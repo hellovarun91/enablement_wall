@@ -664,23 +664,11 @@
                 "textDone": "",
                 "link": [
                   {
-                    "name": "",
-                    "value": ""
-                  }
-                ],
-                "logo": "/Icons/General enablers/icons-primary/applicable_projects.svg"
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
                     "name": "Visit us",
                     "value": "https://www.sidf.gov.sa/en/ServicesforInvestors/Products/Pages/OpeningLetters.aspx"
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/applicable_projects.svg"
               }
             ]
           },
