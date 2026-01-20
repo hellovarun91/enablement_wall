@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Video files (too large for git)
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Backup folders
+*_backup/
+
+# Claude internal
+.claude/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Excel files
+*.xlsx
+*.xls

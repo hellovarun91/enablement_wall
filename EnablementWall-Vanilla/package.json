@@ -1,0 +1,17 @@
+{
+  "name": "enablement-wall-vanilla",
+  "version": "1.0.0",
+  "description": "Enablement Wall Kiosk Application - Vanilla JS Version",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "kiosk",
+    "enablement",
+    "vanilla-js"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
