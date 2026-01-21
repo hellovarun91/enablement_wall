@@ -816,6 +816,7 @@
 
       // Flag to prevent multiple triggers
       var watchClicked = false;
+      var isVideoReady = false;
 
       // Show loader while video loads
       loader.style.display = 'block';
@@ -825,14 +826,24 @@
       var videoUrl = data.loopVideoUrl;
       var posterUrl = data.posterImage || '/posters/poster-0' + data.index + '.jpg';
 
-      // Ensure loop attribute is set
-      loopVideo.loop = true;
-      loopVideo.muted = true;
-      loopVideo.playsInline = true;
-      loopVideo.src = '.' + videoUrl;
+      // Reset video element first to prevent jitter from previous state
+      loopVideo.pause();
+      loopVideo.currentTime = 0;
+      loopVideo.src = '';
 
-      // IMPORTANT: Explicitly call load() to start loading the video
-      loopVideo.load();
+      // Small delay to let page transition settle, then load video
+      setTimeout(function() {
+        if (currentPage !== 'loop') return;
+
+        // Ensure loop attribute is set
+        loopVideo.loop = true;
+        loopVideo.muted = true;
+        loopVideo.playsInline = true;
+        loopVideo.src = '.' + videoUrl;
+
+        // IMPORTANT: Explicitly call load() to start loading the video
+        loopVideo.load();
+      }, 50);
 
       // Timeout fallback - if video doesn't load in 5 seconds, try to play anyway
       var loadTimeout = setTimeout(function() {
@@ -874,7 +885,8 @@
 
       // Wait for canplaythrough for smoother playback (fully buffered)
       loopVideo.oncanplaythrough = function() {
-        if (currentPage !== 'loop') return;
+        if (currentPage !== 'loop' || isVideoReady) return;
+        isVideoReady = true;
         clearTimeout(loadTimeout); // Clear fallback timeout
         loader.style.display = 'none';
         loopVideo.play();
@@ -882,14 +894,11 @@
 
       // Fallback to loadeddata if canplaythrough doesn't fire
       loopVideo.onloadeddata = function() {
-        if (currentPage !== 'loop') return;
+        if (currentPage !== 'loop' || isVideoReady) return;
+        isVideoReady = true;
         clearTimeout(loadTimeout); // Clear fallback timeout
-        // Give a small delay for buffering, then hide loader
-        setTimeout(function() {
-          if (currentPage !== 'loop') return;
-          loader.style.display = 'none';
-          loopVideo.play();
-        }, 500);
+        loader.style.display = 'none';
+        loopVideo.play();
       };
 
       loopVideo.onerror = function() {
@@ -924,13 +933,24 @@
 
       // Flag to prevent multiple navigation triggers
       var hasNavigated = false;
+      var isVideoReady = false;
 
       loader.style.display = 'block';
       closeBtnEl.style.display = 'block'; // Show skip button immediately
 
-      video.src = '.' + data.mainVideoUrl;
-      // Video plays fullscreen, skip button overlays on top
-      video.style.display = 'block';
+      // Reset video element first to prevent jitter
+      video.pause();
+      video.currentTime = 0;
+      video.src = '';
+
+      // Small delay to let page transition settle, then load video
+      setTimeout(function() {
+        if (currentPage !== 'video') return;
+
+        video.src = '.' + data.mainVideoUrl;
+        video.style.display = 'block';
+        video.load(); // Explicitly start loading
+      }, 50);
 
       var goToNext = function() {
         // CRITICAL: Only navigate once, and only if we're still on video page
@@ -944,10 +964,18 @@
         }
       };
 
-      video.onloadeddata = function() {
-        // Only proceed if still on video page
-        if (currentPage !== 'video') return;
+      video.oncanplaythrough = function() {
+        // Only proceed if still on video page and not already playing
+        if (currentPage !== 'video' || isVideoReady) return;
+        isVideoReady = true;
+        loader.style.display = 'none';
+        video.play();
+      };
 
+      video.onloadeddata = function() {
+        // Fallback: Only proceed if still on video page
+        if (currentPage !== 'video' || isVideoReady) return;
+        isVideoReady = true;
         loader.style.display = 'none';
         video.play();
       };
@@ -969,57 +997,63 @@
       var id = params.id;
       var card = params.card;
 
-      // Reset scroll position to top (after content is populated)
+      // Clear content immediately to prevent flash of old content
+      document.getElementById('enablersTitle').textContent = '';
+      document.getElementById('enablersList').innerHTML = '';
+
+      // Small delay to let page transition settle, then populate content
       setTimeout(function() {
-        var listEl = document.getElementById('enablersList');
-        if (listEl) listEl.scrollTop = 0;
+        if (currentPage !== 'enablers') return;
+
+        var category = null;
+        for (var i = 0; i < enablersData.length; i++) {
+          if (enablersData[i].id === id) { category = enablersData[i]; break; }
+        }
+        if (!category) return;
+
+        var enabler = null;
+        for (var j = 0; j < category.enablers.length; j++) {
+          if (category.enablers[j].id == card) { enabler = category.enablers[j]; break; }
+        }
+        if (!enabler) return;
+
+        document.getElementById('enablersTitle').textContent = enabler.enablerName;
+
+        // Set background image - use poster image from selected screen (screens 1-4)
+        // Screen 5 (Special Enablers) uses its own bgImage from data.json
+        var screenData = JSON.parse(localStorage.getItem('data'));
+        var bgImageUrl;
+        if (screenData && screenData.posterImage && screenData.index !== 5) {
+          bgImageUrl = screenData.posterImage;
+        } else if (enabler.bgImage) {
+          bgImageUrl = enabler.bgImage;
+        } else {
+          bgImageUrl = '/posters/poster-01.jpg';
+        }
+        document.getElementById('enablersBg').style.backgroundImage = 'url(.' + bgImageUrl + ')';
+
+        var list = document.getElementById('enablersList');
+        list.innerHTML = '';
+        for (var k = 0; k < enabler.enablerItem.length; k++) {
+          var item = enabler.enablerItem[k];
+          var btn = document.createElement('button');
+          btn.className = 'enabler-btn';
+          btn.textContent = item.name;
+          btn.dataset.id = item.id;
+          btn.onclick = function() {
+            navigate('details?id=' + id + '&card=' + card + '&ei_id=' + this.dataset.id);
+          };
+          list.appendChild(btn);
+        }
+
+        // Reset scroll position to top after content is populated
+        list.scrollTop = 0;
+
+        // Show back button only for special enablers (id=2)
+        document.getElementById('backBtn').style.display = id === '2' ? 'flex' : 'none';
+        document.getElementById('backBtn').onclick = function() { window.history.back(); };
+        document.getElementById('homeBtn').onclick = function() { navigate('loop'); };
       }, 50);
-
-      var category = null;
-      for (var i = 0; i < enablersData.length; i++) {
-        if (enablersData[i].id === id) { category = enablersData[i]; break; }
-      }
-      if (!category) return;
-
-      var enabler = null;
-      for (var j = 0; j < category.enablers.length; j++) {
-        if (category.enablers[j].id == card) { enabler = category.enablers[j]; break; }
-      }
-      if (!enabler) return;
-
-      document.getElementById('enablersTitle').textContent = enabler.enablerName;
-
-      // Set background image - use poster image from selected screen (screens 1-4)
-      // Screen 5 (Special Enablers) uses its own bgImage from data.json
-      var screenData = JSON.parse(localStorage.getItem('data'));
-      var bgImageUrl;
-      if (screenData && screenData.posterImage && screenData.index !== 5) {
-        bgImageUrl = screenData.posterImage;
-      } else if (enabler.bgImage) {
-        bgImageUrl = enabler.bgImage;
-      } else {
-        bgImageUrl = '/posters/poster-01.jpg';
-      }
-      document.getElementById('enablersBg').style.backgroundImage = 'url(.' + bgImageUrl + ')';
-
-      var list = document.getElementById('enablersList');
-      list.innerHTML = '';
-      for (var k = 0; k < enabler.enablerItem.length; k++) {
-        var item = enabler.enablerItem[k];
-        var btn = document.createElement('button');
-        btn.className = 'enabler-btn';
-        btn.textContent = item.name;
-        btn.dataset.id = item.id;
-        btn.onclick = function() {
-          navigate('details?id=' + id + '&card=' + card + '&ei_id=' + this.dataset.id);
-        };
-        list.appendChild(btn);
-      }
-
-      // Show back button only for special enablers (id=2)
-      document.getElementById('backBtn').style.display = id === '2' ? 'flex' : 'none';
-      document.getElementById('backBtn').onclick = function() { window.history.back(); };
-      document.getElementById('homeBtn').onclick = function() { navigate('loop'); };
     }
 
     // ===== DETAILS PAGE =====
@@ -1028,170 +1062,183 @@
       var card = params.card;
       var ei_id = params.ei_id;
 
-      // Reset scroll position to top (after content is populated)
+      // Clear content immediately to prevent flash of old content
+      document.getElementById('detailsTitle').textContent = '';
+      document.getElementById('detailsSubtitle').textContent = '';
+      document.getElementById('detailsCards').innerHTML = '';
+
+      // Small delay to let page transition settle, then populate content
       setTimeout(function() {
-        var cardsEl = document.getElementById('detailsCards');
-        if (cardsEl) cardsEl.scrollTop = 0;
-      }, 50);
+        if (currentPage !== 'details') return;
 
-      var category = null;
-      for (var i = 0; i < enablersData.length; i++) {
-        if (enablersData[i].id === id) { category = enablersData[i]; break; }
-      }
-      if (!category) return;
+        var category = null;
+        for (var i = 0; i < enablersData.length; i++) {
+          if (enablersData[i].id === id) { category = enablersData[i]; break; }
+        }
+        if (!category) return;
 
-      var enabler = null;
-      for (var j = 0; j < category.enablers.length; j++) {
-        if (category.enablers[j].id == card) { enabler = category.enablers[j]; break; }
-      }
-      if (!enabler || !enabler.enablerItem) return;
+        var enabler = null;
+        for (var j = 0; j < category.enablers.length; j++) {
+          if (category.enablers[j].id == card) { enabler = category.enablers[j]; break; }
+        }
+        if (!enabler || !enabler.enablerItem) return;
 
-      var detail = null;
-      for (var k = 0; k < enabler.enablerItem.length; k++) {
-        if (enabler.enablerItem[k].id == ei_id) { detail = enabler.enablerItem[k]; break; }
-      }
-      if (!detail) return;
+        var detail = null;
+        for (var k = 0; k < enabler.enablerItem.length; k++) {
+          if (enabler.enablerItem[k].id == ei_id) { detail = enabler.enablerItem[k]; break; }
+        }
+        if (!detail) return;
 
-      document.getElementById('detailsTitle').textContent = detail.name;
-      document.getElementById('detailsSubtitle').textContent = detail.nameIn || '';
+        document.getElementById('detailsTitle').textContent = detail.name;
+        document.getElementById('detailsSubtitle').textContent = detail.nameIn || '';
 
-      // Set background image - use poster image from selected screen (screens 1-4)
-      var screenData = JSON.parse(localStorage.getItem('data'));
-      var bgImageUrl;
-      if (screenData && screenData.posterImage && screenData.index !== 5) {
-        bgImageUrl = screenData.posterImage;
-      } else if (enabler.bgImage) {
-        bgImageUrl = enabler.bgImage;
-      } else {
-        bgImageUrl = '/posters/poster-01.jpg';
-      }
-      document.querySelector('.details-bg').style.backgroundImage = 'url(.' + bgImageUrl + ')';
-
-      var cardsEl = document.getElementById('detailsCards');
-      cardsEl.innerHTML = '';
-
-      for (var m = 0; m < detail.content.length; m++) {
-        var item = detail.content[m];
-        var cardDiv = document.createElement('div');
-        cardDiv.className = 'detail-card';
-
-        if (item.textDone && item.textDone.trim() !== '') {
-          var textP = document.createElement('p');
-          textP.className = 'detail-card-text';
-          textP.textContent = item.textDone;
-          cardDiv.appendChild(textP);
-
-          if (item.link && item.link[0] && item.link[0].value) {
-            var linkBtn = document.createElement('button');
-            var linkUrl = item.link[0].value;
-            linkBtn.textContent = item.link[0].name || 'Visit';
-            // Inline styles for BrightSign compatibility
-            linkBtn.style.display = 'inline-block';
-            linkBtn.style.marginTop = '16px';
-            linkBtn.style.padding = '10px 20px';
-            linkBtn.style.backgroundColor = '#40D9C7';
-            linkBtn.style.color = '#000000';
-            linkBtn.style.fontWeight = '700';
-            linkBtn.style.borderRadius = '8px';
-            linkBtn.style.border = 'none';
-            linkBtn.style.cursor = 'pointer';
-            linkBtn.style.fontSize = '14px';
-            // Open in modal iframe so user can come back
-            linkBtn.onclick = function() {
-              openLinkModal(linkUrl);
-            };
-            cardDiv.appendChild(linkBtn);
-          }
+        // Set background image - use poster image from selected screen (screens 1-4)
+        var screenData = JSON.parse(localStorage.getItem('data'));
+        var bgImageUrl;
+        if (screenData && screenData.posterImage && screenData.index !== 5) {
+          bgImageUrl = screenData.posterImage;
+        } else if (enabler.bgImage) {
+          bgImageUrl = enabler.bgImage;
         } else {
-          var header = document.createElement('div');
-          header.className = 'detail-card-header';
+          bgImageUrl = '/posters/poster-01.jpg';
+        }
+        document.querySelector('.details-bg').style.backgroundImage = 'url(.' + bgImageUrl + ')';
 
-          if (item.icon) {
-            var icon = document.createElement('img');
-            icon.className = 'detail-card-icon';
-            icon.src = '.' + item.icon;
-            icon.onerror = function() { this.style.display = 'none'; };
-            header.appendChild(icon);
-          }
+        var cardsEl = document.getElementById('detailsCards');
+        cardsEl.innerHTML = '';
 
-          var title = document.createElement('h3');
-          title.className = 'detail-card-title';
-          title.textContent = item.name || '';
-          header.appendChild(title);
+        for (var m = 0; m < detail.content.length; m++) {
+          var item = detail.content[m];
+          var cardDiv = document.createElement('div');
+          cardDiv.className = 'detail-card';
 
-          cardDiv.appendChild(header);
+          if (item.textDone && item.textDone.trim() !== '') {
+            var textP = document.createElement('p');
+            textP.className = 'detail-card-text';
+            textP.textContent = item.textDone;
+            cardDiv.appendChild(textP);
 
-          if (item.text) {
-            var textP2 = document.createElement('p');
-            textP2.className = 'detail-card-text';
-            textP2.textContent = item.text;
-            cardDiv.appendChild(textP2);
-          }
-
-          if (item.list && item.list.length > 0) {
-            var ul = document.createElement('ul');
-            ul.className = 'detail-card-list';
-            for (var n = 0; n < item.list.length; n++) {
-              var li = document.createElement('li');
-              li.textContent = item.list[n];
-              ul.appendChild(li);
+            if (item.link && item.link[0] && item.link[0].value) {
+              var linkBtn = document.createElement('button');
+              var linkUrl = item.link[0].value;
+              linkBtn.textContent = item.link[0].name || 'Visit';
+              // Inline styles for BrightSign compatibility
+              linkBtn.style.display = 'inline-block';
+              linkBtn.style.marginTop = '16px';
+              linkBtn.style.padding = '10px 20px';
+              linkBtn.style.backgroundColor = '#40D9C7';
+              linkBtn.style.color = '#000000';
+              linkBtn.style.fontWeight = '700';
+              linkBtn.style.borderRadius = '8px';
+              linkBtn.style.border = 'none';
+              linkBtn.style.cursor = 'pointer';
+              linkBtn.style.fontSize = '14px';
+              // Open in modal iframe so user can come back
+              linkBtn.onclick = function() {
+                openLinkModal(linkUrl);
+              };
+              cardDiv.appendChild(linkBtn);
             }
-            cardDiv.appendChild(ul);
+          } else {
+            var header = document.createElement('div');
+            header.className = 'detail-card-header';
+
+            if (item.icon) {
+              var icon = document.createElement('img');
+              icon.className = 'detail-card-icon';
+              icon.src = '.' + item.icon;
+              icon.onerror = function() { this.style.display = 'none'; };
+              header.appendChild(icon);
+            }
+
+            var title = document.createElement('h3');
+            title.className = 'detail-card-title';
+            title.textContent = item.name || '';
+            header.appendChild(title);
+
+            cardDiv.appendChild(header);
+
+            if (item.text) {
+              var textP2 = document.createElement('p');
+              textP2.className = 'detail-card-text';
+              textP2.textContent = item.text;
+              cardDiv.appendChild(textP2);
+            }
+
+            if (item.list && item.list.length > 0) {
+              var ul = document.createElement('ul');
+              ul.className = 'detail-card-list';
+              for (var n = 0; n < item.list.length; n++) {
+                var li = document.createElement('li');
+                li.textContent = item.list[n];
+                ul.appendChild(li);
+              }
+              cardDiv.appendChild(ul);
+            }
           }
+
+          cardsEl.appendChild(cardDiv);
         }
 
-        cardsEl.appendChild(cardDiv);
-      }
+        // Reset scroll position to top after content is populated
+        cardsEl.scrollTop = 0;
 
-      document.getElementById('detailsBackBtn').onclick = function() { window.history.back(); };
-      document.getElementById('detailsHomeBtn').onclick = function() { navigate('loop'); };
+        document.getElementById('detailsBackBtn').onclick = function() { window.history.back(); };
+        document.getElementById('detailsHomeBtn').onclick = function() { navigate('loop'); };
+      }, 50);
     }
 
     // ===== SPECIAL PAGE =====
     function initSpecialPage() {
-      var specialData = enablersData[1]; // Index 1 is Special Enablers
-      if (!specialData || !specialData.enablers) return;
-
+      // Clear content immediately to prevent flash of old content
       var container = document.getElementById('page-special');
       container.innerHTML = '';
 
-      for (var i = 0; i < specialData.enablers.length; i++) {
-        var item = specialData.enablers[i];
+      // Small delay to let page transition settle, then populate content
+      setTimeout(function() {
+        if (currentPage !== 'special') return;
 
-        var div = document.createElement('div');
-        div.className = 'special-item';
-        div.dataset.id = item.id;
+        var specialData = enablersData[1]; // Index 1 is Special Enablers
+        if (!specialData || !specialData.enablers) return;
 
-        var bg = document.createElement('div');
-        bg.className = 'special-item-bg';
-        bg.style.backgroundImage = 'url(.' + item.bgImage + ')';
-        div.appendChild(bg);
+        for (var i = 0; i < specialData.enablers.length; i++) {
+          var item = specialData.enablers[i];
 
-        var overlay = document.createElement('div');
-        overlay.className = 'special-item-overlay';
-        div.appendChild(overlay);
+          var div = document.createElement('div');
+          div.className = 'special-item';
+          div.dataset.id = item.id;
 
-        var content = document.createElement('div');
-        content.className = 'special-item-content';
+          var bg = document.createElement('div');
+          bg.className = 'special-item-bg';
+          bg.style.backgroundImage = 'url(.' + item.bgImage + ')';
+          div.appendChild(bg);
 
-        var title = document.createElement('span');
-        title.className = 'special-item-title';
-        title.textContent = item.enablerName;
-        content.appendChild(title);
+          var overlay = document.createElement('div');
+          overlay.className = 'special-item-overlay';
+          div.appendChild(overlay);
 
-        var btn = document.createElement('div');
-        btn.className = 'special-item-btn';
-        btn.innerHTML = '<span>→</span>';
-        content.appendChild(btn);
+          var content = document.createElement('div');
+          content.className = 'special-item-content';
 
-        div.appendChild(content);
+          var title = document.createElement('span');
+          title.className = 'special-item-title';
+          title.textContent = item.enablerName;
+          content.appendChild(title);
 
-        div.onclick = function() {
-          navigate('enablers?id=2&card=' + this.dataset.id);
-        };
+          var btn = document.createElement('div');
+          btn.className = 'special-item-btn';
+          btn.innerHTML = '<span>→</span>';
+          content.appendChild(btn);
 
-        container.appendChild(div);
-      }
+          div.appendChild(content);
+
+          div.onclick = function() {
+            navigate('enablers?id=2&card=' + this.dataset.id);
+          };
+
+          container.appendChild(div);
+        }
+      }, 50);
     }
 
     // ===== ROUTER =====
