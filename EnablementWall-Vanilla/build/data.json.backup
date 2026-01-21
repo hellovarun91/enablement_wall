@@ -22,7 +22,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/advantages.svg"
               },
               {
                 "name": "Supply Competitions:",
@@ -37,22 +38,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
-              },
-              {
-                "name": "Other Competitions:",
-                "text": "",
-                "list": [
-                  "The competitor does not have to present the original product, whether it is national or foreign.",
-                  "The contractor must abide by the list when executing the contract, and the government entity takes into account this list when supervising the implementation."
                 ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
+                "logo": "/Icons/General enablers/icons-primary/beneficiary.svg"
               },
               {
                 "name": "",
@@ -61,7 +48,7 @@
                 "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
                 "link": [
                   {
-                    "name": "Local Content & Government Procurement Authority Website",
+                    "name": "Visit us",
                     "value": "https://lcgpa.gov.sa/en/LocalContent/Pages/Local-Content-Mechanisms.aspx"
                   }
                 ]
@@ -83,7 +70,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/economic_impact.svg"
               },
               {
                 "name": "Mechanism Characteristics:",
@@ -102,7 +90,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/expansion_financing.svg"
               },
               {
                 "name": "",
@@ -111,7 +100,7 @@
                 "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
                 "link": [
                   {
-                    "name": "Local Content & Government Procurement Authority Website",
+                    "name": "Visit us",
                     "value": "https://lcgpa.gov.sa/en/LocalContent/Pages/Local-Content-Mechanisms.aspx"
                   }
                 ]
@@ -133,23 +122,21 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/invoice_financing.svg"
               },
               {
                 "name": "Mechanism Characteristics:",
                 "text": "In the financial evaluation, this mechanism grants a price weight equivalent to 60%. The remaining 40% includes:",
-                "list": [
-                  "Baseline for local content.",
-                  "Target local content percentage.",
-                  "Being listed in the market."
-                ],
+                "list": ["Baseline for local content.", "Target local content percentage.", "Being listed in the market."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/economic_impact.svg"
               },
               {
                 "name": "",
@@ -158,7 +145,7 @@
                 "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
                 "link": [
                   {
-                    "name": "Local Content & Government Procurement Authority Website",
+                    "name": "Visit us",
                     "value": "https://lcgpa.gov.sa/en/LocalContent/Pages/Local-Content-Mechanisms.aspx"
                   }
                 ]
@@ -180,23 +167,21 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/economic_impact.svg"
               },
               {
                 "name": "Mechanism Characteristics:",
                 "text": "In the financial evaluation, this mechanism grants a price weight equivalent to 60%. The remaining 40% includes:",
-                "list": [
-                  "Baseline for local content.",
-                  "Target local content percentage.",
-                  "Being listed in the market."
-                ],
+                "list": ["Baseline for local content.", "Target local content percentage.", "Being listed in the market."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/economic_impact.svg"
               },
               {
                 "name": "",
@@ -205,7 +190,7 @@
                 "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
                 "link": [
                   {
-                    "name": "Local Content & Government Procurement Authority Website",
+                    "name": "Visit us",
                     "value": "https://lcgpa.gov.sa/en/LocalContent/Pages/Local-Content-Mechanisms.aspx"
                   }
                 ]
@@ -227,7 +212,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/economic_impact.svg"
               },
               {
                 "name": "ECONOMICAL IMPACT:",
@@ -243,7 +229,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/economic_impact.svg"
               },
               {
                 "name": "",
@@ -252,8 +239,8 @@
                 "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
                 "link": [
                   {
-                    "name": "Local Content & Government Procurement Authority Website",
-                    "value": "https://lcgpa.gov.sa/p/en_US/Service"
+                    "name": "Visit us",
+                    "value": "https://lcgpa.gov.sa/en/Initiatives/Pages/Contracting-Method.aspx"
                   }
                 ]
               }
@@ -266,7 +253,7 @@
             "content": [
               {
                 "name": "Ministry Of Industry & Minerals Resources",
-                "text": "Exemption of the industrial facility holding an industrial license from customs duties on its imports of raw materials, finished materials, semi-manufactured materials, packaging materials, machinery and spare parts necessary for direct production.",
+                "text": "Exemption of an industrial facility that has an industrial license from customs duties on its imports of raw materials, finished goods, semi-finished goods, packaging materials, machinery, and spare parts necessary for direct production.",
                 "list": [],
                 "textDone": "",
                 "link": [
@@ -274,7 +261,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/economic_impact.svg"
               },
               {
                 "name": "Application conditions:",
@@ -291,17 +279,18 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/economic_impact.svg"
               },
               {
                 "name": "",
                 "text": "",
                 "list": [],
-                "textDone": "For more details, you can visit the website of Ministry of Industry & Minerals Resources:",
+                "textDone": "You can visit the website of Ministry of Industry & Minerals Resources for more details:",
                 "link": [
                   {
                     "name": "Ministry of Industry & Minerals Resources Website",
-                    "value": "https://www.mim.gov.sa/en/services/customs-exemption-equipment-spare-parts"
+                    "value": "https://mim.gov.sa/service/63dc7ed1-010d-3c3b-8269-faf0ba7491d4"
                   }
                 ]
               }
@@ -360,7 +349,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/economic_impact.svg"
               },
               {
                 "name": "The initiative offers:",
@@ -382,19 +372,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Nusaned initiative for more details:",
-                "link": [
-                  {
-                    "name": "Nusaned Initiative",
-                    "value": "https://www.sabic.com/en/nusaned/nusaned-pillars"
-                  }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/economic_impact.svg"
               }
             ]
           },
@@ -405,7 +384,7 @@
             "content": [
               {
                 "name": "Saudi Aramco",
-                "text": "Iktva (in kingdom total value add) provides a level playing field for suppliers through consistency and transparency in application and process. Uniform evaluations for both service and material suppliers will be consistent across the company, creating supplier-focused partnerships, and investment stability and assurance achieved through annual assessments.\nmoreover, iktva program has the potential to help companies develop new products, services and technologies through partnerships in and outside of the Kingdom.",
+                "text": "Iktva (in kingdom total value add) provides a level playing field for suppliers through consistency and transparency in application and process. Uniform evaluations for both service and material suppliers will be consistent across the company, creating supplier-focused partnerships, and investment stability and assurance achieved through annual assessments. moreover, iktva program has the potential to help companies develop new products, services and technologies through partnerships in and outside of the Kingdom.",
                 "list": [],
                 "textDone": "",
                 "link": [
@@ -413,11 +392,12 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/economic_impact.svg"
               },
               {
                 "name": "How does it work?",
-                "text": "",
+                "text": "You can visit the website of Iktva program for more details:",
                 "list": [
                   "The program will first establish an iktva baseline score for each supplier measured against key metrics for local value creation.",
                   "Your company and Saudi Aramco can work together develop a 5-year iktva action plan to improve your iktva ratio."
@@ -428,23 +408,12 @@
                     "name": "",
                     "value": ""
                   }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Iktva program for more details:",
-                "link": [
-                  {
-                    "name": "Iktva Program",
-                    "value": "https://iktva.sa/english/iktva-participation/how-to-participate-in-iktva"
-                  }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/economic_impact.svg"
               },
               {
                 "name": "Opportunities platform",
-                "text": "Investment Opportunities Platform promotes the establishment of state-of-the-art local manufacturing facilities in Saudi Arabia to comply with local content requirements. The annual opportunity size exceeds $16B. National Companies and Tier-1 OEMs/EPC contractors are encouraged to buy locally manufactured goods and services in order to meet the iktva targets which will benefit the potential investors.",
+                "text": "Investment Opportunities Platform promotes the establishment of state-of-the-art local manufacturing facilities in Saudi Arabia to comply with local content requirements. The annual opportunity size exceeds $16B. National Companies and Tier-1 OEMs/EPC contractors are encouraged to buy locally manufactured goods and services in order to meet the iktva targets which will benefit the potential investors.You can visit the website of Iktva program for more details:",
                 "list": [],
                 "textDone": "",
                 "link": [
@@ -452,30 +421,19 @@
                     "name": "",
                     "value": ""
                   }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Iktva program for more details:",
-                "link": [
-                  {
-                    "name": "Iktva Program",
-                    "value": "https://iktva.sa/english/opportunities/overview"
-                  }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/economic_impact.svg"
               }
             ]
           },
           {
             "id": "10",
             "name": "Consultancy Services",
-            "nameIn": "Consultancy Services",
+            "nameIn": "",
             "content": [
               {
                 "name": "Saudi Industrial Development Fund – SIDF",
-                "text": "Due to the challenges faced by these establishments in the industrial sector, a team of specialized consultants at the Saudi Industrial Development Fund intends to provide support by investigating appropriate opportunities to improve performance and achieve growth and sustainability.",
+                "text": "Given the challenges facing these establishments in the industrial sector, a team of specialized consultants at the Saudi Industrial Development Fund intends to provide support to them by exploring appropriate opportunities to improve performance, achieve growth, and ensure sustainability.",
                 "list": [],
                 "textDone": "",
                 "link": [
@@ -483,15 +441,22 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/initiative_offers.svg"
               },
               {
                 "name": "Services Provided",
-                "text": "Cost efficiency improvement:",
+                "text": "Improving Cost Efficiency:",
                 "list": [
                   "Analysis of direct and indirect costs.",
-                  "Analysis of the company's costs compared to the market.",
-                  "Analysis of raw material costs, suppliers, the procurement process, and more."
+                  "Analysis of the company’s costs compared to the market.",
+                  "Analysis of raw material costs, suppliers, the procurement process, and more.",
+                  "Providing recommendations to improve the market strategy.",
+                  "Providing advice on sales and market strategy by studying prices and product mix.",
+                  "Analysis of market share, target customers, sales channels, and customer segmentation.",
+                  "Conducting a diagnostic analysis of the establishment’s operations and production processes.",
+                  "Identifying the factors that pose challenges in the production processes.",
+                  "Providing recommendations on how to enhance manufacturing efficiency based on standard studies and best practices."
                 ],
                 "textDone": "",
                 "link": [
@@ -499,127 +464,18 @@
                     "name": "",
                     "value": ""
                   }
-                ]
-              },
-              {
-                "name": "",
-                "text": "Market strategy:",
-                "list": [
-                  "Providing recommendations to improve market strategy.",
-                  "Providing advice on sales and market strategy through pricing and product portfolio analysis.",
-                  "Market share analysis, target customers, sales channels and customer segmentation."
                 ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "Improving manufacturing operations efficiency:",
-                "list": [
-                  "Conducting diagnostic analysis of facility operations and production processes.",
-                  "Identifying factors that pose challenges in production processes.",
-                  "Providing recommendations on how to enhance manufacturing efficiency based on benchmarking studies and best practices."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
+                "logo": "/Icons/General enablers/icons-primary/working_capital_financing.svg"
               },
               {
                 "name": "",
                 "text": "",
                 "list": [],
-                "textDone": "For more details, you can visit the website of Saudi Industrial Development Fund:",
+                "textDone": "You can visit the website of Saudi Industrial Development Fund for more details: ",
                 "link": [
                   {
-                    "name": "Saudi Industrial Development Fund Website",
-                    "value": "https://www.sidf.gov.sa/ar/Registration/Pages/AdvisoryRegistration.aspx"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "11",
-            "name": "Combat Unfair Competition of International Trade Initiative",
-            "nameIn": "Combat Unfair Competition of International Trade Initiative",
-            "content": [
-              {
-                "name": "",
-                "text": "Providing a consulting service to the private sector to enable them to create a case file against harmful practices of international trade by providing the required data and information and completing the necessary documents to bring the case.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website for more details:",
-                "link": [
-                  {
-                    "name": "Combat Unfair Competition of International Trade Initiative",
-                    "value": "https://www.mim.gov.sa/en/initiatives-programs/industrial-sector-initiatives/combat-unfair-competition-of-international-trade-initiative"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "12",
-            "name": "Encourage Factories to Issue Local Content Certificates Initiative",
-            "nameIn": "Encourage Factories to Issue Local Content Certificates Initiative",
-            "content": [
-              {
-                "name": "",
-                "text": "This initiative stems from the Local Industry Stimulation Initiative. It aims to encourage medium, small, and micro-sized industrial enterprises to issue local content certificates and contribute to achieving local content targets by covering all or part of the cost of local content auditing provided to them by audit offices.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Tracks of Coverage",
-                "text": "",
-                "list": [
-                  "Micro-sized factories.",
-                  "Small-sized factories.",
-                  "Medium-sized factories."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
-                "link": [
-                  {
-                    "name": "For More",
-                    "value": "https://lcgpa.gov.sa/p/en_US/Initiatives/Small_and_Medium_Enterprises_Stimulation_Initiative_Issuing_a_Local_Content_Certificate"
+                    "name": "Visit us",
+                    "value": "https://www.sidf.gov.sa/en/Registration/Pages/AdvisoryRegistration.aspx"
                   }
                 ]
               }
@@ -647,23 +503,21 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/advantages.svg"
               },
               {
                 "name": "Initiative Requirements:",
                 "text": "",
-                "list": [
-                  "Brownfield projects with three years of audited financials.",
-                  "Increase in revenue or volume sold.",
-                  "Terms and conditions apply."
-                ],
+                "list": ["Brownfield projects with three years of audited financials.", "Increase in revenue or volume sold.", "Terms and conditions apply."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/initiative_offers.svg"
               },
               {
                 "name": "Benefits:",
@@ -680,7 +534,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/ready_built_factories.svg"
               },
               {
                 "name": "",
@@ -689,8 +544,8 @@
                 "textDone": "You can visit the website of Saudi Industrial Development Fund for more details:",
                 "link": [
                   {
-                    "name": "Saudi Industrial Development Fund Website",
-                    "value": "https://eloan.sidf.gov.sa/landing-page"
+                    "name": "Visit us",
+                    "value": "https://www.sidf.gov.sa/en/ServicesforInvestors/Programs/Pages/AFAQ.aspx"
                   }
                 ]
               }
@@ -711,7 +566,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/objectives.svg"
               },
               {
                 "name": "Tawteen Objectives:",
@@ -727,23 +583,21 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/roles.svg"
               },
               {
                 "name": "Benefits:",
                 "text": "",
-                "list": [
-                  "Longer tenure of a minimum of 7 years.",
-                  "Longer grace period of up to 24 months.",
-                  "Fast track for projects with purchase agreements."
-                ],
+                "list": ["Longer tenure of a minimum of 7 years.", "Longer grace period of up to 24 months.", "Fast track for projects with purchase agreements."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/targeted_entities.svg"
               },
               {
                 "name": "",
@@ -752,7 +606,7 @@
                 "textDone": "You can visit the website of Saudi Industrial Development Fund for more details:",
                 "link": [
                   {
-                    "name": "Saudi Industrial Development Fund Website",
+                    "name": "Visit us",
                     "value": "https://www.sidf.gov.sa/en/ServicesforInvestors/Programs/Pages/Tawteen.aspx"
                   }
                 ]
@@ -774,23 +628,21 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/beneficiary.svg"
               },
               {
                 "name": "Objectives:",
                 "text": "",
-                "list": [
-                  "Better liquidity management.",
-                  "Project implementation acceleration.",
-                  "Lower Issuance fees."
-                ],
+                "list": ["Better liquidity management.", "Project implementation acceleration.", "Lower Issuance fees."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/requirements.svg"
               },
               {
                 "name": "Roles of Each Party:",
@@ -802,39 +654,21 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/competition.svg"
               },
               {
                 "name": "Success Partners:",
                 "text": "",
-                "list": [
-                  "Riyad Bank",
-                  "The Saudi National Bank",
-                  "Alinma bank",
-                  "Arab National Bank",
-                  "Gulf International Bank",
-                  "Bank Albilad​",
-                  "Al Rajhi Bank"
-                ],
+                "list": ["Riyad Bank", "Bank AlJazira", "Samba bank", "Al Inma bank", "Banque Saudi Fransi", "SABB", "Bank Albilad"],
                 "textDone": "",
                 "link": [
                   {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Saudi Industrial Development Fund for more details:",
-                "link": [
-                  {
-                    "name": "Saudi Industrial Development Fund Website",
+                    "name": "Visit us",
                     "value": "https://www.sidf.gov.sa/en/ServicesforInvestors/Products/Pages/OpeningLetters.aspx"
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/applicable_projects.svg"
               }
             ]
           },
@@ -853,23 +687,21 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/ready_built_factories.svg"
               },
               {
                 "name": "Benefits:",
                 "text": "",
-                "list": [
-                  "Simplified and quick evaluation process.",
-                  "No additional security required.",
-                  "Upfront disbursement."
-                ],
+                "list": ["Simplified and quick evaluation process.", "No additional security required.", "Upfront disbursement."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/success_partners.svg"
               },
               {
                 "name": "General Eligibility Criteria:",
@@ -887,7 +719,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/financing_options.svg"
               },
               {
                 "name": "",
@@ -896,8 +729,8 @@
                 "textDone": "You can visit the website of Saudi Industrial Development Fund for more details:",
                 "link": [
                   {
-                    "name": "Saudi Industrial Development Fund Website",
-                    "value": "https://www.sidf.gov.sa/en/FinancialSolutions/financialSolutionsServices/WorkingCapitalFinancing"
+                    "name": "Visit us",
+                    "value": "https://www.sidf.gov.sa/en/ServicesforInvestors/Products/Pages/WorkingCapital.aspx"
                   }
                 ]
               }
@@ -918,7 +751,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/eligibility_criteria.svg"
               },
               {
                 "name": "Applicable Acquisitions for Financing:",
@@ -934,22 +768,21 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/services.svg"
               },
               {
                 "name": "Financing Options:",
                 "text": "",
-                "list": [
-                  "Pre-acquisition financing",
-                  "Post-acquisition financing"
-                ],
+                "list": ["Pre-acquisition financing", "Post-acquisition financing"],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/eligibility_criteria.svg"
               },
               {
                 "name": "",
@@ -958,7 +791,7 @@
                 "textDone": "You can visit the website of Saudi Industrial Development Fund for more details:",
                 "link": [
                   {
-                    "name": "Saudi Industrial Development Fund Website",
+                    "name": "Visit us",
                     "value": "https://www.sidf.gov.sa/en/ServicesforInvestors/Products/Pages/FinancingLogistics.aspx"
                   }
                 ]
@@ -980,7 +813,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/working_capital_financing.svg"
               },
               {
                 "name": "Requirements:",
@@ -996,23 +830,21 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/initiatives.svg"
               },
               {
                 "name": "Benefits:",
                 "text": "",
-                "list": [
-                  "Medium-term financing for a maximum period of 5 years.",
-                  "30% upfront disbursement of the loan.",
-                  "Fast assessment track."
-                ],
+                "list": ["Medium-term financing for a maximum period of 5 years.", "30% upfront disbursement of the loan.", "Fast assessment track."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/initiative_offers.svg"
               },
               {
                 "name": "",
@@ -1021,8 +853,8 @@
                 "textDone": "You can visit the website of Saudi Industrial Development Fund for more details:",
                 "link": [
                   {
-                    "name": "Saudi Industrial Development Fund Website",
-                    "value": "https://www.sidf.gov.sa/en/FinancialSolutions/financialSolutionsServices/MultiPurposeFinancing"
+                    "name": "Visit us",
+                    "value": "https://www.sidf.gov.sa/en/ServicesforInvestors/Products/Pages/MultiPurposeLoan.aspx"
                   }
                 ]
               }
@@ -1043,39 +875,34 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/applicable_projects.svg"
               },
               {
                 "name": "Applicable Projects:",
                 "text": "",
-                "list": [
-                  "New Industrial Projects.",
-                  "Expansion Projects for Existing Facilities.",
-                  "Upgrade Projects for Existing Facilities."
-                ],
+                "list": ["New Industrial Projects.", "Expansion Projects for Existing Facilities.", "Upgrade Projects for Existing Facilities."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/eligibility_criteria.svg"
               },
               {
                 "name": "Benefits:",
                 "text": "",
-                "list": [
-                  "Financing for a period up to 20 years.",
-                  "Financing up to 75% of the project total cost.",
-                  "Grace period up to 18 months."
-                ],
+                "list": ["Financing for a period up to 20 years.", "Financing up to 75% of the project total cost.", "Grace period up to 18 months."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/applicable_projects.svg"
               },
               {
                 "name": "",
@@ -1084,8 +911,8 @@
                 "textDone": "You can visit the website of Saudi Industrial Development Fund for more details:",
                 "link": [
                   {
-                    "name": "Saudi Industrial Development Fund Website",
-                    "value": "https://www.sidf.gov.sa/en/FinancialSolutions/financialSolutionsServices/ProjectFinancing"
+                    "name": "Visit us",
+                    "value": "https://www.sidf.gov.sa/en/ServicesforInvestors/Products/Pages/LoanProcess.aspx"
                   }
                 ]
               }
@@ -1112,7 +939,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/ready_built_factories.svg"
               },
               {
                 "name": "Initiative Privileges:",
@@ -1129,10 +957,11 @@
                 "textDone": "",
                 "link": [
                   {
-                    "name": "",
-                    "value": ""
+                    "name": "To join the initiative: \n NIDLP&RB@riyadbank.com",
+                    "value": "mailto:NIDLP&RB@riyadbank.com"
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/roles.svg"
               }
             ]
           },
@@ -1142,8 +971,8 @@
             "nameIn": "Supply Chain Financing",
             "content": [
               {
-                "name": "Saudi Industrial Development Fund – SIDF",
-                "text": "It is a short-term financing to pay invoices in advance to support working capital needs, and improve cash flow.",
+                "name": "Saudi Industrial Development Fund-SIDF",
+                "text": "Short-term financing to facilitate early invoice payments that aims to support working capital needs and​ improve cashflows.",
                 "list": [],
                 "textDone": "",
                 "link": [
@@ -1151,7 +980,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/objectives.svg"
               },
               {
                 "name": "Advantages of Supply Chain Financing Product:",
@@ -1169,7 +999,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/applicable_projects.svg"
               },
               {
                 "name": "Product Eligibility Criteria for the Buyer:",
@@ -1187,19 +1018,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "For more details, you can visit the website of Saudi Industrial Development Fund:",
-                "link": [
-                  {
-                    "name": "Saudi Industrial Development Fund Website",
-                    "value": "https://www.sidf.gov.sa/FinancialSolutions/financialSolutionsServices/Supply-Chain-Financing"
-                  }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/characterstics.svg"
               }
             ]
           },
@@ -1224,12 +1044,7 @@
               {
                 "name": "Program Paths:",
                 "text": "Guarantee to support working capital needs path through commercial banks:",
-                "list": [
-                  "SAB",
-                  "Banque Saudi Fransi",
-                  "Riyad Bank",
-                  "Arab National Bank"
-                ],
+                "list": ["SAB", "Banque Saudi Fransi", "Riyad Bank", "Arab National Bank"],
                 "textDone": "",
                 "link": [
                   {
@@ -1292,11 +1107,11 @@
           {
             "id": "11",
             "name": "Dinar",
-            "nameIn": "Dinar",
+            "nameIn": "",
             "content": [
               {
                 "name": "Saudi Authority For Industrial Cities And Technology Zones (MODON)",
-                "text": "In collaboration with Dinar Investment Company, MODON offers financing solutions to its investors to obtain fast and flexible financing.",
+                "text": "In collaboration with Dinar Investment Company, MODON offers financial solutions to its investors for quick and flexible financing.",
                 "list": [],
                 "textDone": "",
                 "link": [
@@ -1304,10 +1119,11 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/eligibility_criteria.svg"
               },
               {
-                "name": "Invoice Financing:",
+                "name": "Invoice Financing::",
                 "text": "",
                 "list": [
                   "Financing against invoices, or extracts and receivables of the company.",
@@ -1322,16 +1138,17 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/opportunities_platform.svg"
               },
               {
                 "name": "Working Capital Financing:",
                 "text": "",
                 "list": [
-                  "Enhancing company liquidity.",
-                  "Fast financing with approval within 3 business days.",
+                  "Enhancing the company’s liquidity.",
+                  "Quick financing with approval within 3 working days.​",
                   "Financing up to 30 million Saudi Riyals.",
-                  "Flexible financing design according to company business.",
+                  "Flexible financing design according to the company’s business.",
                   "Flexible cash payments.",
                   "Competitive profit margin."
                 ],
@@ -1341,10 +1158,11 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/roles.svg"
               },
               {
-                "name": "Expansion Financing:",
+                "name": "Expansion Financing::",
                 "text": "",
                 "list": [
                   "Financing expansion projects.",
@@ -1359,19 +1177,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "For more details, you can visit the website of Dinar Investment Company:",
-                "link": [
-                  {
-                    "name": "Dinar",
-                    "value": "https://app.dinar.sa/sign/modon"
-                  }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/initiative_offers.svg"
               }
             ]
           },
@@ -1396,12 +1203,7 @@
               {
                 "name": "Solutions:",
                 "text": "",
-                "list": [
-                  "Working capital for factories.",
-                  "Capital projects for factories.",
-                  "Bridge financing for factories.",
-                  "Acquisition financing for factories."
-                ],
+                "list": ["Working capital for factories.", "Capital projects for factories.", "Bridge financing for factories.", "Acquisition financing for factories."],
                 "textDone": "",
                 "link": [
                   {
@@ -1414,12 +1216,7 @@
               {
                 "name": "Advantages:",
                 "text": "",
-                "list": [
-                  "Flexible repayment schedules.",
-                  "Fast financing process.",
-                  "Diverse financial products.",
-                  "Financing with various terms."
-                ],
+                "list": ["Flexible repayment schedules.", "Fast financing process.", "Diverse financial products.", "Financing with various terms."],
                 "textDone": "",
                 "link": [
                   {
@@ -1482,7 +1279,7 @@
             "content": [
               {
                 "name": "Saudi Authority for Industrial Cities and Technology Zones(MODON)",
-                "text": "MODON oversees more than 39 industrial cities. Each industrial city has a field administration that supervises the daily needs of investors and supervises the operation and maintenance of the site and the construction projects in the industrial city. Modon has introduced different products that enhance its role and responsibility as one of the pillars of national industry empowerment and leadership.",
+                "text": "MODON oversees more than 36 industrial cities. Each industrial city has a field administration that supervises the daily needs of investors and supervises the operation and maintenance of the site and the construction projects in the industrial city. Moon has introduced different products that enhance its role and responsibility as one of the pillars of national industry empowerment and leadership.",
                 "list": [],
                 "textDone": "",
                 "link": [
@@ -1490,7 +1287,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/program_benefits.svg"
               },
               {
                 "name": "Industrial Lands:",
@@ -1502,7 +1300,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/economic_impact.svg"
               },
               {
                 "name": "Ready-Built Factories:",
@@ -1514,83 +1313,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "For more details, you can visit the website of the Saudi Authority for Industrial Cities and Technology Zones (MODON):",
-                "link": [
-                  {
-                    "name": "Saudi Authority for Industrial Cities and Technology Zones (MODON) Website",
-                    "value": "https://www.modon.gov.sa/en/Pages/default.aspx"
-                  }
-                ]
-              },
-              {
-                "name": "Supporting Units \"Services\":",
-                "text": "MODON launched the \"Supporting Units\" product aimed at supporting industrial service activities such as equipment maintenance and repair, in addition to targeting laboratory activities and calibration centers.",
-                "list": [
-                  "Area: 240 square meters."
                 ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Fields:",
-                "text": "",
-                "list": [
-                  "Laboratory activities.",
-                  "Industrial services (such as machinery and equipment maintenance and repair).",
-                  "Measurement and calibration activities."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Features:",
-                "text": "",
-                "list": [
-                  "Internal workspace.",
-                  "Loading and unloading area.",
-                  "Parking spaces.",
-                  "Fast procedures.",
-                  "Nearly 1150 industrial, logistics and investment facilities.",
-                  "Proximity to industrial markets.",
-                  "Service integration.",
-                  "Presence of a large number of factories.",
-                  "Strategic location."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "For more details, you can visit the Shareek system on the website of the Saudi Authority for Industrial Cities and Technology Zones:",
-                "link": [
-                  {
-                    "name": "Shareek System",
-                    "value": "https://partner.modon.gov.sa/modon-services/service-details/1001"
-                  }
-                ]
+                "logo": "/Icons/General enablers/icons-primary/beneficiary.svg"
               }
             ]
           },
@@ -1609,66 +1333,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [
-                  "Industrial Cities:",
-                  "Access to major markets with lower logistics costs.",
-                  "Ease of doing business.",
-                  "Lower industrial input costs and readily available materials.",
-                  "Quality of life & its impact on talent attraction & retention."
                 ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "RCJY manages 2 economic zone in Ras Alkhair and Jazan. they provide some incentives and enable the free trade for investors",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [
-                  "5% income tax reduction for 20 years.",
-                  "0% value added tax.",
-                  "Exemption on import & export. fees and in customs.",
-                  "Exemptions on foreign employee & families from any fees"
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "For more details please refer to the website",
-                "link": [
-                  {
-                    "name": "Royal Commission of Jubail and Yanbu Website",
-                    "value": "https://www.rcjy.gov.sa/"
-                  }
-                ]
+                "logo": "/Icons/General enablers/icons-primary/industrial_lands.svg"
               }
             ]
           },
@@ -1687,7 +1353,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/human_resource_development_fund.svg"
               },
               {
                 "name": "1- King Abdullah Economic City (KAEC) SEZ",
@@ -1706,52 +1373,47 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/requirements.svg"
               },
               {
                 "name": "2- Ras Al-Khair Special Economic Zone",
                 "text": "Sectors of Opportunity:",
-                "list": [
-                  "Shipbuilding and MRO.",
-                  "Rig platforms and MRO."
-                ],
+                "list": ["Shipbuilding and MRO.", "Rig platforms and MRO."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/success_partners.svg"
               },
               {
                 "name": "3- Jazan Special Economic Zone",
                 "text": "Sectors of Opportunity:",
-                "list": [
-                  "Food processing.",
-                  "Metals conversion.",
-                  "Logistic."
-                ],
+                "list": ["Food processing.", "Metals conversion.", "Logistic."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/working_capital_financing.svg"
               },
               {
                 "name": "4- Cloud Computing SEZ",
                 "text": "Sectors of Opportunity:",
-                "list": [
-                  "Cloud computing."
-                ],
+                "list": ["Cloud computing."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/roles.svg"
               },
               {
                 "name": "Access Attractive Economic Incentives Across the SEZ Network:",
@@ -1770,7 +1432,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/advantages.svg"
               },
               {
                 "name": "",
@@ -1780,26 +1443,7 @@
                 "link": [
                   {
                     "name": "Economic Cities And Special Zones Authority Website",
-                    "value": "https://ecza.gov.sa/en/special-economic-zones"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "4",
-            "name": "Industrial Valley",
-            "nameIn": "Industrial Valley",
-            "content": [
-              {
-                "name": "King Abdullah Economic City (KAEC)",
-                "text": "The Industrial Valley is considered one of the main pillars driving the economic and industrial transformation in the Kingdom of Saudi Arabia. It provides an integrated and promising platform for global and regional investors. This vast industrial powerhouse, spanning 22.5 square kilometers, is strategically designed to foster growth in key sectors including logistics, pharmaceuticals, automotive, and fast-moving consumer goods. Its thriving ecosystem is home to more than 100 leading investors, clearly demonstrating the competitive advantages offered by the city’s industrial and logistics hub. Imagine your business flourishing alongside global leaders such as Mars, Pfizer, and Flow, benefiting from the strategic advantages and broad scale provided by the Industrial Valley.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
+                    "value": "https://sez.ecza.gov.sa/en/"
                   }
                 ]
               }
@@ -1827,7 +1471,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/human_resource_development_fund.svg"
               },
               {
                 "name": "Admission Requirements:",
@@ -1846,7 +1491,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/expansion_financing.svg"
               },
               {
                 "name": "The Training Program:",
@@ -1858,19 +1504,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Human Resources Development Fund for more details:",
-                "link": [
-                  {
-                    "name": "Human Resources Development Fund Website",
-                    "value": "https://eservices.taqat.sa/Eservices_Individual/ProgramDetails.aspx?Id=2"
-                  }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/opportunities_platform.svg"
               }
             ]
           },
@@ -1881,7 +1516,7 @@
             "content": [
               {
                 "name": "Human Resources Development Fund",
-                "text": "An employment support program provided by the Human Resources Development Fund. The program aims to support research and jobseekers in the private sector. The fund bears a percentage of the employee’s wages, and includes support for all the jobs in the private sector for full-time. The program adds additional support in regions and cities with fewer job opportunities, less female employment. It provides support to persons with disabilities, and is for small, medium and micro enterprises.",
+                "text": "An employment support program provided by the Human Resources Development Fund. The program aims to support research and jobseekers in the private sector. The fund bears a percentage of the employee’s wages, and includes support for all the jobs in the private sector for full-time and remote work. The program adds additional support in regions and cities with fewer job opportunities, less female employment. It provides support to persons with disabilities, and is for small, medium and micro enterprises.",
                 "list": [],
                 "textDone": "",
                 "link": [
@@ -1889,11 +1524,12 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/ready_built_factories.svg"
               },
               {
                 "name": "Targeted Entities:",
-                "text": "All private sector entities are subject to the support provided through this program, unless they are suspended by the Ministry of Human Resources and Social Development of the Human Resources Development Fund. The minimum wage is 4,000 riyals. The maximum wage is 15,000 riyals, according to social insurance records. The duration of support period extends to two years.",
+                "text": "All private sector entities are subject to the support provided through this program, unless they are suspended by the Ministry of Human Resources and Social Development of the Human Resources Development Fund. The minimum wage is 3200 riyals. The maximum wage is 15,000 riyals, according to social insurance records. The duration of support period extends to two years.",
                 "list": [],
                 "textDone": "",
                 "link": [
@@ -1901,7 +1537,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/initiative_offers.svg"
               },
               {
                 "name": "",
@@ -1910,8 +1547,8 @@
                 "textDone": "You can visit the website of Human Resources Development Fund for more details:",
                 "link": [
                   {
-                    "name": "Human Resources Development Fund Website",
-                    "value": "https://www.hrdf.org.sa/en/products-and-services/programs/establishments/enable/employment-support/"
+                    "name": "Visit us",
+                    "value": "https://eservices.taqat.sa/Eservices/ProgramDetails.aspx?Id=1"
                   }
                 ]
               }
@@ -1932,7 +1569,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/success_partners.svg"
               },
               {
                 "name": "Targeted Entities:",
@@ -1950,7 +1588,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/services.svg"
               },
               {
                 "name": "Program Benefits:",
@@ -1967,7 +1606,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/General enablers/icons-primary/working_capital_financing.svg"
               },
               {
                 "name": "",
@@ -1976,8 +1616,8 @@
                 "textDone": "You can visit the website of Human Resources Development Fund for more details:",
                 "link": [
                   {
-                    "name": "Human Resources Development Fund Website",
-                    "value": "https://www.hrdf.org.sa/en/products-and-services/programs/individuals/training/graduate-development/"
+                    "name": "Visit us",
+                    "value": "https://eservices.taqat.sa/Eservices/ProgramDetails.aspx?Id=5"
                   }
                 ]
               }
@@ -2010,7 +1650,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/incentives.svg"
               },
               {
                 "name": "Program Products and Services:",
@@ -2026,7 +1667,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/working_capital_financing.svg"
               },
               {
                 "name": "The Program Offers the Following:",
@@ -2043,22 +1685,21 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/financing_power.svg"
               },
               {
                 "name": "Program Objectives:",
                 "text": "",
-                "list": [
-                  "Encourage and support small and medium projects to grow.",
-                  "Build local capabilities."
-                ],
+                "list": ["Encourage and support small and medium projects to grow.", "Build local capabilities."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/target_audience.svg"
               },
               {
                 "name": "",
@@ -2067,8 +1708,8 @@
                 "textDone": "You can visit the website of Saudi Industrial Development Fund for more details:",
                 "link": [
                   {
-                    "name": "Saudi Industrial Development Fund Website",
-                    "value": "https://eloan.sidf.gov.sa/landing-page"
+                    "name": "Visit us",
+                    "value": "https://www.sidf.gov.sa/en/ServicesforInvestors/Programs/Pages/AFAQ.aspx"
                   }
                 ]
               }
@@ -2085,10 +1726,11 @@
                 "textDone": "",
                 "link": [
                   {
-                    "name": "Kafalah Program Website",
-                    "value": "https://www.kafalah.gov.sa/en/About/Pages/default.aspx"
+                    "name": "",
+                    "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/limit_loan.svg"
               },
               {
                 "name": "Objectives:",
@@ -2104,7 +1746,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/incentives.svg"
               }
             ]
           },
@@ -2119,10 +1762,11 @@
                 "textDone": "",
                 "link": [
                   {
-                    "name": "Saudi Venture Capital Company Website",
-                    "value": "https://svc.com.sa/en/home/"
+                    "name": "",
+                    "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/program_syllabus.svg"
               },
               {
                 "name": "Objectives:",
@@ -2137,6 +1781,19 @@
                   {
                     "name": "",
                     "value": ""
+                  }
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/loan_features.svg"
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit Saudi Venture Capital Company website for more details:",
+                "link": [
+                  {
+                    "name": "Saudi Venture Capital Company Website",
+                    "value": "https://svc.com.sa/en/home/"
                   }
                 ]
               }
@@ -2153,22 +1810,65 @@
                 "textDone": "",
                 "link": [
                   {
-                    "name": "Small & Medium Enterprises General Authority (Monshaat) Website",
-                    "value": "https://www.monshaat.gov.sa/en"
+                    "name": "",
+                    "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/incentives.svg"
               },
               {
                 "name": "Program Objective:",
                 "text": "",
-                "list": [
-                  "Promoting lending to micro, small and medium enterprises by providing low-cost loans."
-                ],
+                "list": ["Promoting lending to micro, small and medium enterprises by providing low-cost loans."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
+                  }
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/required_documents.svg"
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit Monshaat website for more details:",
+                "link": [
+                  {
+                    "name": "Small & Medium Enterprises General Authority (Monshaat) Website",
+                    "value": "https://www.monshaat.gov.sa/en"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "5",
+            "name": "Jadir Platform",
+            "content": [
+              {
+                "name": "Small & Medium Enterprises General Authority - Monshaat",
+                "text": "An e-service that qualifies and empowers small and medium-sized enterprises by linking them to the purchasing opportunities of the public and private sectors and facilitating access of enterprises to purchasing opportunities to ensure growth and market opening.",
+                "list": [],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/solar_electrical.svg"
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit Monshaat website for more details:",
+                "link": [
+                  {
+                    "name": "Small & Medium Enterprises General Authority (Monshaat) Website",
+                    "value": "https://jadeer.monshaat.gov.sa/"
                   }
                 ]
               }
@@ -2180,15 +1880,16 @@
             "content": [
               {
                 "name": "Small & Medium Enterprises General Authority - Monshaat",
-                "text": "In an effort to reach entrepreneurs and SMEs owners in all cities and governorates of the Kingdom, the General Authority for SMEs has created an application called “Monshaat’s Windows” to provide guidance and counselling services. The application aims to increase enterprise success and stability and to enable enterprises to overcome challenges by providing specialized advisers and mentors with business expertise.",
+                "text": "In an effort to reach entrepreneurs and SMEs owners in all cities and governorates of the Kingdom, the General Authority for SMEs has created an application called \"Monshaat’s Windows\" to provide guidance and counselling services. The application aims to increase enterprise success and stability and to enable enterprises to overcome challenges by providing specialized advisers and mentors with business expertise.",
                 "list": [],
                 "textDone": "",
                 "link": [
                   {
-                    "name": "Small & Medium Enterprises General Authority (Monshaat) Website",
-                    "value": "https://www.monshaat.gov.sa/en/nawafth"
+                    "name": "",
+                    "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/renewable_energy.svg"
               },
               {
                 "name": "Objectives:",
@@ -2204,6 +1905,19 @@
                     "name": "",
                     "value": ""
                   }
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/economic_impact.svg"
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit Monshaat website for more details:",
+                "link": [
+                  {
+                    "name": "Small & Medium Enterprises General Authority (Monshaat) Website",
+                    "value": "https://www.monshaat.gov.sa/en/nawafth"
+                  }
                 ]
               }
             ]
@@ -2214,7 +1928,7 @@
             "nameIn": "Saudi Industrial Development Fund - SIDF",
             "content": [
               {
-                "name": "Saudi Industrial Development Fund - SIDF",
+                "name": "",
                 "text": "Through it, it reduces the personal guarantees and financial solvency required to obtain financing, enabling entrepreneurs to start their industrial activities by creating innovative investment and financing tools.",
                 "list": [],
                 "textDone": "",
@@ -2223,22 +1937,21 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/eligibility_criteria.svg"
               },
               {
                 "name": "Targeted Groups:",
                 "text": "",
-                "list": [
-                  "Small and medium enterprises.",
-                  "Entrepreneurs."
-                ],
+                "list": ["Small and medium enterprises.", "Entrepreneurs."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/target_audience.svg"
               },
               {
                 "name": "Benefits:",
@@ -2253,19 +1966,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
-              },
-              {
-                "name": "Submission Mechanism:",
-                "text": "Through the electronic loan platform provided by the Industrial Fund, on condition of joining and passing the industrial business incubators program.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/submission_steps.svg"
               }
             ]
           },
@@ -2281,14 +1983,15 @@
                 "textDone": "",
                 "link": [
                   {
-                    "name": "Saudi Industrial Development Fund Website",
-                    "value": "https://www.sidf.gov.sa/en/Initiatives/Industrial-Sector-Support-Initiative/Promising-Factories"
+                    "name": "",
+                    "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/eligibility_criteria.svg"
               },
               {
                 "name": "Loan Purpose:",
-                "text": "",
+                "text": "Fulfilling Short-Term Financing needs: & to cover short-term expenses including the following:",
                 "list": [
                   "Operating expenses including Rent, Utilities, Salaries to employees (Full-time/Part-time), Transportation, and other short-term liabilities",
                   "Raw Material and finished goods purchases"
@@ -2299,36 +2002,21 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/target_audience.svg"
               },
               {
                 "name": "Main Features:",
                 "text": "",
-                "list": [
-                  "All sectors inclusive",
-                  "Minimum of 1 year for Active CR",
-                  "Financing up to 15 million SAR",
-                  "Financing tenor up to 12 months"
-                ],
+                "list": [" All sectors inclusive", "minimum of 1 year for Active CR", "Financing up to 15 million SAR", "Financing tenor up to 12 months"],
                 "textDone": "",
                 "link": [
                   {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "Working Capital Loan",
+                    "name": "Wprking Capital Loan",
                     "value": "https://smebank.gov.sa/en/products/working-capital-loan"
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/submission_steps.svg"
               },
               {
                 "name": "2. Term Loan",
@@ -2357,31 +2045,15 @@
               {
                 "name": "Main Features:",
                 "text": "",
-                "list": [
-                  "All sectors inclusive",
-                  "Minimum of 2 years for Active CR",
-                  "Financing tenor up to 36 months",
-                  "Grace period up to 6 months"
-                ],
+                "list": ["All sectors inclusive", "Minimum of 2 years for Active CR", "Financing tenor up to 36 months", "Grace period up to 6 months"],
                 "textDone": "",
                 "link": [
                   {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "Term Loan",
+                    "name": "Team Loan",
                     "value": "https://smebank.gov.sa/en/products/medium-term-loan"
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/submission_steps.svg"
               },
               {
                 "name": "3. Revolving Limit Loan",
@@ -2393,51 +2065,21 @@
                     "name": "",
                     "value": ""
                   }
-                ]
-              },
-              {
-                "name": "Loan Purpose:",
-                "text": "",
-                "list": [
-                  "Operating expenses: for example, general and administrative expenses (rent, sales and transportation expenses, salaries, and other short-term expenses and obligations)",
-                  "Purchasing raw materials and finished goods"
                 ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
+                "logo": "/Icons/Special enablers/icons-primary/submission_steps.svg"
               },
               {
                 "name": "Main Features:",
-                "text": "",
-                "list": [
-                  "All industries are inclusive",
-                  "Financing up to 8 million SAR",
-                  "Financing tenor up to 12 months",
-                  "Minimum of 1 year for Active CR"
-                ],
+                "text": "This type of financing is targeting Micro, Small, and medium enterprises [whose annual revenues do not exceed SAR 200 million and the number of employees not exceeding 250] with a revolving Credit limit that is re-initiated and set once the entire loan part has been paid",
+                "list": [" All industries are inclusive", "Financing up to 8 million SAR", "Financing tenor up to 12 months", "Minimum of 1 year for Active CR"],
                 "textDone": "",
                 "link": [
                   {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "Revolving Limit Loan",
+                    "name": "Revoluting Limit Loan",
                     "value": "https://smebank.gov.sa/en/products/revolving-limit"
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/submission_steps.svg"
               }
             ]
           },
@@ -2461,12 +2103,7 @@
               {
                 "name": "Program Paths:",
                 "text": "Guarantee to support working capital needs path through commercial banks:",
-                "list": [
-                  "SAB",
-                  "Banque Saudi Fransi",
-                  "Riyad Bank",
-                  "Arab National Bank"
-                ],
+                "list": ["SAB", "Banque Saudi Fransi", "Riyad Bank", "Arab National Bank"],
                 "textDone": "",
                 "link": [
                   {
@@ -2479,9 +2116,7 @@
               {
                 "name": "",
                 "text": "Trade finance guarantee path to improve sales through our industrial company partner:",
-                "list": [
-                  "Tasnee"
-                ],
+                "list": ["Tasnee"],
                 "textDone": "",
                 "link": [
                   {
@@ -2540,7 +2175,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/renewable_energy.svg"
               },
               {
                 "name": "Center Services:",
@@ -2556,25 +2192,14 @@
                   "Thakaa Opportunities: Your opportunity to innovate smart, scalable solutions for various products and projects based on emerging technologies provided by Thakaa Center experts in partnership with public and private entities.",
                   "Thakaa Plus: Support your promising business through exclusive and diverse services. Be one of the beneficiaries and develop your establishment."
                 ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
                 "textDone": "You can visit Monshaat website for more details:",
                 "link": [
                   {
-                    "name": "Small & Medium Enterprises General Authority (Monshaat) Website",
+                    "name": "Small & Medium Enterprises General Authority Website",
                     "value": "https://www.monshaat.gov.sa/en/innovation_center"
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/economic_impact.svg"
               }
             ]
           },
@@ -2592,295 +2217,21 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/renewable_energy.svg"
               },
               {
                 "name": "Incentives:",
                 "text": "",
-                "list": [
-                  "Financial incentives.",
-                  "Feasibility studies.",
-                  "Industrial land / Ready-made factory.",
-                  "Presentation to investors.",
-                  "Market entry."
+                "list": ["Financial incentives.", "Feasibility studies.", "Industrial land / Ready-made factory.", "Presentation to investors.", "Market entry."],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "Revolving Limit Lone",
+                    "value": "https://smebank.gov.sa/en/products/revolving-limit"
+                  }
                 ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "For more details, you can visit the 1K Mile Program website:",
-                "link": [
-                  {
-                    "name": "1K Mile Program Website",
-                    "value": "https://1kmile.daleel.gov.sa/"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "12",
-            "name": "Jadeer Platform",
-            "nameIn": "",
-            "content": [
-              {
-                "name": "Small & Medium Enterprises General Authority - Monshaat",
-                "text": "An e-service that qualifies and empowers small and medium-sized enterprises by linking them to the purchasing opportunities of the public and private sectors and facilitating access of enterprises to purchasing opportunities to ensure growth and market opening.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "Small & Medium Enterprises General Authority (Monshaat) Website",
-                    "value": "https://www.monshaat.gov.sa/en/node/12778"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "13",
-            "name": "Innovative Factories Promotion Initiative",
-            "nameIn": "",
-            "content": [
-              {
-                "name": "",
-                "text": "The initiative contributes to enabling the industrial sector and boosting its competitiveness through supporting and encouraging the Research and Innovation sector in industrial enterprises and entrepreneurs and by leveraging the innovations of national research centers to develop specialized industrial products within the sectors of the National Industrial Strategy (NIS).",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Program Objective",
-                "text": "",
-                "list": [
-                  "Maximize the number of factories engaged in the activities of research, development and innovation activities.",
-                  "Create attractive job opportunities in the industrial sector for national talented researchers.",
-                  "Develop efficient partnerships between the Industrial Sector and the Research, Development. and Innovation sector.",
-                  "Improve the quality of innovation results for the industrial sector.",
-                  "Strengthen the research and innovation capabilities of the industrial sector.",
-                  "Support the development of new innovative products and facilities in the industry"
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "For more details, you can visit the website",
-                "link": [
-                  {
-                    "name": "Innovative Factories Promotion Initiative",
-                    "value": "https://www.mim.gov.sa/en/initiatives-programs/industrial-sector-initiatives/industrial-sector-support-initiative/Innovative-Factories-Promotion-Initiative"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "14",
-            "name": "Mazaya",
-            "nameIn": "",
-            "content": [
-              {
-                "name": "Small & Medium Enterprises General Authority (Monshaat)",
-                "text": "In its commitment to support small and medium enterprises to reduce their costs, improve efficiency and performance, and through distinguished service providers, the Small & Medium Enterprises General Authority (Monshaat) established the Mazaya platform to provide private sector services and some government entities at exclusive and reduced prices for small and medium enterprises.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Mazaya Definition",
-                "text": "An electronic platform that provides various services and benefits at reduced prices supported by Monshaat to suit the needs of small and medium enterprises and facilitate their access to offers and discounts provided by government entities and the private sector to contribute to reducing enterprise costs and improving their performance. The Mazaya platform also provides an opportunity for business service providers from the private sector to access a customer base of small and medium enterprises, which represent up to 99% of the number of commercial establishments in the Kingdom through the Mazaya platform.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Target Categories",
-                "text": "",
-                "list": [
-                  "Micro enterprises.",
-                  "Small enterprises.",
-                  "Medium enterprises."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Eligibility Conditions",
-                "text": "",
-                "list": [
-                  "Create an account on the platform.",
-                  "Have an active commercial registration.",
-                  "Service conditions - if any - apply to your establishment."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "For more details, you can visit the Mazaya platform website:",
-                "link": [
-                  {
-                    "name": "Mazaya Platform",
-                    "value": "https://mazaya.monshaat.gov.sa/about"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "15",
-            "name": "Intellectual Property Advisory Clinics",
-            "nameIn": "",
-            "content": [
-              {
-                "name": "Intellectual Property Advisory Clinics",
-                "text": "The Intellectual Property Advisory Clinics service is provided in cooperation between MODON and the Saudi Authority for Intellectual Property. It contributes to enhancing the paths to acquiring intellectual property rights and ways to exploit them to generate economic value and financial returns. This service is provided by providing free guidance and all forms of support in the field of intellectual property. The Intellectual Property Advisory Clinics target various categories of innovation-based projects and products to help the industrial sector obtain exclusive rights for industrial products.",
-                "list": [
-                  "Circular Economy",
-                  "Intellectual Property Consulting"
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "Intellectual Property Advisory Clinics",
-                "link": [
-                  {
-                    "name": "Visit us",
-                    "value": "https://modon.gov.sa/en/Systems/Pages/ipclinic.aspx"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "16",
-            "name": "Complementary Service Request",
-            "nameIn": "",
-            "content": [
-              {
-                "name": "Saudi Authority for Industrial Cities and Technology Zones - MODON",
-                "text": "MODON designed the (Motamem) product to enable and support entrepreneurs and owners of small and medium enterprises to establish investment activities within existing factories, to enhance the production capacity of large factories and enable small factories to enter the industrial sector and expand their fields in many activities. It also meets the desire of large factories to benefit from available spaces, achieving mutual benefit between both parties.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Service Duration",
-                "text": "10 working days.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Application Requirements and Details",
-                "text": "General conditions for approval to operate or lease an entity within a factory:",
-                "list": [
-                  "The partner's contract must be valid and the remaining period in the existing factory contract must not be less than two contractual years.",
-                  "Must be committed to safety requirements and there must be no unresolved violations with the factory.",
-                  "Official documents for the partner and entity must be valid, such as the establishment contract and commercial registration for the entity, and must provide all official documents for the entity such as commercial registration and industrial license (if applicable).",
-                  "The entity's activity must be suitable for the location according to the general plan of the industrial city and the existing factory's activity.",
-                  "The necessary conditions for issuing licenses from external entities at the entity's location must be met.",
-                  "A contract must be signed between the partner and the entity clarifying the obligations of the parties, mutual benefits, and services covered by the contract."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "Requirements that must be available at the location:",
-                "list": [
-                  "Independence availability for the new entity such as having an independent entrance for the entity to the facility as a building or a special part for them within the administrative offices.",
-                  "Availability of directional signs outside and inside the factory boundaries indicating the entity's location.",
-                  "The area required to operate the entity/entities must not exceed 20% of the total area of the productive factory.",
-                  "The area of any of the entities must not be less than 250 square meters.",
-                  "The number of entities must not exceed one per 10,000 square meters as a maximum."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "For more details, you can visit the Partner System website:",
-                "link": [
-                  {
-                    "name": "Partner System",
-                    "value": "https://partner.modon.gov.sa/modon-services/service-details/23"
-                  }
-                ]
+                "logo": "/Icons/Special enablers/icons-primary/economic_impact.svg"
               }
             ]
           }
@@ -2905,7 +2256,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/target_audience.svg"
               },
               {
                 "name": "The initiative requirements:",
@@ -2924,7 +2276,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/economic_impact.svg"
               },
               {
                 "name": "Benefits:",
@@ -2941,7 +2294,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/required_documents.svg"
               },
               {
                 "name": "",
@@ -2950,7 +2304,7 @@
                 "textDone": "You can visit the website of Saudi Industrial Development Fund for more details:",
                 "link": [
                   {
-                    "name": "Saudi Industrial Development Fund Website",
+                    "name": "Visit us",
                     "value": "https://www.sidf.gov.sa/en/ServicesforInvestors/Programs/Pages/Tanafusiya.aspx"
                   }
                 ]
@@ -2977,11 +2331,7 @@
               {
                 "name": "The Initiative Requirements:",
                 "text": "",
-                "list": [
-                  "Brownfield projects with three years of audited financials.",
-                  "Increase in revenue or volume sold.",
-                  "Terms and conditions apply."
-                ],
+                "list": ["Brownfield projects with three years of audited financials.", "Increase in revenue or volume sold.", "Terms and conditions apply."],
                 "textDone": "",
                 "link": [
                   {
@@ -2994,11 +2344,7 @@
               {
                 "name": "Benefits:",
                 "text": "",
-                "list": [
-                  "Longer tenure of a minimum of 7 years.",
-                  "Longer grace period of up 24 months.",
-                  "Fast track for projects with purchase agreements."
-                ],
+                "list": ["Longer tenure of a minimum of 7 years.", "Longer grace period of up 24 months.", "Fast track for projects with purchase agreements."],
                 "textDone": "",
                 "link": [
                   {
@@ -3036,60 +2382,45 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/program_paths.svg"
               },
               {
                 "name": "Initiative Tracks:",
                 "text": "",
-                "list": [
-                  "Adoption of digital capabilities",
-                  "Adoption of emerging technologies"
-                ],
+                "list": ["Adoption of digital capabilities", "Adoption of emerging technologies"],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/working_capital_financing.svg"
               },
               {
                 "name": "Target Audience:",
                 "text": "",
-                "list": [
-                  "Private sector",
-                  "Technology companies"
-                ],
+                "list": ["Private sector", "Technology companies"],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/eligibility_criteria.svg"
               },
               {
                 "name": "Initiative Objectives:",
                 "text": "",
                 "list": [
-                  "Helping establishments enhance productivity",
-                  "Improving quality using Fourth Industrial Revolution technologies",
-                  "Reducing costs and raising innovation and diversity levels",
-                  "Adapting to changes in the era of advanced technology",
-                  "Using artificial intelligence and analytics to monitor quality and analyze data to identify potential defects in the production process and improve them"
+                  " Assist establishments in enhancing productivity",
+                  "Improve quality through the use of Fourth Industrial Revolution technologies",
+                  "Reduce costs and enhance innovation and diversity",
+                  "Adapt to changes in the era of advanced technology",
+                  "Utilize artificial intelligence and analytics for quality control and data analysis to identify potential defects in the production process and improve them"
                 ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
                 "textDone": "",
                 "link": [
                   {
@@ -3114,7 +2445,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/program_paths.svg"
               },
               {
                 "name": "The program aims to support factories in",
@@ -3130,29 +2462,18 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/working_capital_financing.svg"
               },
               {
                 "name": "",
                 "text": "",
                 "list": [],
-                "textDone": "For more details, you can visit the Fourth Industrial Revolution Capability Center website:",
+                "textDone": "You can visit the website of The Fourth Industrial Revolution Center for more details:",
                 "link": [
                   {
-                    "name": "Fourth Industrial Revolution Capability Center Website",
+                    "name": "The Fourth Industrial Revolution Center Website",
                     "value": "https://4ir.nidlp.gov.sa/#partners"
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can also visit the Fourth Industrial Revolution Capability Center headquarters at the Second Industrial City in Riyadh:",
-                "link": [
-                  {
-                    "name": "Fourth Industrial Revolution Capability Center Location",
-                    "value": "https://www.google.com/maps/place/24%C2%B033'35.0%22N+46%C2%B052'08.9%22E/@24.5597222,46.8691389,17z/data=!3m1!4b1!4m4!3m3!8m2!3d24.5597222!4d46.8691389?entry=ttu"
                   }
                 ]
               }
@@ -3163,7 +2484,7 @@
             "name": "Tanafusiya Program – Energy Efficiency Track",
             "content": [
               {
-                "name": "Tanafusiya Program – Energy Efficiency Track",
+                "name": "Saudi Industrial Development Fund – SIDF",
                 "text": "Which aims to apply techniques that reduce energy consumption, using energy auditing and management systems to support continuous improvements of energy performance such as; energy efficiency, energy security, and energy consumption.",
                 "list": [],
                 "textDone": "",
@@ -3172,7 +2493,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/program_paths.svg"
               },
               {
                 "name": "Requirement:",
@@ -3180,7 +2502,7 @@
                 "list": [
                   "For new and existing clients with a good standing.",
                   "Brownfield projects that can provide financial statements for the last three years.",
-                  "Project’s ability to prove reducing energy consumption or energy cost.",
+                  "Project’s ability to prove reducing energy consumption or energy cost. ",
                   "Commercially proven technology.",
                   "Provide a feasibility study with reasonable Capex and Opex projections.",
                   "SIDF Terms and conditions apply."
@@ -3191,23 +2513,21 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/working_capital_financing.svg"
               },
               {
                 "name": "Benefits:",
                 "text": "",
-                "list": [
-                  "Longer tenor (minimum of 7 years).",
-                  "Grace period that extends up to 24 months.",
-                  "Faster turnaround time within 8 weeks."
-                ],
+                "list": [" Longer tenor (minimum of 7 years).", "Grace period that extends up to 24 months.", "Faster turnaround time within 8 weeks."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/eligibility_criteria.svg"
               },
               {
                 "name": "",
@@ -3229,7 +2549,7 @@
             "content": [
               {
                 "name": "Ministry Of Industry & Mineral Resources",
-                "text": "Providing grants to factories to implement basic digitization and automation solutions, which are requirements for advanced digitization and automation solutions and usually do not require large capital investments. These solutions include digitizing procedures and planning, communication and production line control systems, and material handling and packaging systems and machines.",
+                "text": "Providing grants to factories to implement basic digitization and automation solutions, which are considered a requirement for advanced digitization and automation solutions and do not usually require large capital investments. These solutions include digitizing procedures, planning, communication systems, production line control, material handling systems, and packaging machines.",
                 "list": [],
                 "textDone": "",
                 "link": [
@@ -3237,7 +2557,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/program_paths.svg"
               },
               {
                 "name": "Eligibility Criteria:",
@@ -3259,7 +2580,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/working_capital_financing.svg"
               },
               {
                 "name": "Required Documents:",
@@ -3284,91 +2606,11 @@
                 "name": "",
                 "text": "",
                 "list": [],
-                "textDone": "For more details, you can visit the website:",
+                "textDone": "You can visit the website of Ministry of Industry & Minerals Resources for more details:",
                 "link": [
                   {
-                    "name": "Ministry of Industry and Mineral Resources",
-                    "value": "https://www.mim.gov.sa/en/initiatives-programs/industrial-sector-initiatives/industrial-sector-support-initiative/Future-Factories-Initiative-The-Main-Digitization-Track"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "7",
-            "name": "Availability of Petrochemical Raw Materials",
-            "nameIn": "",
-            "content": [
-              {
-                "name": "",
-                "text": "This service supports manufacturers in overcoming challenges related to the availability of petrochemical raw materials as part of an initiative to empower the specialized and downstream industries sector.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "For more details, you can visit the website",
-                "link": [
-                  {
-                    "name": "For More",
-                    "value": "https://industry.sa/en/services/petrochemicals_availability"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "8",
-            "name": "Acceleration Circular Economy Initiative",
-            "nameIn": "",
-            "content": [
-              {
-                "name": "",
-                "text": "The initiative of encouraging small and medium factories to issue the local content certificate led by LCGPA is one of the initiatives under the umbrella of Industrial Sector Support Initiative. This initiative contributes to achieving local content targets in the industrial sector by covering the cost of auditing local content or part of it that is provided by approved audit office",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Objectives",
-                "text": "",
-                "list": [
-                  "Increase economic growth",
-                  "Maintain the raw material and natural resources",
-                  "Increase competitiveness and promote innovations",
-                  "Generate new jobs",
-                  "Reduce pressure on the environment"
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of the program for more details:",
-                "link": [
-                  {
-                    "name": "Acceleration Circular Economy Initiative",
-                    "value": "https://www.mim.gov.sa/en/initiatives-programs/industrial-sector-initiatives/industrial-sector-support-initiative/acceleration-circular-economy-initiative"
+                    "name": "Ministry Of Industry & Minerals Resources Website",
+                    "value": "https://future-factories.mim.gov.sa/en/contact-us"
                   }
                 ]
               }
@@ -3395,7 +2637,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/loan_purpose.svg"
               },
               {
                 "name": "Products and Services:",
@@ -3417,19 +2660,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of the Saudi Exports Development Authority for more details:",
-                "link": [
-                  {
-                    "name": "Saudi Exports Development Authority Website",
-                    "value": "https://www.saudiexports.gov.sa/en/eservices/FND"
-                  }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/eligibility_criteria.svg"
               }
             ]
           },
@@ -3439,7 +2671,7 @@
             "content": [
               {
                 "name": "Saudi Export-Import Bank",
-                "text": "The bank aims to enhance the development and diversification of Saudi exports and increase its competitiveness, provide export financing and guarantee services, and secure export credit with competitive advantages, enhance confidence in Saudi exports and their entry into new markets and reduce the risks of non-payment, and provide credit facilities for exports.",
+                "text": "Established in 2020 with the aim of achieving the targets of Saudi Vision 2030, the Saudi Export-Import Bank seeks to enhance the non-oil Saudi economy and increase the share of non-oil exports in the total GDP. The bank works towards developing non-oil Saudi exports, enhancing their competitiveness in global markets, bridging financial gaps, and mitigating risks faced by exporters. The bank is one of the development funds under the Saudi National Development Fund. It is committed to its developmental role by integrating with governmental institutions to achieve national strategies and strengthen national companies to foster a diverse and comprehensive economy. It focuses on building international economic and trade partnerships and accessing targeted and promising markets. The bank offers a range of financial products, guarantees, and export credit insurance with competitive advantages, aiming to boost confidence in Saudi products, increase the economic contribution of non-oil exports, and expand their presence in regional and global markets.",
                 "list": [],
                 "textDone": "",
                 "link": [
@@ -3447,19 +2679,27 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/submission_steps.svg"
               },
               {
                 "name": "Products and Services:",
                 "text": "",
                 "list": [
-                  "Letter of guarantee: issuance of letters of guarantees.",
-                  "Buyer’s credit: short to medium-term revolving.",
-                  "Structured financing for international projects: Includes medium to long-term tailored loans.",
-                  "Working Capital Finance: Finance export-related working.",
-                  "Line of credit International and Domestic: Lines of credit extended to international and domestic Financial Institutions for import of Saudi Exports.",
-                  "Letter of Credit Insurance Policy: An insurance policy between Saudi EXIM and local commercial banks and financial institutions to protect them against the risk of nonpayment of an irrevocable Letter of Credit (LC) issued by the importer’s bank.",
-                  "Export credit insurance policy: A credit insurance policy that covers the Saudi exporter against the risks of non-payment of the international buyer resulting from commercial or political risks."
+                  "Line of Credit (Domestic): ​​​​The bank seeks to conduct partnerships and agreements with local financial institutions offering financing solutions that enable local exporters, therefore contributing to the growth of local exports in international markets.",
+                  "",
+                  "Line of Credit (International): ​​​​​​​​​​​​​​​​​​​​​​​​T​he bank conducts partnerships and agreements with international financial institutions (Banks, Non-bank financial institutions, Multilateral development banks, etc) offering solutions that enable international buyers to overcome financing challenges, which contributes to the growth of local exports",
+                  "Pre-Export Financing: ​​Liquidity could be an issue for some exporters who purchase production inputs from the local market during the pre-export phase to meet the demands of the foreign buyer. This product, therefore, provides financing that enables exporters to purchase production inputs required for export.​",
+                  "Discounting: To accelerate the exporter's collection of their export proceeds before their maturity date, this product has been developed to contribute to the acceleration of the collection and provide the cash liquidity necessary to cover the cash flow gap that exporters may experience between the export period and the collection date.",
+                  "Supply Chain: ​​​​Improving payment conditions between exporters and suppliers is critical. The product offers export-dependent enterprises short-term revolving financing while handling complicated payments and extended payment terms for supply chain credit accounts.​",
+                  "Import Finance: To keep up with the demand from international markets for local products, we offer this product to enable local exporters to acquire international raw materials and help accelerate the production process.",
+                  "Working Capital Finance: ​Some exporters face challenges in operational expenditures for export requests. As a result, this product provides liquidity that fulfills short-term export-related needs, thereby boosting export growth.",
+                  "Structured Finance for International Projects: We provide this product in the form of medium- to long-term loans to support companies’ ability to carry out international projects that incorporate local goods or services, considering the involvement of Saudi companies in the implementation of significant international projects in various fields.",
+                  "International Buyer’s Credit: Given that Saudi products and services compete with their foreign counterparts on the global market, we developed this product to give foreign importers short- and medium-term financing options when purchasing Saudi products and services. This product also makes it easier to collect debts without the need to conduct financial transactions.",
+                  "Export Credit Insurance Policy: ​We offer this product to provide insurance solutions that cover the exporter's portfolio of buyers through either comprehensive cover or a specific cover, which helps reduce default risks. This enables the local exporter and provides a layer of protection from the risks of non-payment by buyers or banks.",
+                  "Letter of Credit Insurance Policy: ​With local financial institutions facing the risk of default by international banks issuing letters of credit related to local exports, we offer this product to help improve the acceptance of Letter of Credit received by local financial institutions from foreign banks as well as facilitate access to local exports globally.​",
+                  "Buyer’s Credit Insurance Policy:​To provide financial institutions with the insurance required to finance purchases of local goods and services by international importers, we offer this product that covers the risk of importers defaulting on payments and contributes to increasing the competitiveness of local products internationally.​",
+                  "Letter of Guarantee: ​To enable national enterprises, we developed this product to fulfill the guarantees outlined in the project implementation criteria and increase the chance of winning international bids.​"
                 ],
                 "textDone": "",
                 "link": [
@@ -3467,61 +2707,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
-              },
-              {
-                "name": "",
-                "text": "Saudi EXIM Bank provides a range of financial services to empower national exports and enhance their competitiveness in global markets. It supports exporters and importers through diverse and integrated financing and insurance solutions.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Financing Products",
-                "text": "",
-                "list": [
-                  "Working capital finance",
-                  "Pre-export finance",
-                  "Import finance",
-                  "Supply chain finance",
-                  "Discounting",
-                  "Structured finance for internarional projects",
-                  "Letter of guarantee",
-                  "Buyer’s credit",
-                  "Lines of credit (Local & internarional Financial Institutions)"
                 ],
-                "textDone": "You can visit the website of the Saudi Export-Import Bank for more details (Jusoor enabler):",
-                "link": [
-                  {
-                    "name": "website of the Saudi EXIM Bank",
-                    "value": "https://saudiexim.gov.sa/en/Services/Pages/default.aspx"
-                  }
-                ]
-              },
-              {
-                "name": "Credit Insurance",
-                "text": "",
-                "list": [
-                  "Whole Turnover Export Credit Insurance (Multi-Buyer)",
-                  "Specific Export Credit Insurance",
-                  "Buyer Credit Insurance",
-                  "Documentary Credit Insurance (DCIP)",
-                  "Whole Turnover Export Credit Insurance (Unconfirmed LCs – Multi Bank)",
-                  "Suppliers’ Credit Insurance",
-                  "Investors Insurance Products"
-                ],
-                "textDone": "You can visit the website of the Saudi Export-Import Bank for more details",
-                "link": [
-                  {
-                    "name": "website of the Saudi EXIM Bank",
-                    "value": "https://saudiexim.gov.sa/en/Services/Pages/Insurance.aspx"
-                  }
-                ]
+                "logo": "/Icons/Special enablers/icons-primary/program_syllabus.svg"
               }
             ]
           },
@@ -3539,7 +2726,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/required_documents.svg"
               },
               {
                 "name": "1- King Abdullah Economic City (KAEC) SEZ",
@@ -3558,52 +2746,47 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/limit_loan.svg"
               },
               {
                 "name": "2- Ras Al-Khair Special Economic Zone",
                 "text": "Sectors of Opportunity:",
-                "list": [
-                  "Shipbuilding and MRO.",
-                  "Rig platforms and MRO."
-                ],
+                "list": ["Shipbuilding and MRO.", "Rig platforms and MRO."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/loan_features.svg"
               },
               {
                 "name": "3- Jazan Special Economic Zone",
                 "text": "Sectors of Opportunity:",
-                "list": [
-                  "Food processing.",
-                  "Metals conversion.",
-                  "Logistic."
-                ],
+                "list": ["Food processing.", "Metals conversion.", "Logistic."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/financing_power.svg"
               },
               {
                 "name": "4- Cloud Computing SEZ",
                 "text": "Sectors of Opportunity:",
-                "list": [
-                  "Cloud computing."
-                ],
+                "list": ["Cloud computing."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/incentives.svg"
               },
               {
                 "name": "Access Attractive Economic Incentives Across the SEZ Network:",
@@ -3622,7 +2805,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/economic_impact.svg"
               },
               {
                 "name": "",
@@ -3632,7 +2816,7 @@
                 "link": [
                   {
                     "name": "Economic Cities And Special Zones Authority Websit",
-                    "value": "https://ecza.gov.sa/en/special-economic-zones"
+                    "value": "https://sez.ecza.gov.sa/en/"
                   }
                 ]
               }
@@ -3652,7 +2836,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/objectives.svg"
               },
               {
                 "name": "Provided Benefits:",
@@ -3670,80 +2855,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of the Saudi Made Program for more details:",
-                "link": [
-                  {
-                    "name": "Website of Saudi Made Program",
-                    "value": "https://saudimade.sa/en"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "5",
-            "name": "Customs for Exports",
-            "nameIn": "",
-            "content": [
-              {
-                "name": "Ministry of Industry and Mineral Resources",
-                "text": "Customs exemption for industry inputs intended for export is an exemption from customs duties imposed on inputs that fall within the list of industrial capabilities of the Ministry of Industry and Mineral Resources and which are used in products that are exported based on the historical performance of the factory's exports during the past twelve months (four past quarters).",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Service time frame:",
-                "text": "5 working days.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Requirements:",
-                "text": "",
-                "list": [
-                  "A valid industrial license for the facility.",
-                  "An active and valid commercial registration.",
-                  "The materials must be included in the industrial license data.",
-                  "Submission of export data for the last year.",
-                  "The exemption request must pertain to inputs listed under the Industrial Capabilities List of the Ministry of Industry and Mineral Resources."
                 ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "For more details, you can visit the Sanayi platform website:",
-                "link": [
-                  {
-                    "name": "Sanayi Platform",
-                    "value": "https://industry.sa/en/services/customs_for_export"
-                  }
-                ]
+                "logo": "/Icons/Special enablers/icons-primary/solar_electrical.svg"
               }
             ]
           }
@@ -3768,7 +2881,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/program_paths.svg"
               },
               {
                 "name": "Economical Impact:",
@@ -3784,7 +2898,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/services.svg"
               },
               {
                 "name": "",
@@ -3793,8 +2908,8 @@
                 "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
                 "link": [
                   {
-                    "name": "Local Content & Government Procurement Authority Website",
-                    "value": "https://lcgpa.gov.sa/p/en_US/Service"
+                    "name": "Visit us",
+                    "value": "https://lcgpa.gov.sa/en/Initiatives/Pages/Contracting-Method.aspx"
                   }
                 ]
               }
@@ -3805,7 +2920,7 @@
             "name": "Tawteen Program",
             "content": [
               {
-                "name": "Saudi Industrial Development Fund-SIDF",
+                "name": "Saudi Industrial Development Fund – SIDF",
                 "text": "Tawteen program is set to facilitate, enhance, and finance supply chain localization opportunities of the Kingdom’s industrial sector. To achieve this, SIDF established partnerships with leading companies in the Kingdom of Saudi Arabia to enable the switch to source locally manufactured products and spare parts. Through preferential financing solutions, the Tawteen program will help stimulate investment activities and support the national and local content strategy.",
                 "list": [],
                 "textDone": "",
@@ -3814,7 +2929,8 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/beneficiary.svg"
               },
               {
                 "name": "Tawteen Objectives:",
@@ -3830,23 +2946,21 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/loan_purpose.svg"
               },
               {
                 "name": "Benefits:",
                 "text": "",
-                "list": [
-                  "Longer tenure of a minimum of 7 years.",
-                  "Longer grace period of up to 24 months.",
-                  "Fast track for projects with purchase agreements."
-                ],
+                "list": ["Longer tenure of a minimum of 7 years.", "Longer grace period of up to 24 months.", "Fast track for projects with purchase agreements."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/submission_steps.svg"
               },
               {
                 "name": "",
@@ -3876,13 +2990,14 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/beneficiary.svg"
               },
               {
                 "name": "Financing Renewable Energy Components Manufacturing",
-                "text": "Financing Benefits:",
+                "text": "",
                 "list": [
-                  "Longer tenure (up to 15 years).",
+                  " Longer tenor (up to 15 years).",
                   "Including grace period (up to 36 months).",
                   "Financing up to 75% of project cost.",
                   "Alignment with the Renewable Energy Projects Development Office (REPDO)."
@@ -3893,13 +3008,14 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/loan_purpose.svg"
               },
               {
-                "name": "Financing Distributed Solar Electrical Generation",
-                "text": "Financing Benefits:",
+                "name": "Financing Distributed Solar Electrical Generation:",
+                "text": "",
                 "list": [
-                  "Longer tenure (up to 15 years).",
+                  "Longer tenor (up to 15 years).",
                   "Including grace period (up to 36 months).",
                   "Financing up to 75% of project cost.",
                   "Available for projects owners and developers in commercial and agriculture sectors."
@@ -3910,22 +3026,21 @@
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/submission_steps.svg"
               },
               {
                 "name": "Financing Renewable Independent Power Producers (IPPs)",
-                "text": "Financing Benefits:",
-                "list": [
-                  "Longer repayment period (up to 20 years).",
-                  "Including grace period (up to 36 months)."
-                ],
+                "text": "",
+                "list": ["Longer repayment period (up to 20 years).", "Including grace period (up to 36 months)."],
                 "textDone": "",
                 "link": [
                   {
                     "name": "",
                     "value": ""
                   }
-                ]
+                ],
+                "logo": "/Icons/Special enablers/icons-primary/submission_steps.svg"
               },
               {
                 "name": "",
@@ -3935,186 +3050,7 @@
                 "link": [
                   {
                     "name": "Saudi Industrial Development Fund",
-                    "value": "https://www.sidf.gov.sa/en/ServicesforInvestors/Programs/Pages/Mutjadeda.aspx"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "4",
-            "name": "Exploration Enablement Program",
-            "nameIn": "",
-            "content": [
-              {
-                "name": "Ministry of Industry and Mineral Resources and Ministry of Investment",
-                "text": "",
-                "list": [
-                  "Improve geological knowledge that supports investment through providing data that is collected to international best practice and using innovative techniques.",
-                  "Stimulation exploration activity accelerated to support strategic and pivotable objectives in the Kingdom’s mining sector.",
-                  "Building capability and capacity of local talent in the mineral exploration and mining sector in the Kingdom.",
-                  "Exploration opportunities in new and emerging areas to expand knowledge of the Kingdoms’ exploration potential."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Requirements:",
-                "text": "",
-                "list": [
-                  "Exploration must focus on critical minerals such as Cu, Li, and Ni (Class ‘A’ category of the Mining Investment Law).",
-                  "Exploration activities must focus in underexplored areas or underexplored critical minerals.",
-                  "The applicant/investor must have a valid exploration license where the tenure in less than five years in duration.",
-                  "The investor/applicant must have relevant exploration expertise and track record in greenfield exploration.",
-                  "The applicant/investor must contribute to the development of local Saudi talent during the program period.",
-                  "The applicant/investor will make a commitment to using local providers for services and contracts."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Ta'aden platform for more details:",
-                "link": [
-                  {
-                    "name": "Ta'aden Platform",
-                    "value": "https://taadeen.sa/en/exploration-enablement-program"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "5",
-            "name": "Standard Incentives for the Industrial Sector",
-            "nameIn": "",
-            "content": [
-              {
-                "name": "Ministry of Industry and Mineral Resources, Saudi Industrial Development Fund, and Ministry of Investment",
-                "text": "The incentives aim to enhance economic growth, diversify income sources, enhance sustainable competitiveness, and attract investments to the industrial sector across a wide range of sectors and products that are not currently manufactured in the Kingdom.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Key Features of Standard Incentives for the Industrial Sector:",
-                "text": "",
-                "list": [
-                  "The Standard Incentives for the Industrial Sector provides enablers to innovative projects that will help grow Saudi’s industrial capacities.",
-                  "The SIP aligns with Saudi Arabia’s broader economic vision, including Vision 2030 and national strategies like the National Investment Strategy and the National Industrial Strategy, ensuring cohesion and maximizing impact.",
-                  "The SIP focuses on fostering investment by focusing on key sectors and products that are currently not produced locally in the Kingdom, encouraging diversification and self-sufficiency.",
-                  "By encouraging new foreign investors who are not yet established in the Kingdom to apply, the SIP supports Saudi Arabia’s goals of attracting Foreign Direct Investment (FDI) and driving industrial growth.",
-                  "The SIP offers sustained financial and operational performance enablement for up to seven years, throughout both the construction and operational phases, enabling manufacturing projects.",
-                  "The SIP will enable up to 35% of the eligible initial investment for a maximum of 50 million SAR."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Key Sectors Including:",
-                "text": "",
-                "list": [
-                  "Building materials.",
-                  "Automotive.",
-                  "Downstream chemicals.",
-                  "Machinery and equipment.",
-                  "Aerospace.",
-                  "Pharmaceuticals.",
-                  "Metals.",
-                  "Medical Devices.",
-                  "Maritime.",
-                  "Food Processing."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Eligibility Criteria:",
-                "text": "",
-                "list": [
-                  "An eligible product to be manufactured within the planned project (i.e., new facility or expansion of existing).",
-                  "Minimum equity participation of 25% in the initial investment.",
-                  "Acceptable financial position (i.e., based on an assessment of company leverage, liquidity, profitability, asset quality and credit check)."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "For more details, you can visit the Industrial Platform website:",
-                "link": [
-                  {
-                    "name": "Industrial Platform",
-                    "value": "https://industry.sa/en/programs/sip"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "6",
-            "name": "Investment and Acquisition Facilitation Program",
-            "nameIn": "",
-            "content": [
-              {
-                "name": "Investment and Acquisition Facilitation Program",
-                "text": "It aims to provide diverse investment opportunities for investors aligned with their objectives, and to support industrial companies in expanding production or addressing business development challenges. The program, submitted by the Ministry of Industry, includes reviewing requests from investors and business owners, assessing compatibility, and facilitating communication and connections between them.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "The program targets",
-                "text": "",
-                "list": [
-                  "Fund Seeking investment / acquisition opportunities",
-                  "Company looking for an investor or partner",
-                  "Investor seeking acquisition opportunities"
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
+                    "value": "https://www.sidf.gov.sa/en/ServicesforInvestors/Programs/Pages/Tawteen.aspx"
                   }
                 ]
               }

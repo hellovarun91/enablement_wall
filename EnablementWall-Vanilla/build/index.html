@@ -828,7 +828,23 @@
       // Ensure loop attribute is set
       loopVideo.loop = true;
       loopVideo.muted = true;
+      loopVideo.playsInline = true;
       loopVideo.src = '.' + videoUrl;
+
+      // IMPORTANT: Explicitly call load() to start loading the video
+      loopVideo.load();
+
+      // Timeout fallback - if video doesn't load in 5 seconds, try to play anyway
+      var loadTimeout = setTimeout(function() {
+        if (currentPage !== 'loop') return;
+        loader.style.display = 'none';
+        loopVideo.play().catch(function(e) {
+          // If play fails, show poster
+          loopVideo.style.display = 'none';
+          poster.style.display = 'block';
+          poster.style.backgroundImage = 'url(.' + posterUrl + ')';
+        });
+      }, 5000);
 
       // SEAMLESS LOOP FIX: Loop video slightly before it ends to avoid freeze
       // This prevents the visible gap when using onended event
@@ -859,6 +875,7 @@
       // Wait for canplaythrough for smoother playback (fully buffered)
       loopVideo.oncanplaythrough = function() {
         if (currentPage !== 'loop') return;
+        clearTimeout(loadTimeout); // Clear fallback timeout
         loader.style.display = 'none';
         loopVideo.play();
       };
@@ -866,6 +883,7 @@
       // Fallback to loadeddata if canplaythrough doesn't fire
       loopVideo.onloadeddata = function() {
         if (currentPage !== 'loop') return;
+        clearTimeout(loadTimeout); // Clear fallback timeout
         // Give a small delay for buffering, then hide loader
         setTimeout(function() {
           if (currentPage !== 'loop') return;
@@ -876,6 +894,7 @@
 
       loopVideo.onerror = function() {
         if (currentPage !== 'loop') return;
+        clearTimeout(loadTimeout); // Clear fallback timeout
         // Fallback to poster image if video fails
         loopVideo.style.display = 'none';
         poster.style.display = 'block';
