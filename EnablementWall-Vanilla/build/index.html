@@ -651,10 +651,10 @@
       if (idleTimer) {
         clearTimeout(idleTimer);
       }
-      // Only set new timer if not already on loop page
-      if (currentPage !== 'loop') {
+      // Only set new timer if not on home or loop page
+      if (currentPage !== 'home' && currentPage !== 'loop') {
         idleTimer = setTimeout(function() {
-          // Return to loop page
+          // Return to loop page (keeps selected screen)
           navigate('loop');
         }, IDLE_TIMEOUT);
       }
