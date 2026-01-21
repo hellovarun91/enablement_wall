@@ -370,3 +370,158 @@ All remaining links in data.json work properly in iframe modal.
 - Server runs on port 3001 (vanilla version)
 - Node.js v14+ required
 - All assets are local, no external CDN dependencies
+
+---
+
+## DEVELOPMENT RULES - DO's and DON'Ts
+
+### ❌ DON'Ts (Never Do These)
+
+1. **Never use setTimeout to delay video loading**
+   - Video event handlers must be set AFTER video src is assigned
+   - Race conditions between setTimeout and event handlers cause crashes
+   ```javascript
+   // BAD - event handlers set before src
+   setTimeout(function() { video.src = url; }, 50);
+   video.oncanplaythrough = function() { ... }; // CRASH!
+
+   // GOOD - everything in sequence
+   video.src = url;
+   video.load();
+   video.oncanplaythrough = function() { ... };
+   ```
+
+2. **Never wrap content page initialization in setTimeout**
+   - Causes delays and potential race conditions
+   - DOM manipulation is fast enough without delays
+
+3. **Never set video.src = '' and then set event handlers**
+   - Always reset video state, then set src, then set handlers
+
+4. **Never use async/await or arrow functions**
+   - BrightSign Chromium is ES5 only
+   - Use `function() {}` not `() => {}`
+
+5. **Never use external CDN links**
+   - All assets must be local
+   - BrightSign may not have internet access
+
+6. **Never use CSS Grid**
+   - Use Flexbox instead for BrightSign compatibility
+
+7. **Never make changes without testing locally first**
+   - Run `node server.js` and test in browser before committing
+
+### ✅ DO's (Always Do These)
+
+1. **Always reset video before loading new source**
+   ```javascript
+   video.pause();
+   video.currentTime = 0;
+   video.src = newUrl;
+   video.load();
+   ```
+
+2. **Always use `isVideoReady` flag to prevent double-play**
+   ```javascript
+   var isVideoReady = false;
+   video.oncanplaythrough = function() {
+     if (isVideoReady) return;
+     isVideoReady = true;
+     video.play();
+   };
+   ```
+
+3. **Always check `currentPage` in event handlers**
+   ```javascript
+   video.onended = function() {
+     if (currentPage !== 'video') return;
+     // ... handle event
+   };
+   ```
+
+4. **Always use `hwz="z-index:-1"` on video elements**
+   - Required for BrightSign to render HTML over video
+
+5. **Always include `muted` and `playsinline` on videos**
+   - Required for autoplay on BrightSign/Chromium
+
+6. **Always use inline styles for BrightSign compatibility**
+   - CSS classes may not render correctly
+
+7. **Always test all 5 screens before shipping**
+
+---
+
+## PRE-SHIP CHECKLIST
+
+Before sharing any build with the client, verify ALL of the following:
+
+### 1. Local Testing (Required)
+- [ ] Run `node server.js` in EnablementWall-Vanilla folder
+- [ ] Open http://127.0.0.1:3001 in browser
+- [ ] Test Screen 1 (Financial Enablement) - full flow
+- [ ] Test Screen 2 (Industrial Cities) - full flow
+- [ ] Test Screen 3 (Human Capital) - full flow
+- [ ] Test Screen 4 (Local Content) - full flow
+- [ ] Test Screen 5 (Special Enablers) - full flow
+
+### 2. Video Testing
+- [ ] Loop videos play and loop seamlessly
+- [ ] Main videos play after "Watch Video" click
+- [ ] Skip button is visible and works
+- [ ] No video jitter or double-loading
+- [ ] Videos don't crash the app
+
+### 3. Navigation Testing
+- [ ] All enabler buttons are clickable
+- [ ] All detail pages load correctly
+- [ ] Back button works
+- [ ] Home button returns to loop page
+- [ ] Idle timeout returns to loop after 2 minutes
+
+### 4. Content Testing
+- [ ] No empty cards or ":" characters
+- [ ] All titles display correctly
+- [ ] External links open in modal (if any)
+- [ ] "Return to App" button works
+
+### 5. Code Review
+- [ ] No setTimeout wrapping video loading
+- [ ] No async/await or arrow functions
+- [ ] All event handlers check currentPage
+- [ ] Video elements have hwz attribute
+- [ ] No console errors in browser
+
+### 6. Git Hygiene
+- [ ] All changes committed
+- [ ] Commit message describes the fix
+- [ ] Pushed to GitHub
+
+---
+
+## LESSONS LEARNED
+
+### Issue 10: setTimeout Race Condition (Jan 21, 2026)
+
+**Problem:** App crashed on BrightSign after "jitter fix" update.
+
+**Root Cause:** Used setTimeout to delay video loading, but event handlers were set OUTSIDE the setTimeout, causing them to be attached to a video with no source.
+
+**Bad Code:**
+```javascript
+setTimeout(function() {
+  video.src = url;  // src set 50ms later
+  video.load();
+}, 50);
+video.oncanplaythrough = function() { ... }; // Set immediately on empty video!
+```
+
+**Fix:** Remove setTimeout, load video directly:
+```javascript
+video.src = url;
+video.load();
+video.oncanplaythrough = function() { ... };
+```
+
+**Lesson:** Never separate video src assignment from event handler setup with setTimeout. Video loading is event-driven - let the browser handle timing.
