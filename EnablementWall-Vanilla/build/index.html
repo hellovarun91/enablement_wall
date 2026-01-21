@@ -821,6 +821,7 @@
       // Show loader while video loads
       loader.style.display = 'block';
       poster.style.display = 'none';
+      loopVideo.style.display = 'block';
 
       // Use loop video with hwz="z-index:-1" attribute (renders behind HTML)
       var videoUrl = data.loopVideoUrl;
@@ -829,25 +830,17 @@
       // Reset video element first to prevent jitter from previous state
       loopVideo.pause();
       loopVideo.currentTime = 0;
-      loopVideo.src = '';
 
-      // Small delay to let page transition settle, then load video
-      setTimeout(function() {
-        if (currentPage !== 'loop') return;
-
-        // Ensure loop attribute is set
-        loopVideo.loop = true;
-        loopVideo.muted = true;
-        loopVideo.playsInline = true;
-        loopVideo.src = '.' + videoUrl;
-
-        // IMPORTANT: Explicitly call load() to start loading the video
-        loopVideo.load();
-      }, 50);
+      // Set video attributes and source
+      loopVideo.loop = true;
+      loopVideo.muted = true;
+      loopVideo.playsInline = true;
+      loopVideo.src = '.' + videoUrl;
+      loopVideo.load();
 
       // Timeout fallback - if video doesn't load in 5 seconds, try to play anyway
       var loadTimeout = setTimeout(function() {
-        if (currentPage !== 'loop') return;
+        if (currentPage !== 'loop' || isVideoReady) return;
         loader.style.display = 'none';
         loopVideo.play().catch(function(e) {
           // If play fails, show poster
@@ -858,62 +851,53 @@
       }, 5000);
 
       // SEAMLESS LOOP FIX: Loop video slightly before it ends to avoid freeze
-      // This prevents the visible gap when using onended event
-      var loopThreshold = 0.15; // seconds before end to trigger loop
+      var loopThreshold = 0.15;
       var isLooping = false;
 
       loopVideo.ontimeupdate = function() {
         if (currentPage !== 'loop') return;
-        // Check if we're near the end of the video
         if (loopVideo.duration && loopVideo.currentTime > 0) {
           var timeRemaining = loopVideo.duration - loopVideo.currentTime;
           if (timeRemaining <= loopThreshold && !isLooping) {
             isLooping = true;
             loopVideo.currentTime = 0;
-            // Reset flag after a short delay
             setTimeout(function() { isLooping = false; }, 100);
           }
         }
       };
 
-      // Fallback: if ontimeupdate doesn't catch it, use onended
       loopVideo.onended = function() {
         if (currentPage !== 'loop') return;
         loopVideo.currentTime = 0;
         loopVideo.play();
       };
 
-      // Wait for canplaythrough for smoother playback (fully buffered)
       loopVideo.oncanplaythrough = function() {
         if (currentPage !== 'loop' || isVideoReady) return;
         isVideoReady = true;
-        clearTimeout(loadTimeout); // Clear fallback timeout
+        clearTimeout(loadTimeout);
         loader.style.display = 'none';
         loopVideo.play();
       };
 
-      // Fallback to loadeddata if canplaythrough doesn't fire
       loopVideo.onloadeddata = function() {
         if (currentPage !== 'loop' || isVideoReady) return;
         isVideoReady = true;
-        clearTimeout(loadTimeout); // Clear fallback timeout
+        clearTimeout(loadTimeout);
         loader.style.display = 'none';
         loopVideo.play();
       };
 
       loopVideo.onerror = function() {
         if (currentPage !== 'loop') return;
-        clearTimeout(loadTimeout); // Clear fallback timeout
-        // Fallback to poster image if video fails
+        clearTimeout(loadTimeout);
         loopVideo.style.display = 'none';
         poster.style.display = 'block';
         poster.style.backgroundImage = 'url(.' + posterUrl + ')';
         loader.style.display = 'none';
       };
 
-      // Watch button click - go directly to video page
       watchBtnEl.onclick = function() {
-        // CRITICAL: Only trigger once and only if on loop page
         if (watchClicked || currentPage !== 'loop') return;
         watchClicked = true;
         navigate('video');
@@ -936,24 +920,18 @@
       var isVideoReady = false;
 
       loader.style.display = 'block';
-      closeBtnEl.style.display = 'block'; // Show skip button immediately
+      closeBtnEl.style.display = 'block';
+      video.style.display = 'block';
 
       // Reset video element first to prevent jitter
       video.pause();
       video.currentTime = 0;
-      video.src = '';
 
-      // Small delay to let page transition settle, then load video
-      setTimeout(function() {
-        if (currentPage !== 'video') return;
-
-        video.src = '.' + data.mainVideoUrl;
-        video.style.display = 'block';
-        video.load(); // Explicitly start loading
-      }, 50);
+      // Set video source and load
+      video.src = '.' + data.mainVideoUrl;
+      video.load();
 
       var goToNext = function() {
-        // CRITICAL: Only navigate once, and only if we're still on video page
         if (hasNavigated || currentPage !== 'video') return;
         hasNavigated = true;
 
@@ -965,7 +943,6 @@
       };
 
       video.oncanplaythrough = function() {
-        // Only proceed if still on video page and not already playing
         if (currentPage !== 'video' || isVideoReady) return;
         isVideoReady = true;
         loader.style.display = 'none';
@@ -973,7 +950,6 @@
       };
 
       video.onloadeddata = function() {
-        // Fallback: Only proceed if still on video page
         if (currentPage !== 'video' || isVideoReady) return;
         isVideoReady = true;
         loader.style.display = 'none';
@@ -984,7 +960,6 @@
         if (currentPage !== 'video') return;
         loader.style.display = 'none';
         console.error('Main video failed to load');
-        // Auto skip after 2 seconds if video fails
         setTimeout(goToNext, 2000);
       };
 
@@ -997,63 +972,53 @@
       var id = params.id;
       var card = params.card;
 
-      // Clear content immediately to prevent flash of old content
-      document.getElementById('enablersTitle').textContent = '';
-      document.getElementById('enablersList').innerHTML = '';
+      var category = null;
+      for (var i = 0; i < enablersData.length; i++) {
+        if (enablersData[i].id === id) { category = enablersData[i]; break; }
+      }
+      if (!category) return;
 
-      // Small delay to let page transition settle, then populate content
-      setTimeout(function() {
-        if (currentPage !== 'enablers') return;
+      var enabler = null;
+      for (var j = 0; j < category.enablers.length; j++) {
+        if (category.enablers[j].id == card) { enabler = category.enablers[j]; break; }
+      }
+      if (!enabler) return;
 
-        var category = null;
-        for (var i = 0; i < enablersData.length; i++) {
-          if (enablersData[i].id === id) { category = enablersData[i]; break; }
-        }
-        if (!category) return;
+      document.getElementById('enablersTitle').textContent = enabler.enablerName;
 
-        var enabler = null;
-        for (var j = 0; j < category.enablers.length; j++) {
-          if (category.enablers[j].id == card) { enabler = category.enablers[j]; break; }
-        }
-        if (!enabler) return;
+      // Set background image
+      var screenData = JSON.parse(localStorage.getItem('data'));
+      var bgImageUrl;
+      if (screenData && screenData.posterImage && screenData.index !== 5) {
+        bgImageUrl = screenData.posterImage;
+      } else if (enabler.bgImage) {
+        bgImageUrl = enabler.bgImage;
+      } else {
+        bgImageUrl = '/posters/poster-01.jpg';
+      }
+      document.getElementById('enablersBg').style.backgroundImage = 'url(.' + bgImageUrl + ')';
 
-        document.getElementById('enablersTitle').textContent = enabler.enablerName;
+      var list = document.getElementById('enablersList');
+      list.innerHTML = '';
+      for (var k = 0; k < enabler.enablerItem.length; k++) {
+        var item = enabler.enablerItem[k];
+        var btn = document.createElement('button');
+        btn.className = 'enabler-btn';
+        btn.textContent = item.name;
+        btn.dataset.id = item.id;
+        btn.onclick = function() {
+          navigate('details?id=' + id + '&card=' + card + '&ei_id=' + this.dataset.id);
+        };
+        list.appendChild(btn);
+      }
 
-        // Set background image - use poster image from selected screen (screens 1-4)
-        // Screen 5 (Special Enablers) uses its own bgImage from data.json
-        var screenData = JSON.parse(localStorage.getItem('data'));
-        var bgImageUrl;
-        if (screenData && screenData.posterImage && screenData.index !== 5) {
-          bgImageUrl = screenData.posterImage;
-        } else if (enabler.bgImage) {
-          bgImageUrl = enabler.bgImage;
-        } else {
-          bgImageUrl = '/posters/poster-01.jpg';
-        }
-        document.getElementById('enablersBg').style.backgroundImage = 'url(.' + bgImageUrl + ')';
+      // Reset scroll position
+      list.scrollTop = 0;
 
-        var list = document.getElementById('enablersList');
-        list.innerHTML = '';
-        for (var k = 0; k < enabler.enablerItem.length; k++) {
-          var item = enabler.enablerItem[k];
-          var btn = document.createElement('button');
-          btn.className = 'enabler-btn';
-          btn.textContent = item.name;
-          btn.dataset.id = item.id;
-          btn.onclick = function() {
-            navigate('details?id=' + id + '&card=' + card + '&ei_id=' + this.dataset.id);
-          };
-          list.appendChild(btn);
-        }
-
-        // Reset scroll position to top after content is populated
-        list.scrollTop = 0;
-
-        // Show back button only for special enablers (id=2)
-        document.getElementById('backBtn').style.display = id === '2' ? 'flex' : 'none';
-        document.getElementById('backBtn').onclick = function() { window.history.back(); };
-        document.getElementById('homeBtn').onclick = function() { navigate('loop'); };
-      }, 50);
+      // Show back button only for special enablers (id=2)
+      document.getElementById('backBtn').style.display = id === '2' ? 'flex' : 'none';
+      document.getElementById('backBtn').onclick = function() { window.history.back(); };
+      document.getElementById('homeBtn').onclick = function() { navigate('loop'); };
     }
 
     // ===== DETAILS PAGE =====
@@ -1062,183 +1027,165 @@
       var card = params.card;
       var ei_id = params.ei_id;
 
-      // Clear content immediately to prevent flash of old content
-      document.getElementById('detailsTitle').textContent = '';
-      document.getElementById('detailsSubtitle').textContent = '';
-      document.getElementById('detailsCards').innerHTML = '';
+      var category = null;
+      for (var i = 0; i < enablersData.length; i++) {
+        if (enablersData[i].id === id) { category = enablersData[i]; break; }
+      }
+      if (!category) return;
 
-      // Small delay to let page transition settle, then populate content
-      setTimeout(function() {
-        if (currentPage !== 'details') return;
+      var enabler = null;
+      for (var j = 0; j < category.enablers.length; j++) {
+        if (category.enablers[j].id == card) { enabler = category.enablers[j]; break; }
+      }
+      if (!enabler || !enabler.enablerItem) return;
 
-        var category = null;
-        for (var i = 0; i < enablersData.length; i++) {
-          if (enablersData[i].id === id) { category = enablersData[i]; break; }
-        }
-        if (!category) return;
+      var detail = null;
+      for (var k = 0; k < enabler.enablerItem.length; k++) {
+        if (enabler.enablerItem[k].id == ei_id) { detail = enabler.enablerItem[k]; break; }
+      }
+      if (!detail) return;
 
-        var enabler = null;
-        for (var j = 0; j < category.enablers.length; j++) {
-          if (category.enablers[j].id == card) { enabler = category.enablers[j]; break; }
-        }
-        if (!enabler || !enabler.enablerItem) return;
+      document.getElementById('detailsTitle').textContent = detail.name;
+      document.getElementById('detailsSubtitle').textContent = detail.nameIn || '';
 
-        var detail = null;
-        for (var k = 0; k < enabler.enablerItem.length; k++) {
-          if (enabler.enablerItem[k].id == ei_id) { detail = enabler.enablerItem[k]; break; }
-        }
-        if (!detail) return;
+      // Set background image
+      var screenData = JSON.parse(localStorage.getItem('data'));
+      var bgImageUrl;
+      if (screenData && screenData.posterImage && screenData.index !== 5) {
+        bgImageUrl = screenData.posterImage;
+      } else if (enabler.bgImage) {
+        bgImageUrl = enabler.bgImage;
+      } else {
+        bgImageUrl = '/posters/poster-01.jpg';
+      }
+      document.querySelector('.details-bg').style.backgroundImage = 'url(.' + bgImageUrl + ')';
 
-        document.getElementById('detailsTitle').textContent = detail.name;
-        document.getElementById('detailsSubtitle').textContent = detail.nameIn || '';
+      var cardsEl = document.getElementById('detailsCards');
+      cardsEl.innerHTML = '';
 
-        // Set background image - use poster image from selected screen (screens 1-4)
-        var screenData = JSON.parse(localStorage.getItem('data'));
-        var bgImageUrl;
-        if (screenData && screenData.posterImage && screenData.index !== 5) {
-          bgImageUrl = screenData.posterImage;
-        } else if (enabler.bgImage) {
-          bgImageUrl = enabler.bgImage;
+      for (var m = 0; m < detail.content.length; m++) {
+        var item = detail.content[m];
+        var cardDiv = document.createElement('div');
+        cardDiv.className = 'detail-card';
+
+        if (item.textDone && item.textDone.trim() !== '') {
+          var textP = document.createElement('p');
+          textP.className = 'detail-card-text';
+          textP.textContent = item.textDone;
+          cardDiv.appendChild(textP);
+
+          if (item.link && item.link[0] && item.link[0].value) {
+            var linkBtn = document.createElement('button');
+            var linkUrl = item.link[0].value;
+            linkBtn.textContent = item.link[0].name || 'Visit';
+            linkBtn.style.display = 'inline-block';
+            linkBtn.style.marginTop = '16px';
+            linkBtn.style.padding = '10px 20px';
+            linkBtn.style.backgroundColor = '#40D9C7';
+            linkBtn.style.color = '#000000';
+            linkBtn.style.fontWeight = '700';
+            linkBtn.style.borderRadius = '8px';
+            linkBtn.style.border = 'none';
+            linkBtn.style.cursor = 'pointer';
+            linkBtn.style.fontSize = '14px';
+            linkBtn.onclick = function() {
+              openLinkModal(linkUrl);
+            };
+            cardDiv.appendChild(linkBtn);
+          }
         } else {
-          bgImageUrl = '/posters/poster-01.jpg';
-        }
-        document.querySelector('.details-bg').style.backgroundImage = 'url(.' + bgImageUrl + ')';
+          var header = document.createElement('div');
+          header.className = 'detail-card-header';
 
-        var cardsEl = document.getElementById('detailsCards');
-        cardsEl.innerHTML = '';
-
-        for (var m = 0; m < detail.content.length; m++) {
-          var item = detail.content[m];
-          var cardDiv = document.createElement('div');
-          cardDiv.className = 'detail-card';
-
-          if (item.textDone && item.textDone.trim() !== '') {
-            var textP = document.createElement('p');
-            textP.className = 'detail-card-text';
-            textP.textContent = item.textDone;
-            cardDiv.appendChild(textP);
-
-            if (item.link && item.link[0] && item.link[0].value) {
-              var linkBtn = document.createElement('button');
-              var linkUrl = item.link[0].value;
-              linkBtn.textContent = item.link[0].name || 'Visit';
-              // Inline styles for BrightSign compatibility
-              linkBtn.style.display = 'inline-block';
-              linkBtn.style.marginTop = '16px';
-              linkBtn.style.padding = '10px 20px';
-              linkBtn.style.backgroundColor = '#40D9C7';
-              linkBtn.style.color = '#000000';
-              linkBtn.style.fontWeight = '700';
-              linkBtn.style.borderRadius = '8px';
-              linkBtn.style.border = 'none';
-              linkBtn.style.cursor = 'pointer';
-              linkBtn.style.fontSize = '14px';
-              // Open in modal iframe so user can come back
-              linkBtn.onclick = function() {
-                openLinkModal(linkUrl);
-              };
-              cardDiv.appendChild(linkBtn);
-            }
-          } else {
-            var header = document.createElement('div');
-            header.className = 'detail-card-header';
-
-            if (item.icon) {
-              var icon = document.createElement('img');
-              icon.className = 'detail-card-icon';
-              icon.src = '.' + item.icon;
-              icon.onerror = function() { this.style.display = 'none'; };
-              header.appendChild(icon);
-            }
-
-            var title = document.createElement('h3');
-            title.className = 'detail-card-title';
-            title.textContent = item.name || '';
-            header.appendChild(title);
-
-            cardDiv.appendChild(header);
-
-            if (item.text) {
-              var textP2 = document.createElement('p');
-              textP2.className = 'detail-card-text';
-              textP2.textContent = item.text;
-              cardDiv.appendChild(textP2);
-            }
-
-            if (item.list && item.list.length > 0) {
-              var ul = document.createElement('ul');
-              ul.className = 'detail-card-list';
-              for (var n = 0; n < item.list.length; n++) {
-                var li = document.createElement('li');
-                li.textContent = item.list[n];
-                ul.appendChild(li);
-              }
-              cardDiv.appendChild(ul);
-            }
+          if (item.icon) {
+            var icon = document.createElement('img');
+            icon.className = 'detail-card-icon';
+            icon.src = '.' + item.icon;
+            icon.onerror = function() { this.style.display = 'none'; };
+            header.appendChild(icon);
           }
 
-          cardsEl.appendChild(cardDiv);
+          var title = document.createElement('h3');
+          title.className = 'detail-card-title';
+          title.textContent = item.name || '';
+          header.appendChild(title);
+
+          cardDiv.appendChild(header);
+
+          if (item.text) {
+            var textP2 = document.createElement('p');
+            textP2.className = 'detail-card-text';
+            textP2.textContent = item.text;
+            cardDiv.appendChild(textP2);
+          }
+
+          if (item.list && item.list.length > 0) {
+            var ul = document.createElement('ul');
+            ul.className = 'detail-card-list';
+            for (var n = 0; n < item.list.length; n++) {
+              var li = document.createElement('li');
+              li.textContent = item.list[n];
+              ul.appendChild(li);
+            }
+            cardDiv.appendChild(ul);
+          }
         }
 
-        // Reset scroll position to top after content is populated
-        cardsEl.scrollTop = 0;
+        cardsEl.appendChild(cardDiv);
+      }
 
-        document.getElementById('detailsBackBtn').onclick = function() { window.history.back(); };
-        document.getElementById('detailsHomeBtn').onclick = function() { navigate('loop'); };
-      }, 50);
+      // Reset scroll position
+      cardsEl.scrollTop = 0;
+
+      document.getElementById('detailsBackBtn').onclick = function() { window.history.back(); };
+      document.getElementById('detailsHomeBtn').onclick = function() { navigate('loop'); };
     }
 
     // ===== SPECIAL PAGE =====
     function initSpecialPage() {
-      // Clear content immediately to prevent flash of old content
+      var specialData = enablersData[1]; // Index 1 is Special Enablers
+      if (!specialData || !specialData.enablers) return;
+
       var container = document.getElementById('page-special');
       container.innerHTML = '';
 
-      // Small delay to let page transition settle, then populate content
-      setTimeout(function() {
-        if (currentPage !== 'special') return;
+      for (var i = 0; i < specialData.enablers.length; i++) {
+        var item = specialData.enablers[i];
 
-        var specialData = enablersData[1]; // Index 1 is Special Enablers
-        if (!specialData || !specialData.enablers) return;
+        var div = document.createElement('div');
+        div.className = 'special-item';
+        div.dataset.id = item.id;
 
-        for (var i = 0; i < specialData.enablers.length; i++) {
-          var item = specialData.enablers[i];
+        var bg = document.createElement('div');
+        bg.className = 'special-item-bg';
+        bg.style.backgroundImage = 'url(.' + item.bgImage + ')';
+        div.appendChild(bg);
 
-          var div = document.createElement('div');
-          div.className = 'special-item';
-          div.dataset.id = item.id;
+        var overlay = document.createElement('div');
+        overlay.className = 'special-item-overlay';
+        div.appendChild(overlay);
 
-          var bg = document.createElement('div');
-          bg.className = 'special-item-bg';
-          bg.style.backgroundImage = 'url(.' + item.bgImage + ')';
-          div.appendChild(bg);
+        var content = document.createElement('div');
+        content.className = 'special-item-content';
 
-          var overlay = document.createElement('div');
-          overlay.className = 'special-item-overlay';
-          div.appendChild(overlay);
+        var title = document.createElement('span');
+        title.className = 'special-item-title';
+        title.textContent = item.enablerName;
+        content.appendChild(title);
 
-          var content = document.createElement('div');
-          content.className = 'special-item-content';
+        var btn = document.createElement('div');
+        btn.className = 'special-item-btn';
+        btn.innerHTML = '<span>→</span>';
+        content.appendChild(btn);
 
-          var title = document.createElement('span');
-          title.className = 'special-item-title';
-          title.textContent = item.enablerName;
-          content.appendChild(title);
+        div.appendChild(content);
 
-          var btn = document.createElement('div');
-          btn.className = 'special-item-btn';
-          btn.innerHTML = '<span>→</span>';
-          content.appendChild(btn);
+        div.onclick = function() {
+          navigate('enablers?id=2&card=' + this.dataset.id);
+        };
 
-          div.appendChild(content);
-
-          div.onclick = function() {
-            navigate('enablers?id=2&card=' + this.dataset.id);
-          };
-
-          container.appendChild(div);
-        }
-      }, 50);
+        container.appendChild(div);
+      }
     }
 
     // ===== ROUTER =====
