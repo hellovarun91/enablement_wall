@@ -672,7 +672,8 @@
 
     // ===== HELPERS =====
     function cleanupPage(oldPage) {
-      // Stop all videos when leaving video pages
+      // Stop all videos and RELEASE MEMORY when leaving video pages
+      // CRITICAL: Must call load() after clearing src to release video buffer
       if (oldPage === 'loop') {
         var loopVideo = document.getElementById('loopVideo');
         if (loopVideo) {
@@ -683,12 +684,14 @@
           loopVideo.oncanplaythrough = null;
           loopVideo.onloadeddata = null;
           loopVideo.onerror = null;
+          // IMPORTANT: Clear src AND call load() to release memory buffer
           loopVideo.src = '';
-          loopVideo.style.display = 'block'; // Reset for next time
+          loopVideo.removeAttribute('src');
+          loopVideo.load(); // This releases the video buffer from memory
+          loopVideo.style.display = 'block';
         }
         var poster = document.getElementById('loopPoster');
         if (poster) poster.style.display = 'none';
-        // Remove click handlers to prevent ghost clicks
         var watchEl = document.getElementById('watchBtn');
         if (watchEl) watchEl.onclick = null;
       }
@@ -696,10 +699,16 @@
         var mainVideo = document.getElementById('mainVideo');
         if (mainVideo) {
           mainVideo.pause();
-          mainVideo.onended = null; // IMPORTANT: Remove onended to prevent auto-trigger
+          // Remove all event handlers
+          mainVideo.onended = null;
+          mainVideo.oncanplaythrough = null;
+          mainVideo.onloadeddata = null;
+          mainVideo.onerror = null;
+          // IMPORTANT: Clear src AND call load() to release memory buffer
           mainVideo.src = '';
+          mainVideo.removeAttribute('src');
+          mainVideo.load(); // This releases the video buffer from memory
         }
-        // Remove click handler
         var closeEl = document.getElementById('closeBtn');
         if (closeEl) closeEl.onclick = null;
       }
