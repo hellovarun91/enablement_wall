@@ -547,10 +547,10 @@
 
   <!-- Page: Main Video -->
   <div id="page-video" class="page">
-    <!-- Video plays full screen -->
-    <video id="mainVideo" muted playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;"></video>
-    <!-- Skip button - overlay on video, bottom right corner -->
-    <button id="closeBtn" style="position:absolute; bottom:2%; right:3%; padding:20px 50px; border:1px solid rgba(64,217,199,0.5); border-radius:50px; background-color:rgba(0,0,0,0.4); cursor:pointer; color:#40D9C7; font-size:24px; font-weight:bold; z-index:100;">Skip →</button>
+    <!-- Video plays full screen - hwz="z-index:-1" for BrightSign to render below HTML -->
+    <video id="mainVideo" hwz="z-index:-1" muted playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;"></video>
+    <!-- Skip button - overlay on video, bottom right corner - made more visible -->
+    <button id="closeBtn" style="position:absolute; bottom:5%; right:5%; padding:20px 50px; border:2px solid #40D9C7; border-radius:50px; background-color:rgba(0,0,0,0.7); cursor:pointer; color:#40D9C7; font-size:24px; font-weight:bold; z-index:100;">Skip →</button>
     <!-- Loader -->
     <div id="videoLoader" style="position:absolute; top:48%; left:50%; z-index:50;"><div class="loader-spinner"></div></div>
   </div>
