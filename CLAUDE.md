@@ -525,3 +525,25 @@ video.oncanplaythrough = function() { ... };
 ```
 
 **Lesson:** Never separate video src assignment from event handler setup with setTimeout. Video loading is event-driven - let the browser handle timing.
+
+---
+
+### Issue 11: Memory Leak - Videos Stop Loading (Jan 21, 2026)
+
+**Problem:** After prolonged use (hours), all screens show loading spinner but videos never play. Requires device restart.
+
+**Root Cause:** Video buffers were not being released from memory when navigating between pages. Setting `video.src = ''` alone does NOT release the buffer.
+
+**Bad Code:**
+```javascript
+video.src = '';  // Buffer still in memory!
+```
+
+**Fix:** Must call `load()` after clearing src:
+```javascript
+video.src = '';
+video.removeAttribute('src');
+video.load();  // THIS releases the buffer from memory
+```
+
+**Lesson:** On BrightSign/Chromium, always call `load()` after clearing video src to release memory. Also remove ALL event handlers to prevent accumulation.
