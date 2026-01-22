@@ -533,8 +533,8 @@
 
   <!-- Page: Loop - Video with hwz="z-index:-1" to render BEHIND HTML elements (BrightSign feature) -->
   <div id="page-loop" class="page">
-    <!-- Loop video with hwz attribute to put it behind graphics layer -->
-    <video id="loopVideo" hwz="z-index:-1" muted playsinline loop preload="auto" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:1;"></video>
+    <!-- Loop video: autoplay + loop + muted = native HTML handles everything -->
+    <video id="loopVideo" hwz="z-index:-1" autoplay loop muted playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:1; background:#000;"></video>
     <!-- Fallback poster image if video fails -->
     <div id="loopPoster" style="position:absolute; top:0; left:0; width:100%; height:100%; background-size:cover; background-position:center; background-color:#000; z-index:2; display:none;"></div>
     <!-- Loader -->
@@ -547,8 +547,8 @@
 
   <!-- Page: Main Video -->
   <div id="page-video" class="page">
-    <!-- Video plays full screen - hwz="z-index:-1" for BrightSign to render below HTML -->
-    <video id="mainVideo" hwz="z-index:-1" muted playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;"></video>
+    <!-- Main video: autoplay + muted = starts automatically when src is set -->
+    <video id="mainVideo" hwz="z-index:-1" autoplay muted playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; background:#000;"></video>
     <!-- Skip button - overlay on video, bottom right corner - made more visible -->
     <button id="closeBtn" style="position:absolute; bottom:5%; right:5%; padding:20px 50px; border:2px solid #40D9C7; border-radius:50px; background-color:rgba(0,0,0,0.7); cursor:pointer; color:#40D9C7; font-size:24px; font-weight:bold; z-index:100;">Skip →</button>
     <!-- Loader -->
@@ -679,45 +679,22 @@
 
     // ===== HELPERS =====
     function cleanupPage(oldPage) {
-      // Stop all videos and RELEASE MEMORY when leaving video pages
-      // CRITICAL: Must call load() after clearing src to release video buffer
+      // Simple cleanup: pause video and clear source to release memory
       if (oldPage === 'loop') {
         var loopVideo = document.getElementById('loopVideo');
         if (loopVideo) {
           loopVideo.pause();
-          // Remove all event handlers to prevent ghost triggers
-          loopVideo.ontimeupdate = null;
-          loopVideo.onended = null;
-          loopVideo.oncanplaythrough = null;
-          loopVideo.onloadeddata = null;
-          loopVideo.onerror = null;
-          // IMPORTANT: Clear src AND call load() to release memory buffer
           loopVideo.src = '';
-          loopVideo.removeAttribute('src');
-          loopVideo.load(); // This releases the video buffer from memory
-          loopVideo.style.display = 'block';
+          loopVideo.load(); // Release memory
         }
-        var poster = document.getElementById('loopPoster');
-        if (poster) poster.style.display = 'none';
-        var watchEl = document.getElementById('watchBtn');
-        if (watchEl) watchEl.onclick = null;
       }
       if (oldPage === 'video') {
         var mainVideo = document.getElementById('mainVideo');
         if (mainVideo) {
           mainVideo.pause();
-          // Remove all event handlers
-          mainVideo.onended = null;
-          mainVideo.oncanplaythrough = null;
-          mainVideo.onloadeddata = null;
-          mainVideo.onerror = null;
-          // IMPORTANT: Clear src AND call load() to release memory buffer
           mainVideo.src = '';
-          mainVideo.removeAttribute('src');
-          mainVideo.load(); // This releases the video buffer from memory
+          mainVideo.load(); // Release memory
         }
-        var closeEl = document.getElementById('closeBtn');
-        if (closeEl) closeEl.onclick = null;
       }
     }
 
@@ -819,107 +796,41 @@
       };
     }
 
-    // ===== LOOP PAGE =====
+    // ===== LOOP PAGE (SIMPLIFIED) =====
+    // BrightSign best practice: Use native HTML5 video attributes, minimal JavaScript
     function initLoopPage() {
       var data = JSON.parse(localStorage.getItem('data'));
       if (!data) { navigate('home'); return; }
 
       var loopVideo = document.getElementById('loopVideo');
-      var poster = document.getElementById('loopPoster');
       var loader = document.getElementById('loopLoader');
       var watchBtnEl = document.getElementById('watchBtn');
       var resetBtn = document.getElementById('resetBtn');
 
-      // Flag to prevent multiple triggers
-      var watchClicked = false;
-      var isVideoReady = false;
-
-      // Show loader while video loads
+      // Show loader, hide when video plays
       loader.style.display = 'block';
-      poster.style.display = 'none';
-      loopVideo.style.display = 'block';
 
-      // Use loop video with hwz="z-index:-1" attribute (renders behind HTML)
-      var videoUrl = data.loopVideoUrl;
-      var posterUrl = data.posterImage || '/posters/poster-0' + data.index + '.jpg';
+      // Set video source - let HTML autoplay and loop attributes do the work
+      loopVideo.src = '.' + data.loopVideoUrl;
 
-      // Reset video element first to prevent jitter from previous state
-      loopVideo.pause();
-      loopVideo.currentTime = 0;
-
-      // Set video attributes and source
-      loopVideo.loop = true;
-      loopVideo.muted = true;
-      loopVideo.playsInline = true;
-      loopVideo.src = '.' + videoUrl;
-      loopVideo.load();
-
-      // WATCHDOG TIMER: If video doesn't play within 10 seconds, refresh page
-      // This is the nuclear option - guarantees fresh start if anything goes wrong
-      var watchdogTimer = setTimeout(function() {
-        if (currentPage !== 'loop') return;
-        if (!isVideoReady) {
-          console.log('WATCHDOG: Loop video failed to load, refreshing page...');
-          window.location.reload();
-        }
-      }, 10000);
-
-      // SEAMLESS LOOP FIX: Loop video slightly before it ends to avoid freeze
-      var loopThreshold = 0.15;
-      var isLooping = false;
-
-      loopVideo.ontimeupdate = function() {
-        if (currentPage !== 'loop') return;
-        if (loopVideo.duration && loopVideo.currentTime > 0) {
-          var timeRemaining = loopVideo.duration - loopVideo.currentTime;
-          if (timeRemaining <= loopThreshold && !isLooping) {
-            isLooping = true;
-            loopVideo.currentTime = 0;
-            setTimeout(function() { isLooping = false; }, 100);
-          }
-        }
-      };
-
-      loopVideo.onended = function() {
-        if (currentPage !== 'loop') return;
-        loopVideo.currentTime = 0;
-        loopVideo.play();
-      };
-
-      loopVideo.oncanplaythrough = function() {
-        if (currentPage !== 'loop' || isVideoReady) return;
-        isVideoReady = true;
-        clearTimeout(watchdogTimer); // Video loaded successfully, cancel watchdog
+      // Simple: Hide loader when video starts playing
+      loopVideo.onplaying = function() {
         loader.style.display = 'none';
-        loopVideo.play();
       };
 
-      loopVideo.onloadeddata = function() {
-        if (currentPage !== 'loop' || isVideoReady) return;
-        isVideoReady = true;
-        clearTimeout(watchdogTimer); // Video loaded successfully, cancel watchdog
-        loader.style.display = 'none';
-        loopVideo.play();
-      };
-
-      loopVideo.onerror = function() {
-        if (currentPage !== 'loop') return;
-        clearTimeout(watchdogTimer);
-        // Video error - refresh page to get fresh start
-        console.log('WATCHDOG: Loop video error, refreshing page...');
-        window.location.reload();
-      };
-
+      // Simple: Watch Video button
       watchBtnEl.onclick = function() {
-        if (watchClicked || currentPage !== 'loop') return;
-        watchClicked = true;
         navigate('video');
       };
 
-      resetBtn.onclick = function() { navigate('home'); };
+      // Simple: Reset button
+      resetBtn.onclick = function() {
+        navigate('home');
+      };
     }
 
-    // ===== VIDEO PAGE =====
+    // ===== VIDEO PAGE (SIMPLIFIED) =====
+    // BrightSign best practice: Minimal JavaScript, let HTML5 video do the work
     function initVideoPage() {
       var data = JSON.parse(localStorage.getItem('data'));
       if (!data) { navigate('home'); return; }
@@ -927,41 +838,19 @@
       var video = document.getElementById('mainVideo');
       var loader = document.getElementById('videoLoader');
       var closeBtnEl = document.getElementById('closeBtn');
-
-      // Flag to prevent multiple navigation triggers
       var hasNavigated = false;
-      var isVideoReady = false;
 
+      // Show loader
       loader.style.display = 'block';
-      closeBtnEl.style.display = 'block';
-      video.style.display = 'block';
 
-      // Reset video element first to prevent jitter
-      video.pause();
-      video.currentTime = 0;
-
-      // Set video source and load
+      // Set video source - autoplay attribute in HTML will start it
       video.src = '.' + data.mainVideoUrl;
-      video.load();
 
-      // WATCHDOG TIMER: If video doesn't play within 10 seconds, refresh page
-      var watchdogTimer = setTimeout(function() {
-        if (currentPage !== 'video') return;
-        if (!isVideoReady) {
-          console.log('WATCHDOG: Main video failed to load, refreshing page...');
-          window.location.reload();
-        }
-      }, 10000);
-
+      // Go to next page
       var goToNext = function() {
-        if (hasNavigated || currentPage !== 'video') return;
+        if (hasNavigated) return;
         hasNavigated = true;
-        clearTimeout(watchdogTimer); // Clear watchdog before navigating
-
-        // IMPORTANT: Hide video BEFORE navigating to prevent blue screen flash
         video.pause();
-        video.style.display = 'none';
-
         if (data.index === 5) {
           navigate('special');
         } else {
@@ -969,30 +858,15 @@
         }
       };
 
-      video.oncanplaythrough = function() {
-        if (currentPage !== 'video' || isVideoReady) return;
-        isVideoReady = true;
-        clearTimeout(watchdogTimer); // Video loaded successfully, cancel watchdog
+      // Hide loader when video starts playing
+      video.onplaying = function() {
         loader.style.display = 'none';
-        video.play();
       };
 
-      video.onloadeddata = function() {
-        if (currentPage !== 'video' || isVideoReady) return;
-        isVideoReady = true;
-        clearTimeout(watchdogTimer); // Video loaded successfully, cancel watchdog
-        loader.style.display = 'none';
-        video.play();
-      };
-
-      video.onerror = function() {
-        if (currentPage !== 'video') return;
-        clearTimeout(watchdogTimer);
-        console.log('WATCHDOG: Main video error, refreshing page...');
-        window.location.reload();
-      };
-
+      // When video ends, go to next page
       video.onended = goToNext;
+
+      // Skip button
       closeBtnEl.onclick = goToNext;
     }
 
