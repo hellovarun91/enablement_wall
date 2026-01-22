@@ -547,3 +547,71 @@ video.load();  // THIS releases the buffer from memory
 ```
 
 **Lesson:** On BrightSign/Chromium, always call `load()` after clearing video src to release memory. Also remove ALL event handlers to prevent accumulation.
+
+---
+
+### Issue 12: Permanent Video Fix - Watchdog Timer (Jan 22, 2026)
+
+**Problem:** Even with memory cleanup, videos occasionally fail to load after prolonged use.
+
+**Solution:** Added WATCHDOG TIMER - if video doesn't load within 10 seconds, page auto-refreshes.
+
+```javascript
+// WATCHDOG TIMER: Nuclear option - guarantees fresh start
+var watchdogTimer = setTimeout(function() {
+  if (!isVideoReady) {
+    window.location.reload();  // Refresh page if video fails
+  }
+}, 10000);
+
+video.oncanplaythrough = function() {
+  clearTimeout(watchdogTimer);  // Cancel watchdog on success
+  video.play();
+};
+
+video.onerror = function() {
+  window.location.reload();  // Refresh on error too
+};
+```
+
+**Lesson:** For mission-critical features like video, add a watchdog timer as a safety net. If the feature fails, auto-recover by refreshing the page.
+
+---
+
+### Issue 13: Blue Screen Flash When Skipping Video (Jan 22, 2026)
+
+**Problem:** Brief blue/white flash when clicking Skip button on video page.
+
+**Root Cause:** Video element still visible during page transition.
+
+**Fix:** Hide video BEFORE navigating:
+```javascript
+var goToNext = function() {
+  video.pause();
+  video.style.display = 'none';  // Hide first!
+  navigate('enablers...');
+};
+```
+
+---
+
+### Issue 14: Back Button Needs 2 Taps After Link Modal (Jan 22, 2026)
+
+**Problem:** After visiting external link, back button needed 2 taps to work.
+
+**Root Cause:** No history state pushed when opening modal. Popstate fires after navigation already happened.
+
+**Fix:** Push history state when opening modal:
+```javascript
+function openLinkModal(url) {
+  history.pushState({ modal: true }, '');  // Add history entry
+  // ...open modal
+}
+
+// Popstate just closes modal, no double navigation
+window.addEventListener('popstate', function(e) {
+  if (linkModalOpen) {
+    closeLinkModal();
+  }
+});
+```
