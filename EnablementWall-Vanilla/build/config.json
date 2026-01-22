@@ -2,41 +2,41 @@
   {
     "index": 1,
     "name": "01 Financial Enablement",
-    "loopVideoUrl": "/output/Screen01_loops/loop-01.mp4",
-    "mainVideoUrl": "/output/Screen02_videos/video-01.mp4",
-    "posterImage": "/posters/poster-01.jpg",
+    "loopVideoUrl": "/output/Screen01_loops/loop01.mp4",
+    "mainVideoUrl": "/output/Screen02_videos/video01.mp4",
+    "posterImage": "/posters/poster01.jpg",
     "id": 1
   },
   {
     "index": 2,
     "name": "02 Industrial Cities & Economic Zones",
-    "loopVideoUrl": "/output/Screen01_loops/loop-02.mp4",
-    "mainVideoUrl": "/output/Screen02_videos/video-02.mp4",
-    "posterImage": "/posters/poster-02.jpg",
+    "loopVideoUrl": "/output/Screen01_loops/loop02.mp4",
+    "mainVideoUrl": "/output/Screen02_videos/video02.mp4",
+    "posterImage": "/posters/poster02.jpg",
     "id": 2
   },
   {
     "index": 3,
     "name": "03 Human Capital",
-    "loopVideoUrl": "/output/Screen01_loops/loop-03.mp4",
-    "mainVideoUrl": "/output/Screen02_videos/video-03.mp4",
-    "posterImage": "/posters/poster-03.jpg",
+    "loopVideoUrl": "/output/Screen01_loops/loop03.mp4",
+    "mainVideoUrl": "/output/Screen02_videos/video03.mp4",
+    "posterImage": "/posters/poster03.jpg",
     "id": 3
   },
   {
     "index": 4,
     "name": "04 Local Content",
-    "loopVideoUrl": "/output/Screen01_loops/loop-04.mp4",
-    "mainVideoUrl": "/output/Screen02_videos/video-04.mp4",
-    "posterImage": "/posters/poster-04.jpg",
+    "loopVideoUrl": "/output/Screen01_loops/loop04.mp4",
+    "mainVideoUrl": "/output/Screen02_videos/video04.mp4",
+    "posterImage": "/posters/poster04.jpg",
     "id": 4
   },
   {
     "index": 5,
     "name": "05 Special Enablers",
-    "loopVideoUrl": "/output/Screen01_loops/loop-05.mp4",
-    "mainVideoUrl": "/output/Screen02_videos/video-05.mp4",
-    "posterImage": "/posters/poster-05.jpg",
+    "loopVideoUrl": "/output/Screen01_loops/loop05.mp4",
+    "mainVideoUrl": "/output/Screen02_videos/video05.mp4",
+    "posterImage": "/posters/poster05.jpg",
     "id": 5
   }
 ]
