@@ -610,6 +610,10 @@
     function openLinkModal(url) {
       var modal = document.getElementById('linkModal');
       var iframe = document.getElementById('linkIframe');
+
+      // Push a history state so back button closes modal instead of navigating
+      history.pushState({ modal: true }, '');
+
       iframe.src = url;
       modal.classList.add('active');
       linkModalOpen = true;
@@ -628,15 +632,18 @@
     document.addEventListener('DOMContentLoaded', function() {
       var closeBtn = document.getElementById('linkModalClose');
       if (closeBtn) {
-        closeBtn.onclick = closeLinkModal;
+        closeBtn.onclick = function() {
+          closeLinkModal();
+          // Go back in history to remove the modal state we pushed
+          history.back();
+        };
       }
 
       // Handle back button when modal is open
       window.addEventListener('popstate', function(e) {
         if (linkModalOpen) {
           closeLinkModal();
-          // Prevent default back navigation
-          e.preventDefault();
+          // No need for preventDefault - the modal history state is already popped
         }
       });
     });
@@ -847,17 +854,15 @@
       loopVideo.src = '.' + videoUrl;
       loopVideo.load();
 
-      // Timeout fallback - if video doesn't load in 5 seconds, try to play anyway
-      var loadTimeout = setTimeout(function() {
-        if (currentPage !== 'loop' || isVideoReady) return;
-        loader.style.display = 'none';
-        loopVideo.play().catch(function(e) {
-          // If play fails, show poster
-          loopVideo.style.display = 'none';
-          poster.style.display = 'block';
-          poster.style.backgroundImage = 'url(.' + posterUrl + ')';
-        });
-      }, 5000);
+      // WATCHDOG TIMER: If video doesn't play within 10 seconds, refresh page
+      // This is the nuclear option - guarantees fresh start if anything goes wrong
+      var watchdogTimer = setTimeout(function() {
+        if (currentPage !== 'loop') return;
+        if (!isVideoReady) {
+          console.log('WATCHDOG: Loop video failed to load, refreshing page...');
+          window.location.reload();
+        }
+      }, 10000);
 
       // SEAMLESS LOOP FIX: Loop video slightly before it ends to avoid freeze
       var loopThreshold = 0.15;
@@ -884,7 +889,7 @@
       loopVideo.oncanplaythrough = function() {
         if (currentPage !== 'loop' || isVideoReady) return;
         isVideoReady = true;
-        clearTimeout(loadTimeout);
+        clearTimeout(watchdogTimer); // Video loaded successfully, cancel watchdog
         loader.style.display = 'none';
         loopVideo.play();
       };
@@ -892,18 +897,17 @@
       loopVideo.onloadeddata = function() {
         if (currentPage !== 'loop' || isVideoReady) return;
         isVideoReady = true;
-        clearTimeout(loadTimeout);
+        clearTimeout(watchdogTimer); // Video loaded successfully, cancel watchdog
         loader.style.display = 'none';
         loopVideo.play();
       };
 
       loopVideo.onerror = function() {
         if (currentPage !== 'loop') return;
-        clearTimeout(loadTimeout);
-        loopVideo.style.display = 'none';
-        poster.style.display = 'block';
-        poster.style.backgroundImage = 'url(.' + posterUrl + ')';
-        loader.style.display = 'none';
+        clearTimeout(watchdogTimer);
+        // Video error - refresh page to get fresh start
+        console.log('WATCHDOG: Loop video error, refreshing page...');
+        window.location.reload();
       };
 
       watchBtnEl.onclick = function() {
@@ -940,9 +944,23 @@
       video.src = '.' + data.mainVideoUrl;
       video.load();
 
+      // WATCHDOG TIMER: If video doesn't play within 10 seconds, refresh page
+      var watchdogTimer = setTimeout(function() {
+        if (currentPage !== 'video') return;
+        if (!isVideoReady) {
+          console.log('WATCHDOG: Main video failed to load, refreshing page...');
+          window.location.reload();
+        }
+      }, 10000);
+
       var goToNext = function() {
         if (hasNavigated || currentPage !== 'video') return;
         hasNavigated = true;
+        clearTimeout(watchdogTimer); // Clear watchdog before navigating
+
+        // IMPORTANT: Hide video BEFORE navigating to prevent blue screen flash
+        video.pause();
+        video.style.display = 'none';
 
         if (data.index === 5) {
           navigate('special');
@@ -954,6 +972,7 @@
       video.oncanplaythrough = function() {
         if (currentPage !== 'video' || isVideoReady) return;
         isVideoReady = true;
+        clearTimeout(watchdogTimer); // Video loaded successfully, cancel watchdog
         loader.style.display = 'none';
         video.play();
       };
@@ -961,15 +980,16 @@
       video.onloadeddata = function() {
         if (currentPage !== 'video' || isVideoReady) return;
         isVideoReady = true;
+        clearTimeout(watchdogTimer); // Video loaded successfully, cancel watchdog
         loader.style.display = 'none';
         video.play();
       };
 
       video.onerror = function() {
         if (currentPage !== 'video') return;
-        loader.style.display = 'none';
-        console.error('Main video failed to load');
-        setTimeout(goToNext, 2000);
+        clearTimeout(watchdogTimer);
+        console.log('WATCHDOG: Main video error, refreshing page...');
+        window.location.reload();
       };
 
       video.onended = goToNext;
