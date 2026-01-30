@@ -1,636 +1,12 @@
 [
   {
     "id": "1",
-    "name": "General Enablers",
+    "categoryName": null,
     "enablers": [
       {
-        "id": "4",
-        "enablerName": "Local Content",
-        "enablerItem": [
-          {
-            "id": "1",
-            "name": "Mandatory List",
-            "nameIn": "Mandatory List",
-            "content": [
-              {
-                "name": "Local Content & Government Procurement Authority",
-                "text": "The “mandatory list” is a list of national products that the contractor must commit to purchase from national manufacturers in conjunction with a government agency. The list aims to develop national industries and products that have the ability to meet the needs of government projects.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Supply Competitions:",
-                "text": "",
-                "list": [
-                  "The competitor is obligated to present product origin, whether it is national or foreign.",
-                  "The offer where the competitor did not comply with the mandatory list shall be excluded, and in the event that the competition is divisible, then the items in which the competitor did not abide by the mandatory list shall be excluded in the supply contracts."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Other Competitions:",
-                "text": "",
-                "list": [
-                  "The competitor does not have to present the original product, whether it is national or foreign.",
-                  "The contractor must abide by the list when executing the contract, and the government entity takes into account this list when supervising the implementation."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
-                "link": [
-                  {
-                    "name": "Local Content & Government Procurement Authority Website",
-                    "value": "https://lcgpa.gov.sa/en/LocalContent/Pages/Local-Content-Mechanisms.aspx"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "2",
-            "name": "The Price Premium for National Products",
-            "nameIn": "The Price Premium for National Products",
-            "content": [
-              {
-                "name": "Local Content & Government Procurement Authority",
-                "text": "This mechanism aims to give a price preference to national products. This is directly applied by the government agency in the supply contracts, and the contractor is obligated to apply it in his contracts with his subcontractors. At the end of the contract, the contractor submits a report confirming his commitment to the share of national products during the contract period. Fines are also imposed on the contractor in the event of default in the share of national products.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Mechanism Characteristics:",
-                "text": "",
-                "list": [
-                  "The national product is granted a price premium, by assuming the price of the foreign product 10% higher than indicated in the bid.",
-                  "The premium rate may be increased through an agreement between LCGPA and the Center of Spending Efficiency, provided that the modified rate is explicitly stated in the tender documents.",
-                  "This mechanism applies to products not included in the mandatory list.",
-                  "This mechanism applies either directly or indirectly.",
-                  "Direct application: through the government agency in the supply contracts where national products are preferred. Also during the evaluation phase of offers according to the price preference equation.",
-                  "Indirect application: through the contractor with the government agency in all contracts other than supply. Giving preference to national products when purchasing materials or tools. Also, the contractor is obligated to apply the price preference mechanism in his contracts with his subcontractors."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
-                "link": [
-                  {
-                    "name": "Local Content & Government Procurement Authority Website",
-                    "value": "https://lcgpa.gov.sa/en/LocalContent/Pages/Local-Content-Mechanisms.aspx"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "3",
-            "name": "The Minimum Local Content Threshold",
-            "nameIn": "The Minimum Local Content Threshold",
-            "content": [
-              {
-                "name": "Local Content & Government Procurement Authority",
-                "text": "This mechanism aims to define a minimum required for local content at the project level. It applies to some projects, determined by the Local Content and Governmental Procurement Authority and the Spending Efficiency Center. It is applied to high-value contracts. Competitors provide a percentage of local content, no less than the minimum required, and must clarify whether or not the company is listed in their submitted offers. This is included in the financial evaluation according to an equation that determines the winner of the competition.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Mechanism Characteristics:",
-                "text": "In the financial evaluation, this mechanism grants a price weight equivalent to 60%. The remaining 40% includes:",
-                "list": [
-                  "Baseline for local content.",
-                  "Target local content percentage.",
-                  "Being listed in the market."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
-                "link": [
-                  {
-                    "name": "Local Content & Government Procurement Authority Website",
-                    "value": "https://lcgpa.gov.sa/en/LocalContent/Pages/Local-Content-Mechanisms.aspx"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "4",
-            "name": "Local Content Score in Commercial Evaluation",
-            "nameIn": "Local Content Score in Commercial Evaluation",
-            "content": [
-              {
-                "name": "Local Content & Government Procurement Authority",
-                "text": "This mechanism allocates weight to the local content and to companies listed on the financial market during the financial evaluation phase. An accounting formula determines the highest-ranking competitor.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Mechanism Characteristics:",
-                "text": "In the financial evaluation, this mechanism grants a price weight equivalent to 60%. The remaining 40% includes:",
-                "list": [
-                  "Baseline for local content.",
-                  "Target local content percentage.",
-                  "Being listed in the market."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
-                "link": [
-                  {
-                    "name": "Local Content & Government Procurement Authority Website",
-                    "value": "https://lcgpa.gov.sa/en/LocalContent/Pages/Local-Content-Mechanisms.aspx"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "5",
-            "name": "The contracting method of localization of industries and knowledge transfer",
-            "nameIn": "The contracting method of localization of industries and knowledge transfer",
-            "content": [
-              {
-                "name": "Local Content & Government Procurement Authority",
-                "text": "Industry localization and knowledge transfer agreements are agreements directed to investors who own leading technologies around the world to motivate them to transfer technology and knowledge to the Kingdom in exchange for a government purchase guarantee, the percentage and duration of which are agreed upon according to a feasibility study that considers the investment returns on the government commitment as well as on the investor.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "ECONOMICAL IMPACT:",
-                "text": "",
-                "list": [
-                  "Developing local content through the impact of the establishment of factories by major international companies within the Kingdom as well as creating jobs, transferring knowledge, and creating new local supply chains.",
-                  "Attracting foreign investments.",
-                  "Reducing dependence on imported products and creating new opportunities to export local products."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
-                "link": [
-                  {
-                    "name": "Local Content & Government Procurement Authority Website",
-                    "value": "https://lcgpa.gov.sa/p/en_US/Service"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "6",
-            "name": "Customs Exemption",
-            "nameIn": "Customs Exemption",
-            "content": [
-              {
-                "name": "Ministry Of Industry & Minerals Resources",
-                "text": "Exemption of the industrial facility holding an industrial license from customs duties on its imports of raw materials, finished materials, semi-manufactured materials, packaging materials, machinery and spare parts necessary for direct production.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Application conditions:",
-                "text": "",
-                "list": [
-                  "Valid industrial license",
-                  "Valid commercial registration matching the industrial license",
-                  "The customs items for the goods required for exemption must be registered within the industrial license",
-                  "The quantity of requested materials should not exceed the licensed production capacity of the factory"
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "For more details, you can visit the website of Ministry of Industry & Minerals Resources:",
-                "link": [
-                  {
-                    "name": "Ministry of Industry & Minerals Resources Website",
-                    "value": "https://www.mim.gov.sa/en/services/customs-exemption-equipment-spare-parts"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "7",
-            "name": "Value-Added Tax Exemption for Military Industries",
-            "nameIn": "Value-Added Tax Exemption for Military Industries",
-            "content": [
-              {
-                "name": "General Authority For Military Industries - GAMI",
-                "text": "Military factories licensed by the General Authority for Military Industries are exempted from value-added tax.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ],
-                "logo": "/Icons/General enablers/icons-primary/economic_impact.svg"
-              },
-              {
-                "name": "Requirements:",
-                "text": "",
-                "list": [
-                  "The entity must have a license from GAMI.",
-                  "The produced products are classified as a good for military applications.",
-                  "The product(s) are being supplied to all sections of the Armed Forces and the Internal Security Forces in the Kingdom.",
-                  "Meeting all requirements and regulations of Zakat, Tax and Customs Authority."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ],
-                "logo": "/Icons/General enablers/icons-primary/economic_impact.svg"
-              }
-            ]
-          },
-          {
-            "id": "8",
-            "name": "NUSANED Initiative",
-            "nameIn": "NUSANED Initiative",
-            "content": [
-              {
-                "name": "SABIC Company",
-                "text": "In order to achieve SABIC’s localization agenda and local industry development, SABIC is initiating “Nusaned” –its first integrated localization engine to achieve Saudi Vision 2030.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "The initiative offers:",
-                "text": "",
-                "list": [
-                  "Obtaining raw materials from SABIC.",
-                  "Technology and technical support.",
-                  "Developing workforce capabilities.",
-                  "Organizational support.",
-                  "Industrial consulting.",
-                  "Knowledge, studies, and statistics.",
-                  "Financial empowerment.",
-                  "Business and marketing support.",
-                  "Discount and incentives."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Nusaned initiative for more details:",
-                "link": [
-                  {
-                    "name": "Nusaned Initiative",
-                    "value": "https://www.sabic.com/en/nusaned/nusaned-pillars"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "9",
-            "name": "IKTVA Program",
-            "nameIn": "IKTVA Program",
-            "content": [
-              {
-                "name": "Saudi Aramco",
-                "text": "Iktva (in kingdom total value add) provides a level playing field for suppliers through consistency and transparency in application and process. Uniform evaluations for both service and material suppliers will be consistent across the company, creating supplier-focused partnerships, and investment stability and assurance achieved through annual assessments.\nmoreover, iktva program has the potential to help companies develop new products, services and technologies through partnerships in and outside of the Kingdom.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "How does it work?",
-                "text": "",
-                "list": [
-                  "The program will first establish an iktva baseline score for each supplier measured against key metrics for local value creation.",
-                  "Your company and Saudi Aramco can work together develop a 5-year iktva action plan to improve your iktva ratio."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Iktva program for more details:",
-                "link": [
-                  {
-                    "name": "Iktva Program",
-                    "value": "https://iktva.sa/english/iktva-participation/how-to-participate-in-iktva"
-                  }
-                ]
-              },
-              {
-                "name": "Opportunities platform",
-                "text": "Investment Opportunities Platform promotes the establishment of state-of-the-art local manufacturing facilities in Saudi Arabia to comply with local content requirements. The annual opportunity size exceeds $16B. National Companies and Tier-1 OEMs/EPC contractors are encouraged to buy locally manufactured goods and services in order to meet the iktva targets which will benefit the potential investors.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Iktva program for more details:",
-                "link": [
-                  {
-                    "name": "Iktva Program",
-                    "value": "https://iktva.sa/english/opportunities/overview"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "10",
-            "name": "Consultancy Services",
-            "nameIn": "Consultancy Services",
-            "content": [
-              {
-                "name": "Saudi Industrial Development Fund – SIDF",
-                "text": "Due to the challenges faced by these establishments in the industrial sector, a team of specialized consultants at the Saudi Industrial Development Fund intends to provide support by investigating appropriate opportunities to improve performance and achieve growth and sustainability.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Services Provided",
-                "text": "Cost efficiency improvement:",
-                "list": [
-                  "Analysis of direct and indirect costs.",
-                  "Analysis of the company's costs compared to the market.",
-                  "Analysis of raw material costs, suppliers, the procurement process, and more."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "Market strategy:",
-                "list": [
-                  "Providing recommendations to improve market strategy.",
-                  "Providing advice on sales and market strategy through pricing and product portfolio analysis.",
-                  "Market share analysis, target customers, sales channels and customer segmentation."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "Improving manufacturing operations efficiency:",
-                "list": [
-                  "Conducting diagnostic analysis of facility operations and production processes.",
-                  "Identifying factors that pose challenges in production processes.",
-                  "Providing recommendations on how to enhance manufacturing efficiency based on benchmarking studies and best practices."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "For more details, you can visit the website of Saudi Industrial Development Fund:",
-                "link": [
-                  {
-                    "name": "Saudi Industrial Development Fund Website",
-                    "value": "https://www.sidf.gov.sa/ar/Registration/Pages/AdvisoryRegistration.aspx"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "11",
-            "name": "Combat Unfair Competition of International Trade Initiative",
-            "nameIn": "Combat Unfair Competition of International Trade Initiative",
-            "content": [
-              {
-                "name": "",
-                "text": "Providing a consulting service to the private sector to enable them to create a case file against harmful practices of international trade by providing the required data and information and completing the necessary documents to bring the case.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website for more details:",
-                "link": [
-                  {
-                    "name": "Combat Unfair Competition of International Trade Initiative",
-                    "value": "https://www.mim.gov.sa/en/initiatives-programs/industrial-sector-initiatives/combat-unfair-competition-of-international-trade-initiative"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "12",
-            "name": "Encourage Factories to Issue Local Content Certificates Initiative",
-            "nameIn": "Encourage Factories to Issue Local Content Certificates Initiative",
-            "content": [
-              {
-                "name": "",
-                "text": "This initiative stems from the Local Industry Stimulation Initiative. It aims to encourage medium, small, and micro-sized industrial enterprises to issue local content certificates and contribute to achieving local content targets by covering all or part of the cost of local content auditing provided to them by audit offices.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Tracks of Coverage",
-                "text": "",
-                "list": [
-                  "Micro-sized factories.",
-                  "Small-sized factories.",
-                  "Medium-sized factories."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
-                "link": [
-                  {
-                    "name": "For More",
-                    "value": "https://lcgpa.gov.sa/p/en_US/Initiatives/Small_and_Medium_Enterprises_Stimulation_Initiative_Issuing_a_Local_Content_Certificate"
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "bgImage": "/enablers-01.png"
-      },
-      {
-        "id": "1",
+        "id": 1,
         "enablerName": "Financial Enablement",
+        "bgImage": "/posters/poster-01.jpg",
         "enablerItem": [
           {
             "id": "1",
@@ -1094,7 +470,7 @@
           {
             "id": "8",
             "name": "We Finance, You Manufacture Initiative",
-            "nameIn": "National Industrial Development and Logistic Program & Riyadh Bank",
+            "nameIn": "We Finance, You Manufacture Initiative",
             "content": [
               {
                 "name": "Localizing high priority production in five sectors:",
@@ -1131,6 +507,18 @@
                   {
                     "name": "",
                     "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit the website for more details:",
+                "link": [
+                  {
+                    "name": "Contact",
+                    "value": "mailto:RB@riyadbank.com"
                   }
                 ]
               }
@@ -1205,92 +593,6 @@
           },
           {
             "id": "10",
-            "name": "Guarantee Program to Support Working Capital Needs",
-            "nameIn": "Guarantee Program to Support Working Capital Needs",
-            "content": [
-              {
-                "name": "Saudi Industrial Development Fund-SIDF",
-                "text": "A guarantee provided by SIDF to a financing entity or an industrial company, to support small and medium enterprises in obtaining credit facilities from Financial Institutions or enhanced credit terms from Corporate Creditors. The aim of the program is to support SIDF clients through the program partners.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ],
-                "logo": "/Icons/General enablers/icons-primary/success_partners.svg"
-              },
-              {
-                "name": "Program Paths:",
-                "text": "Guarantee to support working capital needs path through commercial banks:",
-                "list": [
-                  "SAB",
-                  "Banque Saudi Fransi",
-                  "Riyad Bank",
-                  "Arab National Bank"
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ],
-                "logo": "/Icons/General enablers/icons-primary/applicable_projects.svg"
-              },
-              {
-                "name": "Benefits:",
-                "text": "",
-                "list": [
-                  "Obtain credit facilities from financial institutions (Guarantee to support working capital needs Path )",
-                  "Improve credit terms with corporate creditors (Trade Finance guarantee path)​​",
-                  "Guarantee duration reaches 24 months"
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ],
-                "logo": "/Icons/General enablers/icons-primary/initiative_offers.svg"
-              },
-              {
-                "name": "Beneficiary:",
-                "text": "",
-                "list": [
-                  "Existing and operational",
-                  "Satisfactory relationship with SIDF (if existing)",
-                  "Audited financial statements for the last 3 years",
-                  "Proven need of working capital",
-                  "Profitable company for the last two years"
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ],
-                "logo": "/Icons/General enablers/icons-primary/characterstics.svg"
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Saudi Industrial Development Fund for more details:",
-                "link": [
-                  {
-                    "name": "Visit us",
-                    "value": "https://www.sidf.gov.sa/en/ServicesforInvestors/Programs/Pages/Guarantee-program.aspx"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "11",
             "name": "Dinar",
             "nameIn": "Dinar",
             "content": [
@@ -1374,106 +676,13 @@
                 ]
               }
             ]
-          },
-          {
-            "id": "12",
-            "name": "Sukuk",
-            "nameIn": "",
-            "content": [
-              {
-                "name": "Saudi Authority For Industrial Cities And Technology Zones (MODON)",
-                "text": "In collaboration with Sukuk Capital, MODON offers innovative financing solutions with flexible repayment features, to enhance the contribution of the entrepreneurship sector and small and medium enterprises in developing the national economy.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ],
-                "logo": "/Icons/General enablers/icons-primary/services.svg"
-              },
-              {
-                "name": "Solutions:",
-                "text": "",
-                "list": [
-                  "Working capital for factories.",
-                  "Capital projects for factories.",
-                  "Bridge financing for factories.",
-                  "Acquisition financing for factories."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ],
-                "logo": "/Icons/General enablers/icons-primary/industrial_service_activities.svg"
-              },
-              {
-                "name": "Advantages:",
-                "text": "",
-                "list": [
-                  "Flexible repayment schedules.",
-                  "Fast financing process.",
-                  "Diverse financial products.",
-                  "Financing with various terms."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ],
-                "logo": "/Icons/General enablers/icons-primary/benefits.svg"
-              }
-            ]
-          },
-          {
-            "id": "13",
-            "name": "Sukuk Financing For Factories",
-            "nameIn": "",
-            "content": [
-              {
-                "name": "The Royal Commission for Jubail and Yanbu – RCJY",
-                "text": "In collaboration with Sukuk Financial Company, the Royal Commission for Jubail and Yanbu offers financing solutions to enhance cooperation in financing industrial companies operating in the Royal Commission cities.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ],
-                "logo": "/Icons/General enablers/icons-primary/program_benefits.svg"
-              },
-              {
-                "name": "Advantages:",
-                "text": "",
-                "list": [
-                  "Easier financing: Industrial companies will be able to obtain facilitated financing through dedicated funding.",
-                  "Provision of land: Sukuk Financial will work on providing the necessary land and facilities for the companies being financed.",
-                  "Attracting investments: This initiative will contribute to attracting more investments to the industrial sector in the Kingdom of Saudi Arabia."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ],
-                "logo": "/Icons/General enablers/icons-primary/services.svg"
-              }
-            ]
           }
-        ],
-        "bgImage": "/enablers-02.png"
+        ]
       },
       {
-        "id": "2",
+        "id": 2,
         "enablerName": "Industrial Cities & Special Economic Zones",
+        "bgImage": "/posters/poster-02.jpg",
         "enablerItem": [
           {
             "id": "1",
@@ -1805,12 +1014,12 @@
               }
             ]
           }
-        ],
-        "bgImage": "/dist/src/images/big-industry.png"
+        ]
       },
       {
-        "id": "3",
+        "id": 3,
         "enablerName": "Human Capital",
+        "bgImage": "/posters/poster-03.jpg",
         "enablerItem": [
           {
             "id": "1",
@@ -1983,22 +1192,610 @@
               }
             ]
           }
-        ],
-        "bgImage": "/enablers-04.png"
+        ]
+      },
+      {
+        "id": 4,
+        "enablerName": "Local Content",
+        "bgImage": "/posters/poster-04.jpg",
+        "enablerItem": [
+          {
+            "id": "1",
+            "name": "Mandatory List",
+            "nameIn": "Mandatory List",
+            "content": [
+              {
+                "name": "Local Content & Government Procurement Authority",
+                "text": "The “mandatory list” is a list of national products that the contractor must commit to purchase from national manufacturers in conjunction with a government agency. The list aims to develop national industries and products that have the ability to meet the needs of government projects.",
+                "list": [],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "Supply Competitions:",
+                "text": "",
+                "list": [
+                  "The competitor is obligated to present product origin, whether it is national or foreign.",
+                  "The offer where the competitor did not comply with the mandatory list shall be excluded, and in the event that the competition is divisible, then the items in which the competitor did not abide by the mandatory list shall be excluded in the supply contracts."
+                ],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "Other Competitions:",
+                "text": "",
+                "list": [
+                  "The competitor does not have to present the original product, whether it is national or foreign.",
+                  "The contractor must abide by the list when executing the contract, and the government entity takes into account this list when supervising the implementation."
+                ],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
+                "link": [
+                  {
+                    "name": "Local Content & Government Procurement Authority Website",
+                    "value": "https://lcgpa.gov.sa/en/LocalContent/Pages/Local-Content-Mechanisms.aspx"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2",
+            "name": "The Price Premium for National Products",
+            "nameIn": "The Price Premium for National Products",
+            "content": [
+              {
+                "name": "Local Content & Government Procurement Authority",
+                "text": "This mechanism aims to give a price preference to national products. This is directly applied by the government agency in the supply contracts, and the contractor is obligated to apply it in his contracts with his subcontractors. At the end of the contract, the contractor submits a report confirming his commitment to the share of national products during the contract period. Fines are also imposed on the contractor in the event of default in the share of national products.",
+                "list": [],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "Mechanism Characteristics:",
+                "text": "",
+                "list": [
+                  "The national product is granted a price premium, by assuming the price of the foreign product 10% higher than indicated in the bid.",
+                  "The premium rate may be increased through an agreement between LCGPA and the Center of Spending Efficiency, provided that the modified rate is explicitly stated in the tender documents.",
+                  "This mechanism applies to products not included in the mandatory list.",
+                  "This mechanism applies either directly or indirectly.",
+                  "Direct application: through the government agency in the supply contracts where national products are preferred. Also during the evaluation phase of offers according to the price preference equation.",
+                  "Indirect application: through the contractor with the government agency in all contracts other than supply. Giving preference to national products when purchasing materials or tools. Also, the contractor is obligated to apply the price preference mechanism in his contracts with his subcontractors."
+                ],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
+                "link": [
+                  {
+                    "name": "Local Content & Government Procurement Authority Website",
+                    "value": "https://lcgpa.gov.sa/en/LocalContent/Pages/Local-Content-Mechanisms.aspx"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "3",
+            "name": "The Minimum Local Content Threshold",
+            "nameIn": "The Minimum Local Content Threshold",
+            "content": [
+              {
+                "name": "Local Content & Government Procurement Authority",
+                "text": "This mechanism aims to define a minimum required for local content at the project level. It applies to some projects, determined by the Local Content and Governmental Procurement Authority and the Spending Efficiency Center. It is applied to high-value contracts. Competitors provide a percentage of local content, no less than the minimum required, and must clarify whether or not the company is listed in their submitted offers. This is included in the financial evaluation according to an equation that determines the winner of the competition.",
+                "list": [],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "Mechanism Characteristics:",
+                "text": "In the financial evaluation, this mechanism grants a price weight equivalent to 60%. The remaining 40% includes:",
+                "list": [
+                  "Baseline for local content.",
+                  "Target local content percentage.",
+                  "Being listed in the market."
+                ],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
+                "link": [
+                  {
+                    "name": "Local Content & Government Procurement Authority Website",
+                    "value": "https://lcgpa.gov.sa/en/LocalContent/Pages/Local-Content-Mechanisms.aspx"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "4",
+            "name": "Local Content Score in Commercial Evaluation",
+            "nameIn": "Local Content Score in Commercial Evaluation",
+            "content": [
+              {
+                "name": "Local Content & Government Procurement Authority",
+                "text": "This mechanism allocates weight to the local content and to companies listed on the financial market during the financial evaluation phase. An accounting formula determines the highest-ranking competitor.",
+                "list": [],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "Mechanism Characteristics:",
+                "text": "In the financial evaluation, this mechanism grants a price weight equivalent to 60%. The remaining 40% includes:",
+                "list": [
+                  "Baseline for local content.",
+                  "Target local content percentage.",
+                  "Being listed in the market."
+                ],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
+                "link": [
+                  {
+                    "name": "Local Content & Government Procurement Authority Website",
+                    "value": "https://lcgpa.gov.sa/en/LocalContent/Pages/Local-Content-Mechanisms.aspx"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "5",
+            "name": "The contracting method of localization of industries and knowledge transfer",
+            "nameIn": "The contracting method of localization of industries and knowledge transfer",
+            "content": [
+              {
+                "name": "Local Content & Government Procurement Authority",
+                "text": "Industry localization and knowledge transfer agreements are agreements directed to investors who own leading technologies around the world to motivate them to transfer technology and knowledge to the Kingdom in exchange for a government purchase guarantee, the percentage and duration of which are agreed upon according to a feasibility study that considers the investment returns on the government commitment as well as on the investor.",
+                "list": [],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "ECONOMICAL IMPACT:",
+                "text": "",
+                "list": [
+                  "Developing local content through the impact of the establishment of factories by major international companies within the Kingdom as well as creating jobs, transferring knowledge, and creating new local supply chains.",
+                  "Attracting foreign investments.",
+                  "Reducing dependence on imported products and creating new opportunities to export local products."
+                ],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
+                "link": [
+                  {
+                    "name": "Local Content & Government Procurement Authority Website",
+                    "value": "https://lcgpa.gov.sa/p/en_US/Service"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "6",
+            "name": "Customs Exemption",
+            "nameIn": "Customs Exemption",
+            "content": [
+              {
+                "name": "Ministry Of Industry & Minerals Resources",
+                "text": "Exemption of the industrial facility holding an industrial license from customs duties on its imports of raw materials, finished materials, semi-manufactured materials, packaging materials, machinery and spare parts necessary for direct production.",
+                "list": [],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "Application conditions:",
+                "text": "",
+                "list": [
+                  "Valid industrial license",
+                  "Valid commercial registration matching the industrial license",
+                  "The customs items for the goods required for exemption must be registered within the industrial license",
+                  "The quantity of requested materials should not exceed the licensed production capacity of the factory"
+                ],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "For more details, you can visit the website of Ministry of Industry & Minerals Resources:",
+                "link": [
+                  {
+                    "name": "Ministry of Industry & Minerals Resources Website",
+                    "value": "https://www.mim.gov.sa/en/services/customs-exemption-equipment-spare-parts"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "7",
+            "name": "Combat Unfair Competition of International Trade Initiative",
+            "nameIn": "Combat Unfair Competition of International Trade Initiative",
+            "content": [
+              {
+                "name": "",
+                "text": "Providing a consulting service to the private sector to enable them to create a case file against harmful practices of international trade by providing the required data and information and completing the necessary documents to bring the case.",
+                "list": [],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit the website for more details:",
+                "link": [
+                  {
+                    "name": "Combat Unfair Competition of International Trade Initiative",
+                    "value": "https://www.mim.gov.sa/en/initiatives-programs/industrial-sector-initiatives/combat-unfair-competition-of-international-trade-initiative"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "8",
+            "name": "NUSANED Initiative",
+            "nameIn": "NUSANED Initiative",
+            "content": [
+              {
+                "name": "SABIC Company",
+                "text": "In order to achieve SABIC’s localization agenda and local industry development, SABIC is initiating “Nusaned” –its first integrated localization engine to achieve Saudi Vision 2030.",
+                "list": [],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "The initiative offers:",
+                "text": "",
+                "list": [
+                  "Obtaining raw materials from SABIC.",
+                  "Technology and technical support.",
+                  "Developing workforce capabilities.",
+                  "Organizational support.",
+                  "Industrial consulting.",
+                  "Knowledge, studies, and statistics.",
+                  "Financial empowerment.",
+                  "Business and marketing support.",
+                  "Discount and incentives."
+                ],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit the website of Nusaned initiative for more details:",
+                "link": [
+                  {
+                    "name": "Nusaned Initiative",
+                    "value": "https://www.sabic.com/en/nusaned/nusaned-pillars"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "9",
+            "name": "Encourage Factories to Issue Local Content Certificates Initiative",
+            "nameIn": "Encourage Factories to Issue Local Content Certificates Initiative",
+            "content": [
+              {
+                "name": "",
+                "text": "This initiative stems from the Local Industry Stimulation Initiative. It aims to encourage medium, small, and micro-sized industrial enterprises to issue local content certificates and contribute to achieving local content targets by covering all or part of the cost of local content auditing provided to them by audit offices.",
+                "list": [],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "Tracks of Coverage",
+                "text": "",
+                "list": [
+                  "Micro-sized factories.",
+                  "Small-sized factories.",
+                  "Medium-sized factories."
+                ],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit the website of Local Content & Government Procurement Authority for more details:",
+                "link": [
+                  {
+                    "name": "For More",
+                    "value": "https://lcgpa.gov.sa/p/en_US/Initiatives/Small_and_Medium_Enterprises_Stimulation_Initiative_Issuing_a_Local_Content_Certificate"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "10",
+            "name": "IKTVA Program",
+            "nameIn": "IKTVA Program",
+            "content": [
+              {
+                "name": "Saudi Aramco",
+                "text": "Iktva (in kingdom total value add) provides a level playing field for suppliers through consistency and transparency in application and process. Uniform evaluations for both service and material suppliers will be consistent across the company, creating supplier-focused partnerships, and investment stability and assurance achieved through annual assessments.\nmoreover, iktva program has the potential to help companies develop new products, services and technologies through partnerships in and outside of the Kingdom.",
+                "list": [],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "How does it work?",
+                "text": "",
+                "list": [
+                  "The program will first establish an iktva baseline score for each supplier measured against key metrics for local value creation.",
+                  "Your company and Saudi Aramco can work together develop a 5-year iktva action plan to improve your iktva ratio."
+                ],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit the website of Iktva program for more details:",
+                "link": [
+                  {
+                    "name": "Iktva Program",
+                    "value": "https://iktva.sa/english/iktva-participation/how-to-participate-in-iktva"
+                  }
+                ]
+              },
+              {
+                "name": "Opportunities platform",
+                "text": "Investment Opportunities Platform promotes the establishment of state-of-the-art local manufacturing facilities in Saudi Arabia to comply with local content requirements. The annual opportunity size exceeds $16B. National Companies and Tier-1 OEMs/EPC contractors are encouraged to buy locally manufactured goods and services in order to meet the iktva targets which will benefit the potential investors.",
+                "list": [],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit the website of Iktva program for more details:",
+                "link": [
+                  {
+                    "name": "Iktva Program",
+                    "value": "https://iktva.sa/english/opportunities/overview"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "11",
+            "name": "Consultancy Services",
+            "nameIn": "Consultancy Services",
+            "content": [
+              {
+                "name": "Saudi Industrial Development Fund – SIDF",
+                "text": "Due to the challenges faced by these establishments in the industrial sector, a team of specialized consultants at the Saudi Industrial Development Fund intends to provide support by investigating appropriate opportunities to improve performance and achieve growth and sustainability.",
+                "list": [],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "Services Provided",
+                "text": "Cost efficiency improvement:",
+                "list": [
+                  "Analysis of direct and indirect costs.",
+                  "Analysis of the company's costs compared to the market.",
+                  "Analysis of raw material costs, suppliers, the procurement process, and more."
+                ],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "text": "Market strategy:",
+                "list": [
+                  "Providing recommendations to improve market strategy.",
+                  "Providing advice on sales and market strategy through pricing and product portfolio analysis.",
+                  "Market share analysis, target customers, sales channels and customer segmentation."
+                ],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "text": "Improving manufacturing operations efficiency:",
+                "list": [
+                  "Conducting diagnostic analysis of facility operations and production processes.",
+                  "Identifying factors that pose challenges in production processes.",
+                  "Providing recommendations on how to enhance manufacturing efficiency based on benchmarking studies and best practices."
+                ],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "For more details, you can visit the website of Saudi Industrial Development Fund:",
+                "link": [
+                  {
+                    "name": "Saudi Industrial Development Fund Website",
+                    "value": "https://www.sidf.gov.sa/ar/Registration/Pages/AdvisoryRegistration.aspx"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   {
     "id": "2",
-    "name": "Specific Enablers",
+    "categoryName": null,
     "enablers": [
       {
-        "id": "1",
+        "id": 1,
         "enablerName": "SMEs Enabling",
+        "bgImage": "/output/Special_enablers/enablers-05.png",
         "enablerItem": [
           {
             "id": "1",
             "name": "Financing Solutions - AFAQ Program",
+            "nameIn": "Financing Solutions - AFAQ Program",
             "content": [
               {
                 "name": "Saudi Industrial Development Fund – SIDF",
@@ -2077,6 +1874,7 @@
           {
             "id": "2",
             "name": "Kafalah Program",
+            "nameIn": "Kafalah Program",
             "content": [
               {
                 "name": "Small & Medium Enterprises Loan Guarantee Program - Kafalah",
@@ -2085,8 +1883,8 @@
                 "textDone": "",
                 "link": [
                   {
-                    "name": "Kafalah Program Website",
-                    "value": "https://www.kafalah.gov.sa/en/About/Pages/default.aspx"
+                    "name": "",
+                    "value": ""
                   }
                 ]
               },
@@ -2105,12 +1903,25 @@
                     "value": ""
                   }
                 ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit the website of Kafalah program for more details:",
+                "link": [
+                  {
+                    "name": "Kafalah Program Website",
+                    "value": "https://www.kafalah.gov.sa/en/About/Pages/default.aspx"
+                  }
+                ]
               }
             ]
           },
           {
             "id": "3",
             "name": "The Venture Capital Initiative",
+            "nameIn": "The Venture Capital Initiative",
             "content": [
               {
                 "name": "Saudi Venture Capital Company",
@@ -2119,8 +1930,8 @@
                 "textDone": "",
                 "link": [
                   {
-                    "name": "Saudi Venture Capital Company Website",
-                    "value": "https://svc.com.sa/en/home/"
+                    "name": "",
+                    "value": ""
                   }
                 ]
               },
@@ -2139,12 +1950,25 @@
                     "value": ""
                   }
                 ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit Saudi Venture Capital Company website for more details:",
+                "link": [
+                  {
+                    "name": "Saudi Venture Capital Company Website",
+                    "value": "https://svc.com.sa/en/home/"
+                  }
+                ]
               }
             ]
           },
           {
             "id": "4",
             "name": "Indirect lending",
+            "nameIn": "Indirect lending",
             "content": [
               {
                 "name": "Small & Medium Enterprises General Authority - Monshaat",
@@ -2153,8 +1977,8 @@
                 "textDone": "",
                 "link": [
                   {
-                    "name": "Small & Medium Enterprises General Authority (Monshaat) Website",
-                    "value": "https://www.monshaat.gov.sa/en"
+                    "name": "",
+                    "value": ""
                   }
                 ]
               },
@@ -2171,12 +1995,56 @@
                     "value": ""
                   }
                 ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit Monshaat website for more details:",
+                "link": [
+                  {
+                    "name": "Small & Medium Enterprises General Authority (Monshaat) Website",
+                    "value": "https://www.monshaat.gov.sa/en"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "5",
+            "name": "Jadeer Platform",
+            "nameIn": "Jadeer Platform",
+            "content": [
+              {
+                "name": "Small & Medium Enterprises General Authority - Monshaat",
+                "text": "An e-service that qualifies and empowers small and medium-sized enterprises by linking them to the purchasing opportunities of the public and private sectors and facilitating access of enterprises to purchasing opportunities to ensure growth and market opening.",
+                "list": [],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit Monshaat website for more details:",
+                "link": [
+                  {
+                    "name": "Small & Medium Enterprises General Authority (Monshaat) Website",
+                    "value": "https://www.monshaat.gov.sa/en/node/12778"
+                  }
+                ]
               }
             ]
           },
           {
             "id": "6",
             "name": "\"Monshaat Windows\" Application",
+            "nameIn": "\"Monshaat Windows\" Application",
             "content": [
               {
                 "name": "Small & Medium Enterprises General Authority - Monshaat",
@@ -2185,8 +2053,8 @@
                 "textDone": "",
                 "link": [
                   {
-                    "name": "Small & Medium Enterprises General Authority (Monshaat) Website",
-                    "value": "https://www.monshaat.gov.sa/en/nawafth"
+                    "name": "",
+                    "value": ""
                   }
                 ]
               },
@@ -2205,13 +2073,25 @@
                     "value": ""
                   }
                 ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "You can visit Monshaat website for more details:",
+                "link": [
+                  {
+                    "name": "Small & Medium Enterprises General Authority (Monshaat) Website",
+                    "value": "https://www.monshaat.gov.sa/en/nawafth"
+                  }
+                ]
               }
             ]
           },
           {
             "id": "7",
             "name": "Incentivizing Promising Factories",
-            "nameIn": "Saudi Industrial Development Fund - SIDF",
+            "nameIn": "Incentivizing Promising Factories",
             "content": [
               {
                 "name": "Saudi Industrial Development Fund - SIDF",
@@ -2272,7 +2152,7 @@
           {
             "id": "8",
             "name": "Funding Products",
-            "nameIn": "Small and Medium Enterprises Bank (SMEs Bank)",
+            "nameIn": "Funding Products",
             "content": [
               {
                 "name": "1. Working Capital Loan",
@@ -2322,7 +2202,7 @@
                 "name": "",
                 "text": "",
                 "list": [],
-                "textDone": "",
+                "textDone": "You can visit the website of SME Bank for more details:",
                 "link": [
                   {
                     "name": "Working Capital Loan",
@@ -2331,7 +2211,7 @@
                 ]
               },
               {
-                "name": "2. Term Loan",
+                "name": "2. Term Loan:",
                 "text": "This type of financing is targeting Micro, Small, and medium enterprises [whose annual revenues do not exceed SAR 200 million and the number of employees not exceeding 250]",
                 "list": [],
                 "textDone": "",
@@ -2343,7 +2223,7 @@
                 ]
               },
               {
-                "name": "Loan Purpose:",
+                "name": "Loan Purpose",
                 "text": "Fulfilling Medium-Term Financing & The purpose of Term Loans is to provide medium-term financing for SMEs, including fixed assets purchases and business expansion",
                 "list": [],
                 "textDone": "",
@@ -2375,7 +2255,7 @@
                 "name": "",
                 "text": "",
                 "list": [],
-                "textDone": "",
+                "textDone": "You can visit the website of SME Bank for more details:",
                 "link": [
                   {
                     "name": "Term Loan",
@@ -2431,7 +2311,7 @@
                 "name": "",
                 "text": "",
                 "list": [],
-                "textDone": "",
+                "textDone": "You can visit the website of SME Bank for more details:",
                 "link": [
                   {
                     "name": "Revolving Limit Loan",
@@ -2443,92 +2323,8 @@
           },
           {
             "id": "9",
-            "name": "Guarantee Program to Support Working Capital Needs",
-            "content": [
-              {
-                "name": "Saudi Industrial Development Fund-SIDF",
-                "text": "A guarantee provided by SIDF to a financing entity or an industrial company, to support small and medium enterprises in obtaining credit facilities from Financial Institutions or enhanced credit terms from Corporate Creditors. The aim of the program is to support SIDF clients through the program partners.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ],
-                "logo": "/Icons/Special enablers/icons-primary/renewable_energy.svg"
-              },
-              {
-                "name": "Program Paths:",
-                "text": "Guarantee to support working capital needs path through commercial banks:",
-                "list": [
-                  "SAB",
-                  "Banque Saudi Fransi",
-                  "Riyad Bank",
-                  "Arab National Bank"
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ],
-                "logo": "/Icons/Special enablers/icons-primary/economic_impact.svg"
-              },
-              {
-                "name": "",
-                "text": "Trade finance guarantee path to improve sales through our industrial company partner:",
-                "list": [
-                  "Tasnee"
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Benefits:",
-                "text": "",
-                "list": [
-                  "Obtain credit facilities from financial institutions (Guarantee to support working capital needs Path )",
-                  "Improve credit terms with corporate creditors (Trade Finance guarantee path)​​",
-                  "Guarantee duration reaches 24 months"
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Beneficiary:",
-                "text": "",
-                "list": [
-                  "Existing and operational",
-                  "Satisfactory relationship with SIDF (if existing)",
-                  "Audited financial statements for the last 3 years",
-                  "Proven need of working capital",
-                  "Profitable company for the last two years"
-                ],
-                "textDone": "You can visit the website of Saudi Industrial Development Fund for more details:",
-                "link": [
-                  {
-                    "name": "Saudi Industrial Development Fund",
-                    "value": "https://www.sidf.gov.sa/en/ServicesforInvestors/Programs/Pages/Guarantee-program.aspx"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "10",
             "name": "Thakaa Center",
+            "nameIn": "Thakaa Center",
             "content": [
               {
                 "name": "Small & Medium Enterprises General Authority – Monshaat",
@@ -2579,76 +2375,9 @@
             ]
           },
           {
-            "id": "11",
-            "name": "1K Mile Program",
-            "content": [
-              {
-                "name": "National Industrial Development and Logistics Program – NIDLP",
-                "text": "It aims to empower entrepreneurship in the industry and logistics services sector, to contribute to achieving the ambitions of Saudi Vision 2030 by providing a package of enablers and incentives to support investment opportunities.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "Incentives:",
-                "text": "",
-                "list": [
-                  "Financial incentives.",
-                  "Feasibility studies.",
-                  "Industrial land / Ready-made factory.",
-                  "Presentation to investors.",
-                  "Market entry."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "For more details, you can visit the 1K Mile Program website:",
-                "link": [
-                  {
-                    "name": "1K Mile Program Website",
-                    "value": "https://1kmile.daleel.gov.sa/"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "12",
-            "name": "Jadeer Platform",
-            "nameIn": "",
-            "content": [
-              {
-                "name": "Small & Medium Enterprises General Authority - Monshaat",
-                "text": "An e-service that qualifies and empowers small and medium-sized enterprises by linking them to the purchasing opportunities of the public and private sectors and facilitating access of enterprises to purchasing opportunities to ensure growth and market opening.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "Small & Medium Enterprises General Authority (Monshaat) Website",
-                    "value": "https://www.monshaat.gov.sa/en/node/12778"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "13",
+            "id": "10",
             "name": "Innovative Factories Promotion Initiative",
-            "nameIn": "",
+            "nameIn": "Innovative Factories Promotion Initiative",
             "content": [
               {
                 "name": "",
@@ -2696,9 +2425,58 @@
             ]
           },
           {
-            "id": "14",
+            "id": "11",
+            "name": "1K Mile Program",
+            "nameIn": "1K Mile Program",
+            "content": [
+              {
+                "name": "National Industrial Development and Logistics Program – NIDLP",
+                "text": "It aims to empower entrepreneurship in the industry and logistics services sector, to contribute to achieving the ambitions of Saudi Vision 2030 by providing a package of enablers and incentives to support investment opportunities.",
+                "list": [],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "Incentives:",
+                "text": "",
+                "list": [
+                  "Financial incentives.",
+                  "Feasibility studies.",
+                  "Industrial land / Ready-made factory.",
+                  "Presentation to investors.",
+                  "Market entry."
+                ],
+                "textDone": "",
+                "link": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "text": "",
+                "list": [],
+                "textDone": "For more details, you can visit the 1K Mile Program website:",
+                "link": [
+                  {
+                    "name": "1K Mile Program Website",
+                    "value": "https://1kmile.daleel.gov.sa/"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "12",
             "name": "Mazaya",
-            "nameIn": "",
+            "nameIn": "Mazaya",
             "content": [
               {
                 "name": "Small & Medium Enterprises General Authority (Monshaat)",
@@ -2771,9 +2549,9 @@
             ]
           },
           {
-            "id": "15",
+            "id": "13",
             "name": "Intellectual Property Advisory Clinics",
-            "nameIn": "",
+            "nameIn": "Intellectual Property Advisory Clinics",
             "content": [
               {
                 "name": "Intellectual Property Advisory Clinics",
@@ -2797,7 +2575,7 @@
                 "textDone": "Intellectual Property Advisory Clinics",
                 "link": [
                   {
-                    "name": "Visit us",
+                    "name": "Visit Website",
                     "value": "https://modon.gov.sa/en/Systems/Pages/ipclinic.aspx"
                   }
                 ]
@@ -2805,9 +2583,9 @@
             ]
           },
           {
-            "id": "16",
+            "id": "14",
             "name": "Complementary Service Request",
-            "nameIn": "",
+            "nameIn": "Complementary Service Request",
             "content": [
               {
                 "name": "Saudi Authority for Industrial Cities and Technology Zones - MODON",
@@ -2884,16 +2662,17 @@
               }
             ]
           }
-        ],
-        "bgImage": "/output/Special_enablers/enablers-05.png"
+        ]
       },
       {
-        "id": "2",
+        "id": 2,
         "enablerName": "Productivity Improvement",
+        "bgImage": "/output/Special_enablers/enablers-06.png",
         "enablerItem": [
           {
             "id": "1",
             "name": "Tanafusiya Program for Industrial Digital Transformation",
+            "nameIn": "Tanafusiya Program for Industrial Digital Transformation",
             "content": [
               {
                 "name": "Saudi Industrial Development Fund – SIDF",
@@ -2959,72 +2738,8 @@
           },
           {
             "id": "2",
-            "name": "Financing Solutions - Afaq Program",
-            "content": [
-              {
-                "name": "Saudi Industrial Development Fund – SIDF",
-                "text": "In line with supporting promising small and medium-sized industrial enterprises, the SME Scale-Up product was launched to provide financial facilities to SMEs with proven success records to allow them to increase their production capacity and reach the growth and expansion that resonates with their aspirations. This offering is available for both new and existing SIDF investors.",
-                "list": [],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ],
-                "logo": "/Icons/Special enablers/icons-primary/program_paths.svg"
-              },
-              {
-                "name": "The Initiative Requirements:",
-                "text": "",
-                "list": [
-                  "Brownfield projects with three years of audited financials.",
-                  "Increase in revenue or volume sold.",
-                  "Terms and conditions apply."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ],
-                "logo": "/Icons/Special enablers/icons-primary/working_capital_financing.svg"
-              },
-              {
-                "name": "Benefits:",
-                "text": "",
-                "list": [
-                  "Longer tenure of a minimum of 7 years.",
-                  "Longer grace period of up 24 months.",
-                  "Fast track for projects with purchase agreements."
-                ],
-                "textDone": "",
-                "link": [
-                  {
-                    "name": "",
-                    "value": ""
-                  }
-                ],
-                "logo": "/Icons/Special enablers/icons-primary/eligibility_criteria.svg"
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Saudi Industrial Development Fund for more details:",
-                "link": [
-                  {
-                    "name": "Visit us",
-                    "value": "https://www.sidf.gov.sa/en/ServicesforInvestors/Programs/Pages/Mutjadeda.aspx"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "3",
             "name": "AdopTech Initiative",
+            "nameIn": "AdopTech Initiative",
             "content": [
               {
                 "name": "NIDLP program and Ministry of Communications and Information Technology",
@@ -3090,7 +2805,7 @@
                 "name": "",
                 "text": "",
                 "list": [],
-                "textDone": "",
+                "textDone": "You can visit the website for more details:",
                 "link": [
                   {
                     "name": "Technology Adoption Incentives | Ministry of Communications and Information Technology",
@@ -3101,8 +2816,9 @@
             ]
           },
           {
-            "id": "4",
+            "id": "3",
             "name": "The launch of the Fourth Industrial Revolution Capabilities Center",
+            "nameIn": "The launch of the Fourth Industrial Revolution Capabilities Center",
             "content": [
               {
                 "name": "NIDLP Program, KACST, and MODON",
@@ -3159,8 +2875,9 @@
             ]
           },
           {
-            "id": "5",
+            "id": "4",
             "name": "Tanafusiya Program – Energy Efficiency Track",
+            "nameIn": "Tanafusiya Program – Energy Efficiency Track",
             "content": [
               {
                 "name": "Tanafusiya Program – Energy Efficiency Track",
@@ -3224,8 +2941,9 @@
             ]
           },
           {
-            "id": "6",
+            "id": "5",
             "name": "Basic Digitization Solutions Initiative for Factories",
+            "nameIn": "Basic Digitization Solutions Initiative for Factories",
             "content": [
               {
                 "name": "Ministry Of Industry & Mineral Resources",
@@ -3295,9 +3013,9 @@
             ]
           },
           {
-            "id": "7",
+            "id": "6",
             "name": "Availability of Petrochemical Raw Materials",
-            "nameIn": "",
+            "nameIn": "Availability of Petrochemical Raw Materials",
             "content": [
               {
                 "name": "",
@@ -3326,9 +3044,9 @@
             ]
           },
           {
-            "id": "8",
+            "id": "7",
             "name": "Acceleration Circular Economy Initiative",
-            "nameIn": "",
+            "nameIn": "Acceleration Circular Economy Initiative",
             "content": [
               {
                 "name": "",
@@ -3374,16 +3092,17 @@
               }
             ]
           }
-        ],
-        "bgImage": "/output/Special_enablers/enablers-06.png"
+        ]
       },
       {
-        "id": "3",
+        "id": 3,
         "enablerName": "Exports Enablers and Incentives",
+        "bgImage": "/output/Special_enablers/enablers-07.png",
         "enablerItem": [
           {
             "id": "1",
             "name": "Saudi Export Incentives Program",
+            "nameIn": "Saudi Export Incentives Program",
             "content": [
               {
                 "name": "Saudi Exports Development Authority",
@@ -3436,6 +3155,7 @@
           {
             "id": "2",
             "name": "Saudi Export-Import Bank",
+            "nameIn": "Saudi Export-Import Bank",
             "content": [
               {
                 "name": "Saudi Export-Import Bank",
@@ -3528,6 +3248,7 @@
           {
             "id": "3",
             "name": "Cities and Special Economic Zones",
+            "nameIn": "Cities and Special Economic Zones",
             "content": [
               {
                 "name": "Economic Cities And Special Zones Authority (ECZA)",
@@ -3641,6 +3362,7 @@
           {
             "id": "4",
             "name": "Promoting Saudi Made Products",
+            "nameIn": "Promoting Saudi Made Products",
             "content": [
               {
                 "name": "Saudi Made Program",
@@ -3689,7 +3411,7 @@
           {
             "id": "5",
             "name": "Customs for Exports",
-            "nameIn": "",
+            "nameIn": "Customs for Exports",
             "content": [
               {
                 "name": "Ministry of Industry and Mineral Resources",
@@ -3747,16 +3469,17 @@
               }
             ]
           }
-        ],
-        "bgImage": "/output/Special_enablers/enablers-07.png"
+        ]
       },
       {
-        "id": "4",
+        "id": 4,
         "enablerName": "Localization of Industries and Technologies",
+        "bgImage": "/output/Special_enablers/enablers-08.png",
         "enablerItem": [
           {
             "id": "1",
             "name": "The Contracting Method Of Localization Of Industry & Knowledge Transfer (LIKT)",
+            "nameIn": "The Contracting Method Of Localization Of Industry & Knowledge Transfer (LIKT)",
             "content": [
               {
                 "name": "Local content & Government Procurement Authority",
@@ -3803,6 +3526,7 @@
           {
             "id": "2",
             "name": "Tawteen Program",
+            "nameIn": "Tawteen Program",
             "content": [
               {
                 "name": "Saudi Industrial Development Fund-SIDF",
@@ -3865,6 +3589,7 @@
           {
             "id": "3",
             "name": "Mutajadeda Program",
+            "nameIn": "Mutajadeda Program",
             "content": [
               {
                 "name": "Saudi Industrial Development Fund – SIDF",
@@ -3944,7 +3669,7 @@
           {
             "id": "4",
             "name": "Exploration Enablement Program",
-            "nameIn": "",
+            "nameIn": "Exploration Enablement Program",
             "content": [
               {
                 "name": "Ministry of Industry and Mineral Resources and Ministry of Investment",
@@ -3999,7 +3724,7 @@
           {
             "id": "5",
             "name": "Standard Incentives for the Industrial Sector",
-            "nameIn": "",
+            "nameIn": "Standard Incentives for the Industrial Sector",
             "content": [
               {
                 "name": "Ministry of Industry and Mineral Resources, Saudi Industrial Development Fund, and Ministry of Investment",
@@ -4088,7 +3813,7 @@
           {
             "id": "6",
             "name": "Investment and Acquisition Facilitation Program",
-            "nameIn": "",
+            "nameIn": "Investment and Acquisition Facilitation Program",
             "content": [
               {
                 "name": "Investment and Acquisition Facilitation Program",
@@ -4120,8 +3845,7 @@
               }
             ]
           }
-        ],
-        "bgImage": "/output/Special_enablers/enablers-08.png"
+        ]
       }
     ]
   }

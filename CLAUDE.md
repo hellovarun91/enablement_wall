@@ -412,6 +412,21 @@ All remaining links in data.json work properly in iframe modal.
 7. **Never make changes without testing locally first**
    - Run `node server.js` and test in browser before committing
 
+8. **Never create link-only cards without `textDone`**
+   - Cards with only a link but empty `textDone` show as EMPTY BOXES
+   - Always add intro text like "You can visit the website for more details:"
+   ```json
+   // BAD - shows empty card
+   { "name": "", "text": "", "list": [], "textDone": "", "link": [{"name": "Site", "value": "https://..."}] }
+
+   // GOOD - shows link with intro text
+   { "name": "", "text": "", "list": [], "textDone": "Visit for more details:", "link": [{"name": "Site", "value": "https://..."}] }
+   ```
+
+9. **Never skip numbering prefixes in Excel data**
+   - If Excel has "1. Working Capital", "2. Term Loan", "3. Revolving Limit" - preserve the numbers exactly
+   - Don't drop the "2." just because it's in the middle of the list
+
 ### ✅ DO's (Always Do These)
 
 1. **Always reset video before loading new source**
@@ -451,6 +466,76 @@ All remaining links in data.json work properly in iframe modal.
 
 7. **Always test all 5 screens before shipping**
 
+8. **Always add `textDone` to link-only cards**
+   - When Excel row has ONLY a link (no content/bullets), add textDone
+   - Use: "You can visit the website for more details:" or similar
+
+9. **Always preserve exact text from Excel including numbering**
+   - "1. Working Capital" stays "1. Working Capital", not "Working Capital"
+   - "2. Term Loan:" stays "2. Term Loan:", not "Term Loan:"
+
+---
+
+## EXCEL TO DATA.JSON RULES
+
+### Card Types (Based on Excel Row Content)
+
+| Excel Row Has | Card Type | textDone Required? |
+|---------------|-----------|-------------------|
+| Content + Link | content+link | NO - link shows inside card |
+| Content only (text/bullets) | content | NO |
+| Link only (empty content columns) | link-only | YES - MUST have textDone |
+
+### How to Identify Link-Only Rows
+A row is link-only if:
+- Column B (Content Name) is empty or just whitespace
+- Column C (Content Text) is empty
+- Column D (Content List) is empty
+- Column F (Link Name) has value
+- Column G (Link URL) has value
+
+### Link-Only Card Template
+```json
+{
+  "name": "",
+  "text": "",
+  "list": [],
+  "textDone": "You can visit the website for more details:",
+  "link": [{ "name": "Link Text from Excel", "value": "https://url-from-excel" }]
+}
+```
+
+### Content # (Content ID) Rules
+- Each unique Content # = one card in the app
+- If Content # has BOTH content AND link in same row → content+link card
+- If Content # spans multiple rows → combine into one card
+- If Content # row has ONLY link → link-only card with textDone
+
+### Validation After Conversion
+After rebuilding data.json, always run this check:
+```bash
+cat data.json | python3 -c "
+import json,sys
+d=json.load(sys.stdin)
+errors=[]
+for cat in d:
+  for e in cat['enablers']:
+    for item in e['enablerItem']:
+      for i,c in enumerate(item['content']):
+        has_content = bool(c.get('name') or c.get('text') or c.get('list'))
+        has_link = bool(c.get('link') and c['link'][0].get('value'))
+        has_text_done = bool(c.get('textDone'))
+        # Link-only cards MUST have textDone
+        if has_link and not has_content and not has_text_done:
+          errors.append(f\"{item['name']} card {i+1}: link-only but no textDone!\")
+if errors:
+  print('ERRORS FOUND:')
+  for e in errors: print(f'  - {e}')
+else:
+  print('All cards valid!')
+"
+```
+
 ---
 
 ## PRE-SHIP CHECKLIST
@@ -485,6 +570,8 @@ Before sharing any build with the client, verify ALL of the following:
 - [ ] All titles display correctly
 - [ ] External links open in modal (if any)
 - [ ] "Return to App" button works
+- [ ] Link-only cards show text + button (not empty)
+- [ ] Run validation script to check for missing textDone
 
 ### 5. Code Review
 - [ ] No setTimeout wrapping video loading
@@ -615,3 +702,35 @@ window.addEventListener('popstate', function(e) {
   }
 });
 ```
+
+---
+
+### Issue 15: Link-Only Cards Showing as Empty (Jan 30, 2026)
+
+**Problem:** Cards with only a link (no content) displayed as empty boxes in the app.
+
+**Root Cause:** The app requires `textDone` field to be populated for link-only cards to render properly. A card with just a `link` array but empty `name`, `text`, `list`, and `textDone` will show as an empty card.
+
+**Bad Data (shows empty card):**
+```json
+{
+  "name": "",
+  "text": "",
+  "list": [],
+  "textDone": "",
+  "link": [{ "name": "Visit Website", "value": "https://example.com" }]
+}
+```
+
+**Good Data (shows link button with intro text):**
+```json
+{
+  "name": "",
+  "text": "",
+  "list": [],
+  "textDone": "You can visit the website for more details:",
+  "link": [{ "name": "Visit Website", "value": "https://example.com" }]
+}
+```
+
+**Lesson:** When creating link-only cards in data.json, ALWAYS populate `textDone` with introductory text like "You can visit the website for more details:" - otherwise the card will appear empty.

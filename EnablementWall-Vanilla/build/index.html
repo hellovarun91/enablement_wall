@@ -8,6 +8,44 @@
   <link rel="icon" href="./favicon.ico">
   <!-- NO LOTTIE - Using pure CSS buttons for BrightSign compatibility -->
   <style>
+    /* DiodrumArabic Font Family */
+    @font-face {
+      font-family: 'Diodrum Arabic';
+      src: url('./fonts/DiodrumArabic-Extralight.otf') format('opentype');
+      font-weight: 200;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Diodrum Arabic';
+      src: url('./fonts/DiodrumArabic-Light.otf') format('opentype');
+      font-weight: 300;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Diodrum Arabic';
+      src: url('./fonts/DiodrumArabic-Regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Diodrum Arabic';
+      src: url('./fonts/DiodrumArabic-Medium.otf') format('opentype');
+      font-weight: 500;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Diodrum Arabic';
+      src: url('./fonts/DiodrumArabic-Semibold.otf') format('opentype');
+      font-weight: 600;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Diodrum Arabic';
+      src: url('./fonts/DiodrumArabic-Bold.otf') format('opentype');
+      font-weight: 700;
+      font-style: normal;
+    }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     /* Remove focus/active outlines and tap highlights on all interactive elements */
@@ -32,7 +70,7 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Diodrum Arabic', -apple-system, BlinkMacSystemFont, sans-serif;
       background: #000;
       color: white;
       overflow: hidden;
@@ -516,6 +554,9 @@
 </head>
 <body>
 
+  <!-- Black Overlay - Covers hardware video layer during transitions to prevent blue flash -->
+  <div id="blackOverlay" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:#000; z-index:9000; display:none;"></div>
+
   <!-- Link Modal - Website opens in iframe, close button at bottom -->
   <div id="linkModal">
     <iframe id="linkIframe" src="about:blank" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
@@ -533,8 +574,8 @@
 
   <!-- Page: Loop - Video with hwz="z-index:-1" to render BEHIND HTML elements (BrightSign feature) -->
   <div id="page-loop" class="page">
-    <!-- Loop video: autoplay + loop + muted = native HTML handles everything -->
-    <video id="loopVideo" hwz="z-index:-1" autoplay loop muted playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:1; background:#000;"></video>
+    <!-- Loop video: preload=auto ensures full buffer before play, hidden until ready to prevent glitches -->
+    <video id="loopVideo" hwz="z-index:-1" loop muted playsinline preload="auto" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:1; background:#000; opacity:0;"></video>
     <!-- Fallback poster image if video fails -->
     <div id="loopPoster" style="position:absolute; top:0; left:0; width:100%; height:100%; background-size:cover; background-position:center; background-color:#000; z-index:2; display:none;"></div>
     <!-- Loader -->
@@ -547,8 +588,8 @@
 
   <!-- Page: Main Video -->
   <div id="page-video" class="page">
-    <!-- Main video: autoplay + muted = starts automatically when src is set -->
-    <video id="mainVideo" hwz="z-index:-1" autoplay muted playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; background:#000;"></video>
+    <!-- Main video: hidden until ready to prevent glitches -->
+    <video id="mainVideo" hwz="z-index:-1" muted playsinline preload="auto" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; background:#000; opacity:0;"></video>
     <!-- Skip button - overlay on video, bottom right corner - made more visible -->
     <button id="closeBtn" style="position:absolute; bottom:5%; right:5%; padding:20px 50px; border:2px solid #40D9C7; border-radius:50px; background-color:rgba(0,0,0,0.7); cursor:pointer; color:#40D9C7; font-size:24px; font-weight:bold; z-index:100;">Skip →</button>
     <!-- Loader -->
@@ -677,22 +718,49 @@
       resetIdleTimer();
     });
 
+    // ===== BLACK OVERLAY - Hides hardware video layer during transitions =====
+    function showBlackOverlay() {
+      var overlay = document.getElementById('blackOverlay');
+      if (overlay) overlay.style.display = 'block';
+    }
+
+    function hideBlackOverlay() {
+      var overlay = document.getElementById('blackOverlay');
+      if (overlay) overlay.style.display = 'none';
+    }
+
     // ===== HELPERS =====
     function cleanupPage(oldPage) {
-      // Simple cleanup: pause video and clear source to release memory
+      // Cleanup: pause video, hide it, clear source to release memory
       if (oldPage === 'loop') {
         var loopVideo = document.getElementById('loopVideo');
+        var loopPoster = document.getElementById('loopPoster');
         if (loopVideo) {
           loopVideo.pause();
+          loopVideo.style.opacity = '0'; // Hide to prevent flash on return
+          loopVideo.oncanplaythrough = null;
+          loopVideo.onplaying = null;
+          loopVideo.onended = null;
+          loopVideo.onerror = null;
           loopVideo.src = '';
+          loopVideo.removeAttribute('src');
           loopVideo.load(); // Release memory
+        }
+        if (loopPoster) {
+          loopPoster.style.display = 'none';
         }
       }
       if (oldPage === 'video') {
         var mainVideo = document.getElementById('mainVideo');
         if (mainVideo) {
           mainVideo.pause();
+          mainVideo.style.opacity = '0'; // Hide to prevent flash
+          mainVideo.oncanplaythrough = null;
+          mainVideo.onplaying = null;
+          mainVideo.onended = null;
+          mainVideo.onerror = null;
           mainVideo.src = '';
+          mainVideo.removeAttribute('src');
           mainVideo.load(); // Release memory
         }
       }
@@ -796,41 +864,85 @@
       };
     }
 
-    // ===== LOOP PAGE (SIMPLIFIED) =====
-    // BrightSign best practice: Use native HTML5 video attributes, minimal JavaScript
+    // ===== LOOP PAGE (ANTI-GLITCH) =====
+    // BrightSign fix: Hide video until fully buffered to prevent frame tearing
     function initLoopPage() {
       var data = JSON.parse(localStorage.getItem('data'));
       if (!data) { navigate('home'); return; }
 
       var loopVideo = document.getElementById('loopVideo');
+      var loopPoster = document.getElementById('loopPoster');
       var loader = document.getElementById('loopLoader');
       var watchBtnEl = document.getElementById('watchBtn');
       var resetBtn = document.getElementById('resetBtn');
+      var isVideoReady = false;
 
-      // Show loader, hide when video plays
+      // Show loader and poster, hide video until ready
       loader.style.display = 'block';
+      loopVideo.style.opacity = '0';
 
-      // Set video source - let HTML autoplay and loop attributes do the work
+      // Show poster image as background while video loads
+      if (data.posterImage) {
+        loopPoster.style.backgroundImage = 'url(.' + data.posterImage + ')';
+        loopPoster.style.display = 'block';
+      }
+
+      // Clear any previous handlers
+      loopVideo.oncanplaythrough = null;
+      loopVideo.onplaying = null;
+      loopVideo.onended = null;
+      loopVideo.onerror = null;
+
+      // Set video source
       loopVideo.src = '.' + data.loopVideoUrl;
+      loopVideo.load();
 
-      // Simple: Hide loader when video starts playing
-      loopVideo.onplaying = function() {
+      // Wait for video to be fully buffered before showing
+      loopVideo.oncanplaythrough = function() {
+        if (isVideoReady) return;
+        isVideoReady = true;
+
+        // Hide poster, show video, hide loader
+        loopPoster.style.display = 'none';
+        loopVideo.style.opacity = '1';
         loader.style.display = 'none';
+
+        // Hide black overlay - video is ready on hardware layer
+        hideBlackOverlay();
+
+        // Now play (after video is visible and ready)
+        loopVideo.play();
       };
 
-      // Simple: Watch Video button
+      // Fallback: Manual loop in case loop attribute fails
+      loopVideo.onended = function() {
+        if (currentPage !== 'loop') return;
+        loopVideo.currentTime = 0;
+        loopVideo.play();
+      };
+
+      // Error handling: Show poster if video fails
+      loopVideo.onerror = function() {
+        loader.style.display = 'none';
+        if (data.posterImage) {
+          loopPoster.style.display = 'block';
+        }
+      };
+
+      // Watch Video button - show black overlay FIRST to hide hardware layer
       watchBtnEl.onclick = function() {
+        showBlackOverlay();
         navigate('video');
       };
 
-      // Simple: Reset button
+      // Reset button
       resetBtn.onclick = function() {
         navigate('home');
       };
     }
 
-    // ===== VIDEO PAGE (SIMPLIFIED) =====
-    // BrightSign best practice: Minimal JavaScript, let HTML5 video do the work
+    // ===== VIDEO PAGE (ANTI-GLITCH) =====
+    // BrightSign fix: Hide video until fully buffered to prevent frame tearing
     function initVideoPage() {
       var data = JSON.parse(localStorage.getItem('data'));
       if (!data) { navigate('home'); return; }
@@ -839,18 +951,28 @@
       var loader = document.getElementById('videoLoader');
       var closeBtnEl = document.getElementById('closeBtn');
       var hasNavigated = false;
+      var isVideoReady = false;
 
-      // Show loader
+      // Show loader, hide video until ready
       loader.style.display = 'block';
+      video.style.opacity = '0';
 
-      // Set video source - autoplay attribute in HTML will start it
+      // Clear any previous handlers
+      video.oncanplaythrough = null;
+      video.onplaying = null;
+      video.onended = null;
+      video.onerror = null;
+
+      // Set video source
       video.src = '.' + data.mainVideoUrl;
+      video.load();
 
       // Go to next page
       var goToNext = function() {
         if (hasNavigated) return;
         hasNavigated = true;
         video.pause();
+        video.style.opacity = '0'; // Hide before navigating to prevent flash
         if (data.index === 5) {
           navigate('special');
         } else {
@@ -858,13 +980,34 @@
         }
       };
 
-      // Hide loader when video starts playing
-      video.onplaying = function() {
+      // Wait for video to be fully buffered before showing
+      video.oncanplaythrough = function() {
+        if (isVideoReady) return;
+        isVideoReady = true;
+
+        // Show video and hide loader
+        video.style.opacity = '1';
         loader.style.display = 'none';
+
+        // Hide black overlay - video is ready on hardware layer
+        hideBlackOverlay();
+
+        // Now play (after video is visible and ready)
+        video.play();
       };
 
       // When video ends, go to next page
-      video.onended = goToNext;
+      video.onended = function() {
+        if (currentPage !== 'video') return;
+        goToNext();
+      };
+
+      // Error handling
+      video.onerror = function() {
+        loader.style.display = 'none';
+        hideBlackOverlay(); // Hide overlay even on error
+        goToNext(); // Move to next page on error
+      };
 
       // Skip button
       closeBtnEl.onclick = goToNext;
