@@ -423,9 +423,10 @@ All remaining links in data.json work properly in iframe modal.
    { "name": "", "text": "", "list": [], "textDone": "Visit for more details:", "link": [{"name": "Site", "value": "https://..."}] }
    ```
 
-9. **Never skip numbering prefixes in Excel data**
-   - If Excel has "1. Working Capital", "2. Term Loan", "3. Revolving Limit" - preserve the numbers exactly
-   - Don't drop the "2." just because it's in the middle of the list
+9. **Never modify text from Excel - copy exactly**
+   - If Excel has "1. Working Capital Loan" → use exactly that
+   - If Excel has "Term Loan:" (no number) → use exactly that, don't add "2."
+   - Don't "fix" or "improve" text from Excel
 
 ### ✅ DO's (Always Do These)
 
@@ -470,13 +471,29 @@ All remaining links in data.json work properly in iframe modal.
    - When Excel row has ONLY a link (no content/bullets), add textDone
    - Use: "You can visit the website for more details:" or similar
 
-9. **Always preserve exact text from Excel including numbering**
-   - "1. Working Capital" stays "1. Working Capital", not "Working Capital"
-   - "2. Term Loan:" stays "2. Term Loan:", not "Term Loan:"
+9. **Always preserve exact text from Excel - don't add or remove anything**
+   - "1. Working Capital Loan" stays "1. Working Capital Loan"
+   - "Term Loan:" stays "Term Loan:" - don't add "2." prefix just because it follows #1
+   - Copy text EXACTLY as it appears in Excel
 
 ---
 
 ## EXCEL TO DATA.JSON RULES
+
+### ⚠️ CRITICAL: Excel is Single Source of Truth
+
+**NEVER add content, links, or cards that don't exist in Excel.**
+
+- If Excel has no link → JSON should have no link
+- If Excel has 2 cards → JSON should have 2 cards (not 3)
+- Don't assume links should exist based on old data or other sources
+- Don't add "helpful" links that aren't in Excel
+- When in doubt, check Excel - it's always right
+
+**Common Mistakes to Avoid:**
+- Adding link-only cards because "the program should have a website" - NO
+- Keeping old links when rebuilding from new Excel - NO
+- Adding numbering prefixes that don't exist in Excel (e.g., adding "2." to "Term Loan") - NO
 
 ### Card Types (Based on Excel Row Content)
 
@@ -734,3 +751,30 @@ window.addEventListener('popstate', function(e) {
 ```
 
 **Lesson:** When creating link-only cards in data.json, ALWAYS populate `textDone` with introductory text like "You can visit the website for more details:" - otherwise the card will appear empty.
+
+---
+
+### Issue 16: Extra Links Added That Don't Exist in Excel (Jan 30, 2026)
+
+**Problem:** data.json had link-only cards for 5 items (Kafalah, Venture Capital, Indirect lending, Jadeer, Monshaat Windows) but Excel had NO links for these items.
+
+**Root Cause:** Links were carried over from old data or added assuming "these programs should have websites." The new Excel file was the source of truth and it had no links for these items.
+
+**Bad Assumption:**
+```
+"This program is from monshaat.gov.sa, so it should link there" → WRONG
+```
+
+**Correct Approach:**
+```
+"Excel has no link for this item, so JSON should have no link" → RIGHT
+```
+
+**What Was Removed:**
+- Kafalah Program: kafalah.gov.sa link
+- Venture Capital Initiative: svc.com.sa link
+- Indirect lending: monshaat.gov.sa link
+- Jadeer Platform: monshaat.gov.sa/node/12778 link
+- Monshaat Windows: monshaat.gov.sa/nawafth link
+
+**Lesson:** Excel is the SINGLE SOURCE OF TRUTH. Never add content, links, or cards that don't exist in Excel. When rebuilding data.json from a new Excel file, start fresh - don't carry over old data.
