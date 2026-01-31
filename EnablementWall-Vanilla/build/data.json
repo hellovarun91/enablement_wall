@@ -514,11 +514,11 @@
                 "name": "",
                 "text": "",
                 "list": [],
-                "textDone": "You can visit the website for more details:",
+                "textDone": "To join the initiative:",
                 "link": [
                   {
                     "name": "Contact",
-                    "value": "mailto:RB@riyadbank.com"
+                    "value": "mailto:NIDLP&RB@riyadbank.com"
                   }
                 ]
               }
@@ -1903,18 +1903,6 @@
                     "value": ""
                   }
                 ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit the website of Kafalah program for more details:",
-                "link": [
-                  {
-                    "name": "Kafalah Program Website",
-                    "value": "https://www.kafalah.gov.sa/en/About/Pages/default.aspx"
-                  }
-                ]
               }
             ]
           },
@@ -1950,18 +1938,6 @@
                     "value": ""
                   }
                 ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit Saudi Venture Capital Company website for more details:",
-                "link": [
-                  {
-                    "name": "Saudi Venture Capital Company Website",
-                    "value": "https://svc.com.sa/en/home/"
-                  }
-                ]
               }
             ]
           },
@@ -1995,18 +1971,6 @@
                     "value": ""
                   }
                 ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit Monshaat website for more details:",
-                "link": [
-                  {
-                    "name": "Small & Medium Enterprises General Authority (Monshaat) Website",
-                    "value": "https://www.monshaat.gov.sa/en"
-                  }
-                ]
               }
             ]
           },
@@ -2024,18 +1988,6 @@
                   {
                     "name": "",
                     "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit Monshaat website for more details:",
-                "link": [
-                  {
-                    "name": "Small & Medium Enterprises General Authority (Monshaat) Website",
-                    "value": "https://www.monshaat.gov.sa/en/node/12778"
                   }
                 ]
               }
@@ -2071,18 +2023,6 @@
                   {
                     "name": "",
                     "value": ""
-                  }
-                ]
-              },
-              {
-                "name": "",
-                "text": "",
-                "list": [],
-                "textDone": "You can visit Monshaat website for more details:",
-                "link": [
-                  {
-                    "name": "Small & Medium Enterprises General Authority (Monshaat) Website",
-                    "value": "https://www.monshaat.gov.sa/en/nawafth"
                   }
                 ]
               }
@@ -2211,7 +2151,7 @@
                 ]
               },
               {
-                "name": "2. Term Loan:",
+                "name": "Term Loan:",
                 "text": "This type of financing is targeting Micro, Small, and medium enterprises [whose annual revenues do not exceed SAR 200 million and the number of employees not exceeding 250]",
                 "list": [],
                 "textDone": "",
