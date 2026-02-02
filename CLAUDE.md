@@ -778,3 +778,24 @@ window.addEventListener('popstate', function(e) {
 - Monshaat Windows: monshaat.gov.sa/nawafth link
 
 **Lesson:** Excel is the SINGLE SOURCE OF TRUTH. Never add content, links, or cards that don't exist in Excel. When rebuilding data.json from a new Excel file, start fresh - don't carry over old data.
+
+---
+
+### Issue 17: Excel Rows With Empty Item Names (Jan 30, 2026)
+
+**Problem:** Link-only cards were missing because Excel had rows where the Item column was empty.
+
+**Root Cause:** In Excel, link-only rows (Content #3, etc.) sometimes had empty Item names because they were continuation rows. When filtering by `df[df['Item'] == 'Kafalah Program']`, these rows were excluded.
+
+**Excel Structure:**
+```
+Row 6: Item="Kafalah Program", Content #1, (content)
+Row 7: Item="Kafalah Program", Content #2, (content)
+Row 8: Item=(empty),          Content #3, (LINK)  ← MISSED!
+```
+
+**Solution:** Either:
+1. Use forward-fill in pandas: `df['Item'] = df['Item'].ffill()`
+2. Or fix the Excel to fill in Item names for all rows (preferred)
+
+**Lesson:** When parsing Excel, watch for continuation rows with empty Item names. Always verify card counts match between Excel and JSON after any rebuild.
