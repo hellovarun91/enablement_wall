@@ -915,12 +915,7 @@
         loopVideo.play();
       };
 
-      // Fallback: Manual loop in case loop attribute fails
-      loopVideo.onended = function() {
-        if (currentPage !== 'loop') return;
-        loopVideo.currentTime = 0;
-        loopVideo.play();
-      };
+      // Native loop attribute handles looping at hardware level (no JS onended)
 
       // Error handling: Show poster if video fails
       loopVideo.onerror = function() {
