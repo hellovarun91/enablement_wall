@@ -898,8 +898,8 @@
       loopVideo.src = '.' + data.loopVideoUrl;
       loopVideo.load();
 
-      // Wait for video to be fully buffered before showing
-      loopVideo.oncanplaythrough = function() {
+      // Show video when ready
+      var showAndPlay = function() {
         if (isVideoReady) return;
         isVideoReady = true;
 
@@ -914,6 +914,14 @@
         // Now play (after video is visible and ready)
         loopVideo.play();
       };
+
+      // Wait for video to be fully buffered before showing
+      loopVideo.oncanplaythrough = showAndPlay;
+
+      // If video is already cached/ready, oncanplaythrough won't fire
+      if (loopVideo.readyState >= 4) {
+        showAndPlay();
+      }
 
       // Native loop attribute handles looping at hardware level (no JS onended)
 
@@ -976,8 +984,8 @@
         }
       };
 
-      // Wait for video to be fully buffered before showing
-      video.oncanplaythrough = function() {
+      // Show video when ready
+      var showAndPlay = function() {
         if (isVideoReady) return;
         isVideoReady = true;
 
@@ -991,6 +999,15 @@
         // Now play (after video is visible and ready)
         video.play();
       };
+
+      // Wait for video to be fully buffered before showing
+      video.oncanplaythrough = showAndPlay;
+
+      // If video is already cached/ready, oncanplaythrough won't fire
+      // readyState 4 = HAVE_ENOUGH_DATA (same as canplaythrough)
+      if (video.readyState >= 4) {
+        showAndPlay();
+      }
 
       // When video ends, go to next page
       video.onended = function() {
