@@ -287,11 +287,15 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       height: 100%;
       padding: 38px 43px 230px;
       max-width: 100%;
       width: 100%;
+    }
+    .enablers-content::before,
+    .enablers-content::after {
+      content: '';
+      flex: 1;
     }
     .enablers-title {
       font-size: 48px;
@@ -311,22 +315,17 @@
       max-height: 545px;
       overflow-y: auto;
       padding: 10px 22px;
-      position: relative;
     }
-    .scroll-hint {
-      position: absolute;
-      bottom: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10;
-      color: rgba(255,255,255,0.6);
-      font-size: 28px;
-      animation: bounceDown 1.5s ease infinite;
-      pointer-events: none;
+    .enablers-list::-webkit-scrollbar {
+      width: 6px;
     }
-    @keyframes bounceDown {
-      0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
-      50% { transform: translateX(-50%) translateY(8px); opacity: 1; }
+    .enablers-list::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.1);
+      border-radius: 3px;
+    }
+    .enablers-list::-webkit-scrollbar-thumb {
+      background: #40D9C7;
+      border-radius: 3px;
     }
     .nav-buttons {
       position: fixed;
@@ -421,12 +420,21 @@
     .details-cards {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: 20px;
       width: 100%;
       flex: 1;
       overflow-y: auto;
       padding: 10px 22px 256px;
+    }
+    .details-cards::-webkit-scrollbar {
+      width: 6px;
+    }
+    .details-cards::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.1);
+      border-radius: 3px;
+    }
+    .details-cards::-webkit-scrollbar-thumb {
+      background: #40D9C7;
+      border-radius: 3px;
     }
     .bottom-gradient {
       position: fixed;
@@ -618,10 +626,7 @@
     <div class="enablers-bg" id="enablersBg"></div>
     <div class="enablers-content">
       <h1 class="enablers-title" id="enablersTitle"></h1>
-      <div style="position:relative; width:100%;">
-        <div class="enablers-list" id="enablersList"></div>
-        <div class="scroll-hint" id="scrollHint">&#8595;</div>
-      </div>
+      <div class="enablers-list" id="enablersList"></div>
     </div>
     <div class="nav-buttons">
       <button class="nav-btn back-btn" id="backBtn" style="display: none;">
@@ -1093,22 +1098,6 @@
       // Reset scroll position
       list.scrollTop = 0;
 
-      // Scroll hint: show chevron only if list overflows
-      var hint = document.getElementById('scrollHint');
-      if (list.scrollHeight > list.clientHeight) {
-        hint.style.display = 'block';
-        list.onscroll = function() {
-          // Hide chevron when scrolled near bottom
-          if (list.scrollTop + list.clientHeight >= list.scrollHeight - 20) {
-            hint.style.display = 'none';
-          } else {
-            hint.style.display = 'block';
-          }
-        };
-      } else {
-        hint.style.display = 'none';
-      }
-
       // Show back button only for special enablers (id=2)
       document.getElementById('backBtn').style.display = id === '2' ? 'flex' : 'none';
       document.getElementById('backBtn').onclick = function() { window.history.back(); };
@@ -1156,6 +1145,14 @@
 
       var cardsEl = document.getElementById('detailsCards');
       cardsEl.innerHTML = '';
+
+      // Inner wrapper: margin auto centers cards when few, scrolls naturally when many
+      var cardsWrapper = document.createElement('div');
+      cardsWrapper.style.margin = 'auto 0';
+      cardsWrapper.style.display = 'flex';
+      cardsWrapper.style.flexDirection = 'column';
+      cardsWrapper.style.gap = '20px';
+      cardsWrapper.style.width = '100%';
 
       for (var m = 0; m < detail.content.length; m++) {
         var item = detail.content[m];
@@ -1225,8 +1222,10 @@
           }
         }
 
-        cardsEl.appendChild(cardDiv);
+        cardsWrapper.appendChild(cardDiv);
       }
+
+      cardsEl.appendChild(cardsWrapper);
 
       // Reset scroll position
       cardsEl.scrollTop = 0;
